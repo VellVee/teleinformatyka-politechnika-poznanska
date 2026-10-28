@@ -1,0 +1,43 @@
+1. Z ilu bitów sk³ada siê komórka ATM?
+2. Ile bitów zajmuje pole detekcji b³êdów w komórce ATM?
+3. Który z podanych ni¿ej topologii jest topologi¹ dzrzewa?
+4. W której szczelinie w trakcie PCM mog¹ siê znajdowaæ wiadomoœci sygnalizacyjne?
+5. Jakie wystêpuj¹ kana³y w dostêpie podstawowy?
+6. Sygnalizacja we wspólnym kanale odnosi siê do?
+7. Wiadomoœæ IAM jest wysy³ana jako?
+8. Tryb przesy³ania wiadomoœci to atrybut okreœlaj¹cy?
+9. Wiadomoœæ "ISUP"(chodzi o t¹ co przesy³a IAM, ANM itd) s³u¿y do?
+10. W jakiej kolejnoœci wysy³ane s¹ sygna³y (IAM itp) w wiadomoœci ISUP?
+11. Wiadomoœæ ISUP jest zawsze?? (jednostronna, dwustronna itd)
+12. Wyliczyæ iloœæ po³¹czeñ dla n ³¹czy w topologii zupe³nej.
+13. Komutaqcja kana³ów wirtualnych opiera siê na?
+14. Komutator przestrzenny 4x8 sk³ada sie z ... multiplekserów.
+15. Komutator przestrzenny 4x8 sk³ada sie z ... demultiplekserów.
+16. Komutator przestrzenny o jednej pamiêci nxm w czasie jednej szczeliny dkonouje? (jednego odczytu i jednego zapisu itd) 
+
+
+
+
+1. Z ilu bitów sk³ada siê komórka ATM?
+2. Ile bitów zajmuje pole detekcji b³êdów w komórce ATM?
+3. Który z podanych ni¿ej topologii jest topologi¹ dzrzewa?
+4. W której szczelinie w trakcie PCM mog¹ siê znajdowaæ wiadomoœci sygnalizacyjne?
+5. Jakie wystêpuj¹ kana³y w dostêpie podstawowy?
+6. Sygnalizacja we wspólnym kanale odnosi siê do?
+7. Wiadomoœæ IAM jest wysy³ana jako?
+8. Tryb przesy³ania wiadomoœci to atrybut okreœlaj¹cy?
+9. Wiadomoœæ "ISUP"(chodzi o t¹ co przesy³a IAM, ANM itd) s³u¿y do?
+10. W jakiej kolejnoœci wysy³ane s¹ sygna³y (IAM itp) w wiadomoœci ISUP?
+11. Wiadomoœæ ISUP jest zawsze?? (jednostronna, dwustronna itd)
+12. Wyliczyæ iloœæ po³¹czeñ dla n ³¹czy w topologii zupe³nej.
+13. Komutaqcja kana³ów wirtualnych opiera siê na?
+14. Komutator przestrzenny 4x8 sk³ada sie z ... multiplekserów.
+15. Komutator przestrzenny 4x8 sk³ada sie z ... demultiplekserów.
+16. Komutator przestrzenny o jednej pamiêci nxm w czasie jednej szczeliny dkonouje? (jednego odczytu i jednego zapisu itd)
+17. Obliczyæ d³ugoœæ magistrali
+18. Ile ³¹czy potrzeba do po³¹czenia zupe³nego 10 punktów
+19. ile bitów ma ATM
+20. ile bitów ma VCI
+21. czy komutator przestrzenny przerzuca: z jednego œwiat³owodu na drugi w inn¹ szczeline, w tê sam¹ szczeline w inny œwiat³owód, czy szczeline wej na wyjœcie.
+22. która jest wiadomoœæ IAM?
+23 3 pytania dotycz¹ce sygna³ów synchronizacyjnych w kanale (albo paœmie, nie pamiêtam dok³adnie) - dotycz¹ce danych itd.

@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Aktywacja_Uzytkownika" directorySegmentName="seg_0" id="B715B915-F390-F0A6-CFDB-6E71B882EB4B">
+<createdBy></createdBy>
+<createdTime>2019-01-30 20:21:13 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<sourcePk>F051EA56-9A09-C973-4546-957BE5ABCEBF</sourcePk>
+<identifying>false</identifying>
+<nameOnSource>inicjuje</nameOnSource>
+<nameOnTarget>dotyczy</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>593B58B7-272F-EE21-9F6A-53E5EE0015CF</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3333C7AE-AD82-FE2D-21FC-1D7E286032E9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

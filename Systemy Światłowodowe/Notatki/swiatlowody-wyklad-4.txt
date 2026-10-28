@@ -1,0 +1,27 @@
+Systemy koherentne - cd
+=================================
+
+Sygnał o częstotliwości pożądanej sprowadzany jest do częstotliwości pośredniej. Na elemencie liniowym, w odbiorniku, wytwarza się częstotliwość pośrednią - zwiększa to umiejętność wyboru konkretnej stacji bazowej. Elementem tym jest bardzo stabilny laser. 
+
+Schemat blokowy systemu koherentnego
+=================================
+Po stronie odbiornika mamy fotodiode. Do fotodiody dochodzą dwie wiązki, tworzy się superpozycja. 
+Homodyna - na wyjściu fotodiody pasmo podstawowe 
+Heterodyna - na wyjściu fotofiody częstotliwość pośrednia
+
+-----------------to wszystko było ostatno--------------------
+
+
+Problemy i wymagania systemów koherentnych
+=================================
+- Wymagania dotyczące czystości widmowej
+- Odbiór koherenty uzystkujemy tylko w przypadku gdy dwie wiązki są równoległe
+- Laser musi mieć dużą moc
+- Straty muszą być małe
+
+Różne rodzaje modulacji ...
+
+FM - zmiana częstotliwości lasera przy zmianie płynącego prądu 
+Oddziaływanie akustooptyczne - w krysztale wytwarzamy falę optyczną, fala optyczna ulega dyfrakcji, pojawia się fala przesunięta
+
+Zastosowanie wzmacniaczy optycznych zblża nas do systemu koherentnego. 

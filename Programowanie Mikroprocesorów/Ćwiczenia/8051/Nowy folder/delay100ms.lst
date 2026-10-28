@@ -1,0 +1,51 @@
+     1                  ;				DELAY 100MS				;
+     2                  ;************************************************************************************************
+     3                  
+     4                  ;TIMER 0
+     5        0000      T0_G	EQU	0	;GATE
+     6        0000      T0_C	EQU	0	;COUNTER/-TIMER
+     7        0001      T0_M	EQU	1	;MODE (0..3)
+     8        0001      TIM0	EQU	T0_M+T0_C*4+T0_G*8
+     9                  ;TIMER 1
+    10        0000      T1_G	EQU	0	;GATE
+    11        0000      T1_C	EQU	0	;COUNTER/-TIMER
+    12        0000      T1_M	EQU	0	;MODE (0..3)
+    13        0000      TIM1	EQU	T1_M+T1_C*4+T1_G*8
+    14                  
+    15        0001      TMOD_SET	EQU	TIM0+TIM1*16
+    16                  
+    17        004C      TH0_SET		EQU	256-180		;92160
+    18        0000      TL0_SET		EQU	0
+    19                  ;**************************************
+    20                  
+    21  0000: 02 01 00  	LJMP	START
+    22  0100:           	ORG	100H
+    23  0100:           START:
+    24                  	
+    25  0100: 79 0A     	MOV	R1,#10
+    26  0102: 75 89 01  	MOV	TMOD,#TMOD_SET		;Timer 0 liczy czas
+    27  0105: 75 8C 4C  	MOV	TH0,#TH0_SET		;Timer 0 na 50ms
+    28  0108: 75 8A 00  	MOV	TL0,#TL0_SET
+    29  010B: D2 8C     	SETB	TR0			;start Timera
+    30                  
+    31  010D:           DIODA:
+    32                  
+    33  010D: 74 0A     	MOV	A,#10
+    34  010F: B2 97     	CPL P1.7
+    35  0111: 12 01 16  	LCALL	TIME_100
+    36  0114: D9 F7     	DJNZ	R1,DIODA
+    37                  
+    38  0116:           TIME_100:
+    39                  	
+    40  0116: F8        	MOV	R0,A
+    41                  	
+    42  0117:           ILOSC:
+    43  0117: 30 8D FD  	JNB	TF0,$			;odliczanie 100ms
+    44  011A: 75 8C 4C  	MOV	TH0,#TH0_SET
+    45  011D: 30 8D FD  	JNB	TF0,$
+    46  0120: 75 8C 4C  	MOV	TH0,#TH0_SET		
+    47  0123: C2 8D     	CLR	TF0			
+    48                  	
+    49  0125: D8 F0     	DJNZ	R0,ILOSC
+    50                  
+    51  0127: 22        	RET

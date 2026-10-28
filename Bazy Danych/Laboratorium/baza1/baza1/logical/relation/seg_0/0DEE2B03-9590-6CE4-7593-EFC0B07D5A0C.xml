@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Subskrypcja_Hashtag" directorySegmentName="seg_0" id="0DEE2B03-9590-6CE4-7593-EFC0B07D5A0C">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:18:44 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<sourcePk>26FD796D-31BD-8392-80E1-8C513F764BB1</sourcePk>
+<targetPk>7F241E61-83DE-5414-0F69-E159F410C7C9</targetPk>
+<identifying>false</identifying>
+<nameOnSource>składa się z</nameOnSource>
+<nameOnTarget>znajduje się w </nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>89566072-EE2C-9230-F1EC-2DF7D44F27CA</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>40DAC190-ADE5-4973-E727-5F69AEF1C856</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

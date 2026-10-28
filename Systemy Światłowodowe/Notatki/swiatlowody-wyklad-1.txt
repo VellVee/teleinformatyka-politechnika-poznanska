@@ -1,0 +1,73 @@
+Wzmacniacze optyczne - slajdy gościa
+===============================
+
+Basic EDF Amplifier Design - budowa EDFA
+-----------------------------------------
+
+Lasery pompujące powinny mieć co namjmniej 500mW. 
+Rysunek: Jednostopniowa struktura wzmacniacza.
+
+Commercial Designs
+----------------------------
+Rysunek: wzmacniacz dwustopniowy. Cztery lasery pompujące. Jeśli wzmacniacz wzmacnia równocześnie kilka kanałów i ma moc 2W, to te dwa waty są dzielone na 50 kanałów. 
+Dzielimy moc całkowitą wzmacniacza na kilka kanałów, dlatego zasilanie wzmacniacza musi być duże. 
+
+Input & Output Spectra
+----------------------------
+Rysunek: wykresy procesu wzmocnienia. Na górnym wykresie widmo sygnału na wejściu wzmnacniacza. W miejscu zaznaczonym P mamy -10 dBm. Natomiast na dole widzimy sygnał wyjściowy (po wzmcnienieu) o wartości 20 dBm. 
+Jeden pick akcji laserowej - wszystko pozostałe to szum. Jest na tyle niski, że niewidoczny. Natomiast poniżej (po wzmocnieniu) o sygnał jest otoczony całkiem sporym poziomem szumem. Jest to jedno z największych wad wzmacniaczy optycznych. 
+
+
+Introduction to Optical Amplifiers OA1 - VPIphotonics 
+===================================
+
+Introduction 
+-------------------------
+Istnieją podobieństwa do wzmacniaczy elektrycznych. Jednakże wzmacniacze włókniste erbowe mają zasilanie optyczne. Na wyjściu otrzymujemy zaszumiony sygnał. 
+Wzór:
+Power=G*P
+G - moc sygnału wejściowego
+P - współczynnik wzmocnienia mocy optycznej 
+
+How Optical Amplifiers work 
+-------------------------
+LASER - źródło optyczne w którym występuje wzmocnienie bazujące na emisji wymuszonej. 
+Rysunek:
+pasmo przewodnictwa (na górze) , pasmo walencyjne (na dole) 
+
+Zjawiska zachodzące we wzmacniaczu:
+- absorbcja
+- emisja spontaniczna (główne źródło problemów szumowych)
+- emisja wymuszona
+
+Warunkiem koniecznym do wystąpnienia wzmocnienia jest podtrzymanie inwersji obsadzeń()population inversion). 
+Elektrony zazwyczaj przechodzą w najniższe możliwe poziomy energetyczne. Dzięki emisji wymuszonej uzyskujemy ich przejście do wyższych poziomów. Czasem elektrony same z siebie wyskakują - nazywamy to emisją spontaniczną - fotony mają różny kierunek, różną długość fali itp. Najprawdopodobniej nie spełnią warunku całkowitego wewnętrznego odbicia. 
+Wzmocniona emisja spontaniczna (Amplified Spontaneous Emission - ASE): największy efekt uboczny wzmocnienia, źródło wystąpnienia szumów. Jest to proces bardzo energetyczny i dwukierunkowy (fotony biegnące w przeciwnym kiierunku również zostaną wzmocnione). Dlatego na wejściu potrzebny jest optoizolator, aby blokował fotony wychodzące od strony wejścia.
+
+Optical Amplifier Performance: Gain
+--------------------------------------------
+Wzór na współczynnik wzmocnienia
+G = P_signal_out / P_signal_in
+
+Optical Amplifier Performance: Noise
+-----------------------------------
+Moc spektralna wartości szumu W_ASE = ASE noise Power Spectral Density (PSD). 
+
+Optical Amplifier Performance: Gain and Noise
+-----------------------------------
+Zależność pomiędzy wzmoncieniem a szumem. 
+n_sp - współczynnik szumu emisji spontanicznej
+Jest on zdefiniowany tylko w przypadku gdy występuje inwersja obsadzeń. Szum który obserwujemy jest proporcojalny do ilości elektronów znajdujących się na poziomie wyższym. Absorbcja proporcjonalna jest do Ng (elektronów na poziomie dolnym). Wzmocnienie jest przewagą emisji wymuszonej do obsorbcji. Jeżeli nie ma tej przewagi (nie ma tej przewagi) to wynik jest ujemny. 
+
+n_sp = Współczynnik szumu  / Współczynnik wzocnienia. 
+
+Wniosek: jeżeli inwersja jest niska, to oznacza niskie wzmocnienie (a to oznacza dominację szumu). Im więsza inwersja tym większe wzmocnienie. 
+
+
+
+
+
+
+
+
+

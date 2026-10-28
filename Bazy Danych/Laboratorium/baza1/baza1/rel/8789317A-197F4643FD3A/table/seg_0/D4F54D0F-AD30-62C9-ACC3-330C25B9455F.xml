@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D4F54D0F-AD30-62C9-ACC3-330C25B9455F" name="Subskrypcja_Hashtag">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Substrypcja_id_subskrypcji" id="F3883DB2-7DD4-88B7-C5B2-1797A799F46D">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D1EF224C-0F8D-45A9-C86A-845471B9EB23" referredColumn="4C18B69C-E09B-ED9D-374E-6890DBC2B027"/>
+</associations>
+</Column>
+<Column name="Hashtag_nazwa" id="EA9365B9-4048-9CBC-7B7B-8A2E2456C758">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8611F37B-7C7D-AE4A-F520-79CBC12C84B3" referredColumn="B58DA496-F442-08BA-52CD-79949AAA1A67"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8C44C8F6-7726-2AD7-0ACD-FC508598BE18" name="Subskrypcja_Hashtag_PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3883DB2-7DD4-88B7-C5B2-1797A799F46D"/>
+<colUsage columnID="EA9365B9-4048-9CBC-7B7B-8A2E2456C758"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B1803958-14EC-2BAE-67D9-A9E36993BA35" name="FK_ASS_30">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>0DEE2B03-9590-6CE4-7593-EFC0B07D5A0C</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3883DB2-7DD4-88B7-C5B2-1797A799F46D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAFF2EEA-2961-00C4-708C-0D694DEE6ABB" name="FK_ASS_31">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>0DEE2B03-9590-6CE4-7593-EFC0B07D5A0C</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA9365B9-4048-9CBC-7B7B-8A2E2456C758"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

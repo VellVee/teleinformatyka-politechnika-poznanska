@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2E1C24FB-2949-B97D-F34E-02C77522D8F9" name="Post">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:32:09 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_posta" id="3500D913-C1F1-F62C-B520-F856EB3F39C5">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:32:17 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="tytul" id="462D0A44-37A3-E47C-E0D0-16AB0C3AC75E">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:32:28 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+</Attribute>
+<Attribute name="opis" id="F0EB3644-99A2-4C38-7F97-A27A0DEA71A4">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:32:53 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+<Attribute name="url" id="D8959BDB-ED6C-51B0-EB66-FED305E4B9BE">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:33:22 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+</Attribute>
+<Attribute name="nsfw" id="FE41CE26-774B-EBD6-AFB0-BCBBC8F4900A">
+<createdBy></createdBy>
+<createdTime>2019-01-30 23:51:16 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="data_dodania" id="E78E0A24-21C0-869C-64A9-5570637E6748">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:33:31 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+</Attribute>
+<Attribute name="id_uzytkownika" id="6A623514-6B0F-6F3B-D87B-DA7C696EAB8D">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:35:16 UTC</createdTime>
+<generatorID>FFE05334-C1B8-8DB1-E99A-37E72B3E69B3</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>CB59ACCB-ADFA-281A-2871-D05B99B2DF81</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_obrazka" id="D988BCC4-BD1B-4616-5228-CA1C90C3C19E">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:51:31 UTC</createdTime>
+<generatorID>65A0D074-205A-8BA7-0891-085FA7E556FB</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>8BCAFE32-37B8-77BB-4F2A-CB49FB968D13</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9A13BD8E-95F9-91B6-6F30-0C78F6CBCC09" name="Post PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:32:26 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3500D913-C1F1-F62C-B520-F856EB3F39C5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

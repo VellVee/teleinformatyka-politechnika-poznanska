@@ -1,0 +1,28 @@
+     1        0097      DISPLAY EQU P1.7
+     2        0001      PRZYCISK EQU 00000001B 		
+     3                  
+     4  0000: 02 01 00  		LJMP 	START
+     5  0100:           		ORG 	100H
+     6  0100:           START:
+     7  0100: 75 89 60  		MOV		TMOD,#01100000B
+     8  0103: 75 8B FC  		MOV		TL1,#0FCH
+     9  0106: 75 8D 00  		MOV		TH1,#0
+    10  0109: D2 8E     		SETB	TR1
+    11                  		
+    12  010B: 78 30     		MOV R0, #CSDS
+    13  010D: 74 01     		MOV A, #PRZYCISK
+    14  010F: F2        		MOVX @R0, A
+    15                  		
+    16  0110:           WYSWIETL:
+    17  0110: 12 81 0C  		LCALL LCD_CLR 
+    18  0113: A9 8B     		MOV R1, TL1
+    19  0115: E9        		MOV A, R1
+    20  0116: 12 81 04  		LCALL WRITE_HEX
+    21  0119: 30 8F 04  		JNB TF1, LOOP
+    22  011C: C2 8F     		CLR	TF1
+    23  011E: B2 97     		CPL DISPLAY
+    24                  		
+    25  0120:           LOOP:		
+    26  0120: E9        		MOV		A,R1
+    27  0121: B5 8B EC  		CJNE A, TL1, WYSWIETL
+    28  0124: 80 FA     		SJMP LOOP

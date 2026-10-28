@@ -1,0 +1,7 @@
+Część II
+
+Podręczniki:
+J.Siudak - "Sieci fotoniczne"
+K. Perlicki - "Systemy transmisji optycznej WDM"
+
+

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="baza1" id="8E5A88EE-641E-D946-E2E2-0A875604C180" version="3.5">
+<createdBy>Pawel</createdBy>
+<createdTime>2019-01-30 18:24:43 UTC</createdTime>
+<ownerDesignName>nasza_baza</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>8E5A88EE-641E-D946-E2E2-0A875604C180</designId>
+</OSDM_Design>

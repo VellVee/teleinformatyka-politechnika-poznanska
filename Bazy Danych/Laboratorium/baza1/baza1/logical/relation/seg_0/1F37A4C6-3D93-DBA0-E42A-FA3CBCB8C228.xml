@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Glosowanie_na_Posty" directorySegmentName="seg_0" id="1F37A4C6-3D93-DBA0-E42A-FA3CBCB8C228">
+<createdBy></createdBy>
+<createdTime>2019-01-30 20:44:15 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<targetPk>F051EA56-9A09-C973-4546-957BE5ABCEBF</targetPk>
+<identifying>false</identifying>
+<nameOnSource>został oddany</nameOnSource>
+<nameOnTarget>zagłosował</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>ABE15282-CC45-52EA-305D-895DC4623707</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>593B58B7-272F-EE21-9F6A-53E5EE0015CF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

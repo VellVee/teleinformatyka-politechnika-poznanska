@@ -1,0 +1,26 @@
+     1  0000: 02 01 00  	LJMP START
+     2  0100:           	ORG 100H
+     3  0100:           START:
+     4  0100: 12 81 0C  	LCALL LCD_CLR
+     5  0103: 12 81 1C  	LCALL WAIT_KEY
+     6  0106: F8        	MOV R0, A
+     7  0107: 12 81 04  	LCALL WRITE_HEX
+     8  010A: 74 2A     	MOV A, #'*'
+     9  010C: 12 81 02  	LCALL WRITE_DATA
+    10  010F: 12 81 1C  	LCALL WAIT_KEY
+    11  0112: F9        	MOV R1, A
+    12  0113: 12 81 04  	LCALL WRITE_HEX
+    13  0116: 74 3D     	MOV A, #'='
+    14  0118: 12 81 02  	LCALL WRITE_DATA
+    15  011B: E8        	MOV A, R0
+    16  011C: 89 F0     	MOV B, R1
+    17  011E: A4        	MUL AB
+    18  011F: 12 01 27  	LCALL KONWERTUJ
+    19  0122: 12 81 04  	LCALL WRITE_HEX
+    20  0125: 80 FE     	SJMP $
+    21  0127:           KONWERTUJ:
+    22  0127: 75 F0 0A  	MOV B, #10
+    23  012A: 84        	DIV AB
+    24  012B: C4        	SWAP A
+    25  012C: 25 F0     	ADD A, B
+    26  012E: 22        	RET

@@ -1,0 +1,78 @@
+Systemy koherentne
+===============================================
+
+* Detekcja bezpośrednia i detekcja koherentna 
+* Schemat blokowy detektora koherentnego
+* Formaty modulacji w systemach koherentnych
+* Szumy
+
+Słownik:
+- Intensity Modulation / Direct Modulation (IM/DD) - modulacja bezpośrednia
+- Coherent Systems (Coherent Detection CD) - systemy koheretne
+
+Detekcja koherentna - zalety
+-----------------------------------------------
+- zdecydowanie większa czułość (od 10 do 20 dB) 
+- 20-100 fotonów/bit (coherent detection) vs. 700-20000 fotonów/bit (bezpośrednia) 
+- dużo większa selektywność układu koherentnego (dużo łatwiej jest wydzielić nawet bardzo wąski kanał)
+- pozwalają na zastosowanie zaawansowanych formatów modulacji (np. fazowa, wielowartościowa)
+
+Schemat blokowy systemu IM/DD
+-----------------------------------------------
+- laser (modulowany) 
+- fotodioda - miernik mocy 
+- odbiornik
+
+Schemat systemu koherentnego
+-----------------------------------------------
+W części odbiornika znajduje się dodatkowy laser (dodatkowy generator). Laser ten wysyła fale elektromagnetyczne. Stanowią one punkt odniesienia w którym możemy wykrywać np. zmiany fazy. 
+Wprowadzamy laser, który daje nam punkt odniesienia parametrów fali elektromagnetycznej - sygnału przychodzącego. 
+Na fotodiodzie pojawia się częstotliwość różnicowa. Potrzebny jest nam demodulator mikrofalowy, który zdemoduluje sygnał do końca (do pasma podstawowego). 
+
+Zalety poprawy czułości
+-----------------------------------------------
+- Zwiększenie odcinków regeneracyjnych
+- Poprawnienie mocy 
+- Zwiększony budżet mocy
+- cośtam jeszcze
+
+Schemat blokowy systemu koherentnego
+-----------------------------------------------
+Odbiornik:
+- laser lokalny (bardzo precyzyjnie stabilizowany)
+- wzmacniacz 
+- dodulator mikrofalowy 
+
+Gdy częstotliwość lambda1=lambda2 - wtedy mówimy o homodynie.
+Gdy te częstowliwości są różne (występuje częstotliwość różnicowa) - heterodyna.
+
+Nadajnik:
+- laser - tak samo stabilny jak laser odniesieniowy odbiorników 
+- zewnetrzny modulator
+- układ elektroniczny stabilizujący laser 
+- cała elektronika setrująca modulatorem
+
+Możliwe konfiguracje (tabela)
+----------------------------------------------
+ASK, FSK, PSK, PolSK - różne rodzaje modulacji
+Homodyna
+Heterodyna z demotualorem heterodynowym synchronicznym 
+Heterodyna z demotualorem heterodynowym niesynchronicznym 
+
+Porównanie CD vs IM/DD 
+----------------------------------------------
+Teoria ignorująca szumy odbiornika:
+9-40 fotonów/bit (CD) vs. 10,4 fotonów/bit (IM/DD)
+Jakieś tam teoretnyczne rzeczy - lepsze są systemy CD.
+
+Detekcja koherentna 
+----------------------------------------------
+Za elementem sumującym mamy superpozcję dwóch fal elektromagnetycznych o różnych częstotliwościach (heterodyna). Fotodioda jest elementem nieliniowym - nasępuje wymieszanie częstotliwości dwóch fal i na wyjściu mamy częstotliwość różnicową i większą intensywność światła (nadfiolet). Fotoioda obciążona jest rezystorem, na którym wydziela się sygnał w postaci mocy wydzielanej na rezystorze. 
+
+Ps - moc sygnału z odległej stacji nadawczej 
+P_LO - moc lasera w odbiorniku 
+
+Problemy w realizacji systmów koherentny 
+----------------------------------------------
+- stan polaryzacji światła - mamy na fotodiodzie 
+

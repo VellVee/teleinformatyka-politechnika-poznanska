@@ -1,0 +1,45 @@
+Dla każdego pracownika wygeneruj kod składający się z dwóch pierwszych liter jego etatu i jego numeru
+identyfikacyjnego. 
+SELECT NAZWISKO, SUBSTR(ETAT, 1, 2) || ID_PRAC AS KOD FROM PRACOWNICY;
+
+Wydaj wojnę literom „K”, „L”, „M” zamieniając je wszystkie na literę „X” w nazwiskach pracowników.
+SELECT NAZWISKO, TRANSLATE(NAZWISKO, 'KLM', 'XXX') AS WOJNA_LITEROM FROM PRACOWNICY;
+
+Wyświetl nazwiska pracowników którzy posiadają literę „L” w pierwszej połowie swojego nazwiska.
+SELECT NAZWISKO FROM PRACOWNICY WHERE INSTR(NAZWISKO, 'L', 1, 1) > 0 AND INSTR(NAZWISKO, 'L', 1, 1) < LENGTH(NAZWISKO)/2;
+
+Wyświetl nazwiska i płace pracowników powiększone o 15% i zaokrąglone do liczb całkowitych. 
+SELECT NAZWISKO, ROUND(PLACA_POD * 1.15, 0) FROM PRACOWNICY;
+
+Każdy pracownik odłożył 20% swoich miesięcznych zarobków na 10-letnią lokatę oprocentowaną 10% w skali roku i
+kapitalizowaną co roku. Wyświetl informację o tym, jaki zysk będzie miał każdy pracownik po zamknięciu lokaty. 
+SELECT NAZWISKO, PLACA_POD, PLACA_POD*0.2 AS INWESTYCJA, ROUND(PLACA_POD* 0.2 *POWER(1.1,10),6) AS KAPITAL,
+ ROUND((PLACA_POD* 0.2 *POWER(1.1,10))-(PLACA_POD*0.2),6) AS ZYSK FROM PRACOWNICY;
+
+Policz, jaki staż miał każdy pracownik 1 stycznia 2000 roku. 
+SELECT nazwisko, TO_CHAR(zatrudniony, 'yy/mm/dd') AS zatrudniony, SUBSTR((DATE '2000-01-01' - zatrudniony)YEAR TO MONTH,2,2) AS staz_w_2000 FROM pracownicy;
+
+Wyświetl poniższe informacje o datach przyjęcia pracowników zespołu 20
+SELECT NAZWISKO, TO_CHAR(ZATRUDNIONY, 'MONTH, DD YYYY') AS DATA_ZATRUDNIENIA FROM PRACOWNICY WHERE ID_ZESP = 20;
+
+Sprawdź, jaki mamy dziś dzień tygodnia. 
+SELECT TO_CHAR(CURRENT_DATE, 'DAY') AS DZIS FROM DUAL;
+
+Przyjmij, że Mielżyńskiego i Strzelecka należą do dzielnicy Stare Miasto, Piotrowo należy do dzielnicy Nowe Miasto a
+Włodkowica należy do dzielnicy Grunwald. Wyświetl poniższy raport (skorzystaj z wyrażenia CASE).
+SELECT NAZWA, ADRES, CASE 
+  WHEN ADRES LIKE 'WLO%' THEN 'GRUNWALD'
+  WHEN ADRES LIKE 'PIO%' THEN 'NOWE MIASTO'
+  WHEN ADRES LIKE 'STR%' THEN 'STARE MIASTO'
+  WHEN ADRES LIKE 'MIE%' THEN 'STARE MIASTO'
+    END
+    AS DZIELNICA FROM ZESPOLY;
+
+Dla każdego pracownika wyświetl informację o tym, czy jego pensja jest mniejsza niż, równa lub większa niż 480
+złotych. 
+SELECT NAZWISKO, PLACA_POD, CASE
+  WHEN PLACA_POD = 480 THEN 'DOKLADNIE 480'
+  WHEN PLACA_POD > 480 THEN 'POWYZEJ 480'
+  WHEN PLACA_POD < 480 THEN 'PONIZEJ 480'
+    END
+    AS PROG FROM PRACOWNICY;

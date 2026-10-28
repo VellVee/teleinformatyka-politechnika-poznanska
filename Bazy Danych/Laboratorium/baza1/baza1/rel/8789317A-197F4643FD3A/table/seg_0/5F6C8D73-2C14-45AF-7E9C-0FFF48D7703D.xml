@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5F6C8D73-2C14-45AF-7E9C-0FFF48D7703D" name="Obraz">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>8C857B50-C422-B4B4-DD3E-F065318D75F3</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_obrazka" id="3B98875C-0827-FBD0-5600-4DEA50AD87FF">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>8BCAFE32-37B8-77BB-4F2A-CB49FB968D13</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="url" id="F7C8ED1D-E1FA-CB2A-716B-D1903F2B76DB">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>B4631BF0-7927-B5DC-9EA7-DD4FD2925B23</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nsfw" id="666DF8E4-4665-65EB-C661-A1425F43AA3D">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>2E0EA269-D615-0B56-17DF-2C6C27B9DD29</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_dodania" id="16CD08EB-2C38-F1DC-E35E-43F7C7CED6CE">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>DDF4585D-4B4E-178E-40CC-144C655D463F</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="71D5A199-259B-A71E-F8C2-865EE50391F3" name="Obraz_PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>A71BA689-92C1-F4B4-1BCB-195E4AFCA64B</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3B98875C-0827-FBD0-5600-4DEA50AD87FF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,66 @@
+WDM
+============================
+
+- Zwielokrotnienie falowe (częstotliwościowe. Włókno może być jednomodowe i
+- Elementy decydujące o właściwościach
+- Probemy związane z projektowaniem systemów WDM
+
+Technologia WDM oraz wzmacniacze optyczne są kluczowymi technologiami światłowodów umożliwiające ogromne prętkości. WDM polega na tym, że do włókna wprowadzamy wiele długości fal.
+
+Włókno WDM może być włóknem jednomodowym. Występują tutaj jedynie różne długości fal. 
+
+W jakim oknie transmitować kanały WDM (jakiej długośći fali)?
+---------------------------------------------
+- okno 850 nm - zaleta: najtańsze lasery, najtańsze fotodiody - wada: dość duża tłumienność 3dB / km
+- okno 1300 nm - zaleta: niskie tłumienie 0,4 dB/km, wada: zero dyspersji (w tym przypadku to nie zaleta)
+- okno 1550 nm - zaleta: najniższe tłumienie 0,2 dB/km - wada: najdroższe 
+
+Podział WDM
+---------------------------------------------
+* Coarse WDM / CWDM - "zgrubna", "nieprecyzyjna" - maksimum kilkanaście kanałów - kanały są szerokie (czyli nie musimy stosować drogich laserów jednomodowych) z długimi odległościami - wykorzystywane w sieciach lokalnych - kanały mozemy porożzucać po oknach transmisyjnych
+
+* Dense WDM / DWDM - Gęste zwielokrotnienie wielofalowe - definiuje odległości pomiędzy kanałami 100GHz. 50GHz, 25GHz - potrzebujemy lasery jednomodowe - np. każdy kanał ma przepływność 40 Gb/s, kanałów jest 40, co daje łącznie 1,6Tb/s
+
+Komponenty potrzebne do realizacji systemu WDM
+---------------------------------------------
+- Nadajnik - źródło - lasery różnego rodzaju
+- Multiplekser - sumator optyczny - sumuje wiele wiązek 
+- Włókno
+- Wzmacniacze optyczne 
+- Demultiplekser 
+- Odbiorniki - fotodiody 
+
+DWDM System Capacity
+---------------------------------------------
+W konkretnym oknie transmisyjnym możemy upakować określoną liczbę kanałów
+
+DWDM Component Performance 
+---------------------------------------------
+Lasery:
+- wielomodowe - równoczesna praca na wielu kanałach / długościach fal 
+- jednomodowy - np. laser DFB - jeden bardzo dominujący pick - współczynnik tłumienia najwyższego modu bocznego (Side Mode Suppression Ratio - SMSR) - najczęstrzy używany w technologii WDM
+- Single-mode laser with Side Mode dużo energii wprowadza do kanału sąsiedniego, propaguje się w kanale sąsiednim
+
+Czy powinniśmy stosować bezpośrednią modulację czy modulację zewnętrzną?
+---------------------------------------------
+- Modulacja bezpośrednia - jest tańsza - wada: gdy przełączamy laser, to zmienia się jego częstotliwość (świergotanie częstoliwości), max 10Gb/s - oznacza wyłącznie modulacje amplitudy / intensywności
+- Modulacja zewnętrzna - lepszy efekt modulacji - jest droższa, modulator wprowadza pewne tłumienie (nieco obniżona moc sygnału wyjściowego) - oznacza zarówno modulacje amplitudy jak i fazy
+
+Dicrete limitation due to Dispertion 
+---------------------------------------------
+Wykres oczkowy przy modulacji bezpośredniej - tylko 2.5Gb/s - ale porządny wykres, niezła modulacja - patrzymy jak wygląda przebieg sygnału w dziedzinie czasu - (następny slajd) - poziome zera są bardzo stabilne - bardzo stabilne poziomy są też jedynek - symulacja wygląda prawie identycznie jak doświadczenie (wykres na czarnym tle). Możemy tutaj zastosować filtr dolnoprzepustowy, aby wyeliminować oscylacje. 
+
+świergot lasera: świer świer świer 
+
+wykres oczkowy jest tragiczny!!!! To je amelinium! Tego nie pomalujesz! 
+
+dużo wykresów, dużo gadania, nie wiem o co chodzi 
+
+pińć minut jeszcze 
+
+uuu, jakie ładne kształty (tych wykresów) - paanie, to jest sygnał z Hamburga!! 
+
+
+
+
+test: Jan Sebastian Bach-Bach

@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="25F60BDB-7ABA-FC1C-7894-9D5DCF257325" containerWithKeyObject="475723BD-D69A-1B5D-C43C-41F8B3333C66" localFKIndex="599C49E9-70D5-BF5F-ACA6-709E271E4238" name="Komentarz_Post_FK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>33E568D9-1303-4DC0-AC94-FF00210FA9DD</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8D7BD383-CA4F-F8F1-4591-4160E69ED576</referredTableID>
+<keyObject>7204B6EE-D580-AF18-EDAD-B82341630FFF</keyObject>
+<referredKeyID>7204B6EE-D580-AF18-EDAD-B82341630FFF</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

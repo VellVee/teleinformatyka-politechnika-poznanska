@@ -1,0 +1,62 @@
+insert into klient(id_klienta, imie, nazwisko, data_urodzenia, adres) 
+values	('1000', 'Rafał', 'Kowalski', to_date('1995/01/15', 'YYYY/MM/DD'), 'Wadowice');
+insert into klient(id_klienta, imie, nazwisko, data_urodzenia, adres) 
+values	('1001', 'Robert', 'Lawendowski', to_date('1970/03/25, 'YYYY/MM/DD')', 'Warszawa');
+
+insert into konto(adres_email, login, haslo, czy_premium, klient_id_klienta) 
+values	('rkow@gmail.com', 'kowals', '1234', '1', '1000');
+insert into konto(adres_email, login, haslo, czy_premium, klient_id_klienta) 
+values('rlaw@gmail.com', 'lewy', 'robert', '0', '1001');
+
+
+insert into zamowienie(id_zamowienia, data, klient_id_klienta, czy_oplacone, faktura_id_faktury, wysyłka_id_wysylki) 
+values	('10', to_date('2020/01/13', 'YYYY/MM/DD'), '1000', '1', 101, '12'),
+insert into zamowienie(id_zamowienia, data, klient_id_klienta, czy_oplacone, faktura_id_faktury, wysyłka_id_wysylki) 
+values	('11', to_date('2020/02/20', 'YYYY/MM/DD'), '1001', '0', 111, '77');
+
+insert into wysyłka(koszt, zamówienie_id_zamówienia, typ, id_wysylki) 
+values	('20', '10', 'A', '12'),
+insert into wysyłka(koszt, zamówienie_id_zamówienia, typ, id_wysylki) 
+values	('0', '11', 'O', '77');
+
+insert into na_adres(adres, id_zamówienia1, firma_kurierska) 
+values	('Warszawa', '10',  'DHL', '12');
+
+insert into odbiór_osobisty(id_zamówienia1, id_wysylki)
+values ('11', '77');
+
+insert into produkt(id_produktu, nazwa, procent_vat, cena_brutto, opis, producent_nazwa, kategoria_nazwa) 
+values	('500', 'Telewizor 4k', '23', '2290', 'Najlepszy', 'Sony', 'RTV'),
+insert into produkt(id_produktu, nazwa, procent_vat, cena_brutto, opis, producent_nazwa, kategoria_nazwa) 
+values	('241', 'Laptop Yakuza', '23', '2990', '15 cali Intel Celeron dysk 1000GB', 'Lenovo', 'Komputery'),
+insert into produkt(id_produktu, nazwa, procent_vat, cena_brutto, opis, producent_nazwa, kategoria_nazwa) 
+values	('980', 'Gitara akustyczna', '23', '399', NULL, 'Gitarex', 'Instrumenty muzyczne');
+
+insert into promocja(rabat, od, do, produkt_id_produktu) 
+values	('30', to_date('2020/02/20', 'YYYY/MM/DD'), to_date('2020/02/27', 'YYYY/MM/DD'), '239'),
+
+insert into producent(nazwa) 
+values	('Sony'),
+insert into producent(nazwa) 
+values	('Lenovo'),
+insert into producent(nazwa) 
+values	('Gitarex');
+
+insert into kategoria(nazwa) 
+values	('RTV'),
+insert into kategoria(nazwa) 
+values	('Komputery'),
+insert into kategoria(nazwa) 
+values	('Instrumenty muzyczne');
+
+insert into egzemplarz(id_egzemplarza, id_produktu, stan)
+values	('5001', '500', 'nowy'),
+insert into egzemplarz(id_egzemplarza, id_produktu, stan)
+values	('2414', '241', 'nowy'),
+insert into egzemplarz(id_egzemplarza, id_produktu, stan)
+values('9802', '980', 'powystawowy');
+
+insert into faktura(id_faktury, data_wystawienia, procent_vat, wartosc_brutto, zamówienie_id_zamówienia)
+values	('101', to_date('2020/01/13', 'YYYY/MM/DD'), 23, '5300', '10');
+insert into faktura(id_faktury, data_wystawienia, procent_vat, wartosc_brutto, zamówienie_id_zamówienia)
+values	('111', to_date('2020/02/20', 'YYYY/MM/DD'), 23, '399', '11');

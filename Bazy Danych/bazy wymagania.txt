@@ -1,0 +1,48 @@
+wykład:
+Narysuj diagram ERD dla wybranej przez siebie rzeczywistości. 
+Niezależnie od wybranej tematyki diagram ma zawierać konstrukcje: encji słabych, 
+związków wiele do wiele i hierarchii encji. 
+Diagram należy narysować za pomocą edytora z SQL developera, 
+a następnie dołączyć jako rozwiązanie zrzut ekranu z utworzonym diagramem.
+
+Przetransformuj utworzony diagram ERD do schematu relacyjnej bazy danych. 
+Wynikiem zadania mają być polecenie języka SQL służące do tworzenie schematów bazy danych (CREATE TABLE ...)
+
+Zweryfikuj uzyskany schemat bazy danych pod kątem spełnienia wymagań 1NF, 2NF i 3NF.
+
+1. Dla schematów relacji o złożonych kluczach sprawdź spełnienie wymagań 2NF.
+
+2. Dla wszystkich schematów relacji upewnij się, że atrybuty wtórne zależą tylko od klucza, a nie od innych atrybutów wtórnych.
+
+Zdefiniuj przykładową transakcję składającą się z co najmniej dwóch poleceń SQL odwołujących się do utworzonego schematu bazy danych.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+laby:
+Przedmiotem projektu zaliczeniowego części zajęć laboratoryjnych z przedmiotu Bazy Danych jest zaprojektowanie schematu bazy danych dla prostej rzeczywistości.
+
+Projekt ma być realizowany w grupach 2-osobowych. W uzasadnionych przypadkach liczba osób w grupie projektowej może ulec zmianie, 
+jednak pociąga to za sobą zmianę wymagań co do stopnia złożoności projektu (np. inną minimalną liczbę encji).
+
+Tematykę (modelowaną rzeczywistość) projektu grupa wymyśla samodzielnie. Ma być ona na tyle pojemna, aby spełnić wymagania, 
+zawarte w punktach dot. wymagań dotyczących schematu relacyjnego.
+
+Wymagania dotyczące modelowanej bazy danych
+Wybrana rzeczywistość ma zostać zamodelowana przy zastosowaniu diagramu związków encji. Diagram ma składać się z min. 10 encji, połączonych związkami.
+Diagram związków encji musi zostać przygotowany w narzędziu Oracle SQL Developer lub Oracle SQL Developer Data Modeler.
+Diagram związków encji ma zostać przekształcony w schemat relacyjny.
+Nie nakłada się żadnych ograniczeń co do systemu zarządzania bazą danych, w której będą przechowywane obiekty bazodanowe 
+(dopuszczalne są dowolne produkty bazodanowe pod warunkiem, że będą to systemy relacyjne). 
+Przykładowe produkty: Microsoft SQL Server, MySQL, OracleDB, PostgreSQL, itd.
+
+Zadania projektowe dotyczące modelowania bazy danych są następujące:
+zaprezentowanie krótkiego opisu modelowanej rzeczywistości i uzyskanie aprobaty prowadzącego,
+zamodelowanie rzeczywistości w postaci diagramu związków encji, przedstawienie diagramu prowadzącemu,
+przetransformowanie modelu związków encji do modelu relacyjnego (definicji relacji) i utworzenie diagramu relacji,
+utworzenie relacji w bazie danych,
+wypełnienie relacji przykładowymi danymi.
+Elementy składowe projektu:
+diagram związków encji,
+diagram relacji,
+skrypt DDL z poleceniami tworzącymi relacje,
+skrypt DML z poleceniami wypełniającymi relacje danymi,
+obecność wypełnionych danymi relacji w bazie danych.

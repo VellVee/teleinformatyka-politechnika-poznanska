@@ -1,0 +1,87 @@
+--1Wyświetl nazwiska i etaty pracowników pracujących w tym samym zespole co pracownik o
+nazwisku Brzeziński. Wynik uporządkuj wg nazwisk pracowników.
+
+SELECT NAZWISKO, ETAT, ID_ZESP FROM PRACOWNICY WHERE ID_ZESP = (SELECT ID_ZESP FROM PRACOWNICY WHERE NAZWISKO='BRZEZINSKI') ORDER BY NAZWISKO;
+
+
+
+--2Zmodyfikuj treść poprzedniego zapytania w taki sposób, aby zamiast identyfikatora zespołu pojawiła
+się jego nazwa.
+
+
+SELECT NAZWISKO, ETAT, NAZWA FROM PRACOWNICY NATURAL INNER JOIN ZESPOLY WHERE ID_ZESP=(SELECT ID_ZESP FROM PRACOWNICY WHERE NAZWISKO='BRZEZINSKI') ORDER BY NAZWISKO;
+
+
+
+--3Wyświetl nazwisko, etat i datę zatrudnienia najdłużej zatrudnionego profesora
+
+SELECT NAZWISKO, ETAT, ZATRUDNIONY FROM PRACOWNICY WHERE ZATRUDNIONY = (SELECT MIN(ZATRUDNIONY) FROM PRACOWNICY WHERE ETAT='PROFESOR') AND ETAT='PROFESOR';
+
+
+
+--4 Wyświetl najkrócej pracujących pracowników każdego zespołu. Uszereguj wyniki zgodnie
+z kolejnością zatrudnienia.
+
+SELECT NAZWISKO, ZATRUDNIONY, ID_ZESP FROM PRACOWNICY WHERE ZATRUDNIONY IN (SELECT MAX(ZATRUDNIONY) FROM PRACOWNICY GROUP BY ID_ZESP);
+
+
+
+--5Wyświetl informacje o zespołach, które nie zatrudniają pracowników
+
+SELECT ID_ZESP, NAZWA, ADRES FROM ZESPOLY WHERE ID_ZESP NOT IN(SELECT ID_ZESP FROM PRACOWNICY);
+
+
+
+--6Wyświetl nazwiska tych profesorów, którzy wśród swoich podwładnych nie mają żadnych
+stażystów.
+
+SELECT NAZWISKO FROM PRACOWNICY WHERE (NAZWISKO, ETAT) IN (
+
+    SELECT NAZWISKO, 'PROFESOR' FROM PRACOWNICY WHERE ID_PRAC NOT IN(
+
+        SELECT ID_SZEFA FROM PRACOWNICY WHERE ETAT='STAZYSTA'));
+
+
+
+--7Wyświetl numer zespołu wypłacającego miesięcznie swoim pracownikom najwięcej pieniędzy
+
+SELECT ID_ZESP, SUM(PLACA_POD) FROM PRACOWNICY GROUP BY ID_ZESP HAVING SUM(PLACA_POD) = (SELECT MAX(SUM(PLACA_POD)) FROM PRACOWNICY GROUP BY ID_ZESP);
+
+
+
+--8Zmodyfikuj poprzednie zapytanie w taki sposób, aby zamiast numeru zespołu wyświetlona została jego nazwa.
+
+SELECT Z.NAZWA, SUM(PLACA_POD) FROM PRACOWNICY P INNER JOIN ZESPOLY Z ON P.ID_ZESP=Z.ID_ZESP GROUP BY Z.NAZWA HAVING SUM(P.PLACA_POD)=(
+
+    SELECT MAX(SUM(PLACA_POD)) FROM PRACOWNICY GROUP BY ID_ZESP);
+
+
+
+--9Znajdź zespoły zatrudniające więcej pracowników niż zespół ADMINISTRACJA. Wynik posortuj wg nazw zespołów. 
+
+SELECT Z.NAZWA, COUNT(Z.NAZWA) FROM PRACOWNICY P INNER JOIN ZESPOLY Z ON P.ID_ZESP=Z.ID_ZESP GROUP BY Z.NAZWA HAVING COUNT(Z.NAZWA) > 
+
+(SELECT COUNT(Z.NAZWA) FROM PRACOWNICY P INNER JOIN ZESPOLY Z ON P.ID_ZESP=Z.ID_ZESP WHERE NAZWA='ADMINISTRACJA' GROUP BY Z.NAZWA) ORDER BY Z.NAZWA;
+
+
+
+--10. Znajdź etat (etaty), który jest najliczniej reprezentowany w zbiorze pracowników.
+
+SELECT ETAT FROM PRACOWNICY GROUP BY ETAT HAVING COUNT(ETAT)= (SELECT MAX(COUNT(ETAT)) FROM PRACOWNICY GROUP BY ETAT);
+
+
+
+--11 Uzupełnij wynik poprzedniego zapytania o listę nazwisk pracowników na znalezionych etatach.
+
+SELECT P.ETAT, LISTAGG(P.NAZWISKO, ',') AS PRACOWNICY FROM PRACOWNICY P GROUP BY P.ETAT HAVING COUNT(P.ETAT)= (SELECT MAX(COUNT(ETAT)) FROM PRACOWNICY GROUP BY ETAT);
+
+
+
+--12 Znajdź parę: pracownik – szef, dla której różnica między płacą pracownika a płacą jego szefa jest najniższa.
+
+
+SELECT P1.NAZWISKO, P2.SZEF FROM PRACOWNICY P1 INNER JOIN (SELECT NAZWISKO AS SZEF, ID_PRAC AS ID_SZEFA, PLACA_POD AS PLACA_POD_SZEFA  FROM PRACOWNICY ) P2 ON P1.ID_SZEFA=P2.ID_SZEFA 
+
+WHERE (P2.PLACA_POD_SZEFA - P1.PLACA_POD) = 
+
+(SELECT MIN(P2.PLACA_POD_SZEFA - P1.PLACA_POD ) FROM PRACOWNICY P1 INNER JOIN (SELECT NAZWISKO AS SZEF, ID_PRAC AS ID_SZEFA, PLACA_POD AS PLACA_POD_SZEFA  FROM PRACOWNICY ) P2 ON P1.ID_SZEFA=P2.ID_SZEFA);

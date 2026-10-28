@@ -1,0 +1,68 @@
+Indeksy 
+============================================
+
+Struktura rekordów indeksu:
+
+1. <wartość atrybutu, wskaźnik>
+2. <wartość atrybutu, lista wskaźników>
+3. <wartość atrybutu, wskaźnik na listę wskaźników>
+4. Mapy bitowe (ciekawostka)
+
+Tworzenie indeksów
+-----------------------------
+Polecenie SQL:
+CREATE INDEX indeks ON Pracownicy(id_zesp);
+
+Rodzaje indeksów
+-----------------------------
+
+1. podstawowe   |  1. rzadkie
+2. pomocnicze   |  2. gęste 
+
+CREATE CLUSTERED INDEX indeks ON Pracownicy(id_zesp);   <== Tworzy indeks rzadki.
+
+Czym się różni indeks rzadki id gętego?
+------------------------------
+W przypadku indeksów rzadkich, pliki z danymi są najpierw sortowane. 
+
+Przykład:
+----------------------------------
+| Abakanowicz   | (1)
+| Abecadłowski  | (2)
+| Abisyński     |
+----------------------------------
+| Abracki       |
+| Żegocki       |
+| ...           |
+-----------------------------------
+
+
+Indeks gęsty
+--------------------------------
+r_i = r
+R_i = 20B
+B_i = B = 4kB
+btr_i = [B_i/R_i] = 20.4
+b_i = [r_i  btr_i] 
+K = [log2_b_i]+1 (koszty wykonywania operacji)
+
+Indeks rzadki
+---------------------------------
+r_i = b_i
+
+
+Indeks drzewiasty
+----------------------------------
+Coś o indeksach w postaci drzewa.
+
+
+Przykładowe zadanie:
+Wyznacz rząd drzewa
+----------------------------------
+
+p*|W|+(p-1)*|K| <= B_i
+|W| = 4 (wskaźnik ma 4 bajty)
+|K| = 16
+B_i = 44B 
+p = [(B_i + |K|)/(|W|+|K|)] = ](4096 + 4)/(16+4)] = [4100/20] = 205   <== wynik
+h = [log_p_r] = [log_205_

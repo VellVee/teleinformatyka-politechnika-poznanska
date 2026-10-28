@@ -1,0 +1,54 @@
+Wyświetl całość informacji z relacji ZESPOLY. 
+SELECT * FROM ZESPOLY;
+
+Wyświetl całość informacji z relacji PRACOWNICY. 
+SELECT * FROM PRACOWNICY;
+
+Wyświetl nazwiska i roczne dochody pracowników. 
+SELECT NAZWISKO, PLACA_POD*12 FROM PRACOWNICY;
+
+Wyświetl nazwy etatów i sumaryczne miesięczne dochody pracowników (z uwzględnieniem płac dodatkowych) 
+SELECT ETAT, PLACA_POD + COALESCE(PLACA_DOD, 0) AS MIESIECZNE_ZAROBKI FROM PRACOWNICY;
+
+Wyświetl całość informacji o zespołach sortując wynik według nazw zespołó
+SELECT ID_ZESP, NAZWA, ADRES FROM ZESPOLY;
+
+Wyświetl listę etatów (bez duplikatów) na których zatrudnieni są pracownicy Instytutu. 
+SELECT DISTINCT ETAT FROM pracownicy;
+
+Wyświetl wszystkie informacje o asystentach pracujących w Instytucie
+SELECT * FROM PRACOWNICY WHERE ETAT = 'ASYSTENT';
+
+Wybierz poniższe dane o pracownikach zespołów 30 i 40 w kolejności malejących zarobków. 
+SELECT ID_PRAC, NAZWISKO, ETAT, PLACA_POD, ID_ZESP FROM PRACOWNICY WHERE ID_ZESP = '30' OR ID_ZESP = '40';
+
+Wybierz dane o pracownikach których płace podstawowe mieszczą się w przedziale 300 do 800 zł. 
+SELECT NAZWISKO, ID_ZESP, PLACA_POD FROM PRACOWNICY WHERE PLACA_POD < '800' AND PLACA_POD > '300'; 
+
+Wyświetl poniższe informacje o pracownikach, których nazwisko kończy się na SKI 
+SELECT NAZWISKO, ETAT, ID_ZESP FROM PRACOWNICY WHERE NAZWISKO LIKE '%SKI';
+
+Wyświetl poniższe informacje o tych pracownikach, którzy zarabiają powyżej 1000 złotych iposiadają szefa
+SELECT ID_PRAC, ID_SZEFA, NAZWISKO, PLACA_POD FROM PRACOWNICY 
+WHERE (ID_SZEFA IS NOT NULL) AND (PLACA_POD > '1000'); 
+
+Wyświetl nazwiska i identyfikatory zespołów pracowników zatrudnionych w zespole nr 20,
+których nazwisko zaczyna się na ‘M’ lub kończy na ‘SKI’. 
+SELECT NAZWISKO, ID_ZESP FROM PRACOWNICY WHERE (NAZWISKO LIKE 'M%' OR NAZWISKO LIKE '%SKI') AND ID_ZESP = '20';
+
+Wyświetl nazwiska, etaty i stawki godzinowe tych pracowników, którzy nie są ani adiunktami ani
+asystentami ani stażystami i którzy nie zarabiają w przedziale od 400 do 800 złotych. Wyniki
+uszereguj według stawek godzinowych pracowników (przyjmij 20-dniowy miesiąc pracy i 8-
+godzinny dzień pracy). 
+SELECT NAZWISKO, ETAT, PLACA_POD/(20*8) AS STAWKA FROM PRACOWNICY 
+WHERE ETAT!='ADIUNKT' AND ETAT!='ASYSTENT' AND ETAT!='STAZYSTA' AND PLACA_POD NOT BETWEEN 400 AND 800 ORDER BY STAWKA;
+
+Wyświetl poniższe informacje o pracownikach, dla których suma płacy podstawowej i dodatkowej
+jest wyższa niż 1000 złotych. Wyniki uporządkuj według nazw etatów. Jeżeli dwóch pracowników
+ma ten sam etat, to posortuj ich według nazwisk. 
+SELECT NAZWISKO, ETAT, PLACA_POD, PLACA_DOD FROM PRACOWNICY 
+WHERE (PLACA_POD + NVL(PLACA_DOD,0) > 1000) ORDER BY ETAT, NAZWISKO;
+
+Wyświetl poniższe informacje o profesorach, wyniki uporządkuj według malejących płac. 
+SELECT NAZWISKO || ' PRACUJE OD ' || ZATRUDNIONY  || ' I ZARABIA ' || PLACA_POD  AS PROFESOROWIE 
+FROM PRACOWNICY WHERE ETAT = 'PROFESOR' ORDER BY PLACA_POD DESC;

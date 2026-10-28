@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Komentarze_Posty" directorySegmentName="seg_0" id="33E568D9-1303-4DC0-AC94-FF00210FA9DD">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:45:40 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<sourcePk>5692B113-C5A2-A02B-E4B5-1018EDF69832</sourcePk>
+<targetPk>9A13BD8E-95F9-91B6-6F30-0C78F6CBCC09</targetPk>
+<identifying>false</identifying>
+<nameOnSource>dotyczy</nameOnSource>
+<nameOnTarget>posiada</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>7297A366-ED4C-DD4E-15BD-43F3B3B739E4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>2E1C24FB-2949-B97D-F34E-02C77522D8F9</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

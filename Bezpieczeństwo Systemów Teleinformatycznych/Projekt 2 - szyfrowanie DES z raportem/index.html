@@ -1,0 +1,58 @@
+<html lang="en"> 
+<head>
+    <meta charset="utf-8"> 
+    <title>The DES algorithm</title>
+    <script src="script.js"></script> 
+    
+</head>
+<body style="background-color: #bf00ff;">
+<h1 id="header">Implementacja algorytmu szyfrowania DES</h1> 
+
+
+    <style>
+        .page {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+			margin: 20px;
+        }
+
+        .center {
+            width: 100%;
+            text-align: center;
+        }
+		h1 {
+			text-align: center;
+			
+		}
+		h3 {
+			text-align: center;
+		}
+		
+		
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="input">
+            <textarea style="background-color:powderblue;" id="plainTextArea" style="resize: none;" placeholder="Tutaj wpisz tekst do zaszyfrowania" rows="20" cols="50"></textarea>
+        </div>
+        <div class="output">
+            <textarea style="background-color:powderblue;" id="encodedTextArea" style="resize: none;" placeholder="Tutaj pojawi się zaszyfrowany tekst" readonly  rows="20" cols="50"></textarea>
+        </div>
+    </div>
+	
+    <div class="page">
+        <div>Klucz<br/><input style="background-color: #ffbf00;" id="key" type="text" id="key" style="width: 280px;"/>
+		<button type="button" onclick="generateKey()" id="buttonGen">Wygeneruj klucz</button>
+		</div>
+		
+    </div>
+	
+    <div class="center">
+        
+        <button type="button" onclick="getText()" id="button">Zakoduj tekst</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+1.Utwórz relację o nazwie PROJEKTY o następującej strukturze: 
+
+CREATE TABLE PROJEKTY
+(ID_PROJEKTU NUMBER(4) GENERATED ALWAYS AS IDENTITY, 
+OPIS_PROJEKTU VARCHAR(20),
+DATA_ROZPOCZECIA DATE DEFAULT CURRENT_DATE,
+DATA_ZAKONCZENIA DATE,
+FUNDUSZ NUMBER(7,2));
+
+2.Wstaw do relacji PROJEKTY dwa rekordy:
+
+INSERT INTO PROJEKTY 
+VALUES(DEFAULT, 'Indeksy bitmapowe', '1999-04-02', '2001-08-31', 25000);
+INSERT INTO PROJEKTY 
+VALUES(DEFAULT, 'Sieci kręgosupowe', DEFAULT, NULL, 19000);
+
+3.Sprawdź, wykonując odpowiednie zapytanie, jakie wartości zostały umieszczone w
+atrybucie ID_PROJEKTU relacji PROJEKTY w dodanych rekordach. 
+
+SELECT ID_PROJEKTU, OPIS_PROJEKTU FROM PROJEKTY;
+
+
+
+6.Utwórz kopię relacji PROJEKTY o nazwie PROJEKTY_KOPIA. Nowa relacja ma być
+identyczna zarówno pod względem struktury i jak i danych z relacją PROJEKTY. Użyj
+polecenia CREATE TABLE … AS SELECT …. Sprawdź zawartość nowo utworzonej
+relacji. 
+
+CREATE TABLE PROJEKTY_KOPIA AS SELECT * FROM PROJEKTY;
+SELECT * FROM PROJEKTY_KOPIA;
+
+7.Do relacji PROJEKTY_KOPIA dodaj nowy rekord:
+
+INSERT INTO PROJEKTY_KOPIA
+VALUES(10, 'Sieci lokalne', CURRENT_DATE, ADD_MONTHS(CURRENT_DATE,12), 24500);
+To polecenie było skuteczne ponieważ w punkcie 4 były ograniczenia ze względu na IDENTITY
+po skopiowaniu tabeli ograniczenia integralnościowe nie zostały skopiowane.
+
+8.Usuń z relacji PROJEKTY rekord opisujący projekt o nazwie „Indeksy drzewiaste”. Czy
+rekord, opisujący usunięty projekt, został również automatycznie usunięty z relacji
+PROJEKTY_KOPIA? 
+
+DELETE PROJEKTY WHERE OPIS_PROJEKTU = 'Indeksy drzewiaste';
+SELECT * FROM PROJEKTY_KOPIA;
+Rekord zostanie usunięty tylko w relacji PROJEKTY ponieważ relacja PROJEKTY_KOPIA nie ma z nią powiązania.
+
+9. Sprawdź w słowniku bazy danych, jakie relacje posiadasz w swoimi schemacie. 
+
+SELECT TABLE_NAME FROM USER_TABLES ORDER BY TABLE_NAME;

@@ -1,0 +1,57 @@
+--ZAD 1 Wstaw do relacji PRACOWNICY trzy nowe rekordy:
+SELECT * FROM PRACOWNICY;
+
+insert into pracownicy(id_prac, nazwisko, etat, id_szefa, zatrudniony, placa_pod,placa_dod,id_zesp) 
+values(250, 'KOWALSKI', 'ASYSTENT', NULL, '2015/01/15', 1500, NULL, 10);
+
+insert into pracownicy(id_prac, nazwisko, etat, id_szefa, zatrudniony, placa_pod,placa_dod,id_zesp) 
+values(260, 'ADAMSKI', 'ASYSTENT', NULL, '2014/09/10', 1500, NULL, 10);
+
+insert into pracownicy(id_prac, nazwisko, etat, id_szefa, zatrudniony, placa_pod,placa_dod,id_zesp) 
+values(270, 'NOWAK', 'ADIUNKT', NULL, '1990/05/01', 2050, 540, 20);
+
+--ZAD 3 Wstaw do relacji ZESPOLY rekord opisujący nowy zespół o nazwie BAZY DANYCH,
+identyfikatorze równym 60 i lokalizacji PIOTROWO 2.
+
+INSERT INTO ZESPOLY VALUES(60, 'BAZY DANYCH', 'PIOTROWO 2');
+SELECT * FROM ZESPOLY WHERE ID_ZESP=60;
+COMMIT;
+
+Update pracownicy Set placa_pod=1.1*placa_pod, placa_dod=Nvl(placa_dod*1.2,100) Where id_prac>=250;
+
+--zad4Przenieś dodanych w punkcie 1. pracowników do zespołu BAZY DANYCH. W poleceniu
+użyj podzapytania, które wyszuka w relacji ZESPOLY identyfikator zespołu BAZY
+DANYCH (nie podawaj go wprost w poleceniu!)
+Update pracownicy Set id_zesp=(Select id_zesp from zespoly where nazwa='BAZY DANYCH') Where id_prac>=250;
+
+--zad 6 Spróbuj usunąć z relacji ZESPOLY rekord opisujący zespół o nazwie BAZY DANYCH
+BAZY DANYCH
+DELETE from zespoly where nazwa='BAZY DANYCH'
+
+UPDATE PRACOWNICY 
+SET ID_SZEFA = (SELECT ID_PRAC FROM PRACOWNICY WHERE NAZWISKO='MORZY')
+WHERE ID_PRAC>=250;
+
+SELECT * FROM PRACOWNICY WHERE ID_SZEFA>=140;
+Update pracownicy Set id_szefa=(Select id_prac from pracownicy where nazwisko='MORZY') 
+Where id_zesp=(Select id_zesp from zespoly where nazwa='BAZY DANYCH');
+
+ --10 Wyświetl dane pracowników, którzy zarabiają najmniej. Weź pod uwagę tylko wartość
+płacy podstawowej.
+
+SELECT * from pracownicy where PLACA_POD=(Select MIN(PLACA_POD) from pracownicy)
+
+SELECT nazwisko,
+placa_pod, nazwa, 0.1*(avg(z.placa_pod))as podwyzka
+FROM pracownicy p JOIN
+zespoly z ON
+p.id_zesp = z.id_zesp;
+
+Select 0.1*Avg(placa_pod),id_zesp from pracownicy Group By id_zesp;
+
+SELECT NAZWISKO, PLACA_POD, (SELECT avg(placa_pod) from pracownicy group by ID_ZESP) 
+AS PODWYZKA FROM PRACOWNICY;
+
+Select nazwisko,placa_pod, (Select 0.1*Avg(placa_pod) from pracownicy  
+Where id_zesp=p.id_zesp Group By id_zesp) As podwyzka from pracownicy p;
+

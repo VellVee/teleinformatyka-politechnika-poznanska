@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7066CB0A-6DE4-B312-6BB5-BB4784C3CB25" name="Obraz_Komentarz">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Obraz_id_obrazka" id="E7933366-11C2-E36A-5D69-31F31FCDDC89">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="08B70BF3-8125-03C5-9D71-F0BE60CA79BA" referredColumn="3B98875C-0827-FBD0-5600-4DEA50AD87FF"/>
+</associations>
+</Column>
+<Column name="Komentarz_id_komentarza" id="6349137F-558D-B33C-F169-0DACA23E053C">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A8E0B111-8518-4848-FB44-D4D8A640D27F" referredColumn="238D0DD8-3A89-05E0-675D-211972A137F2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8A5D0BD7-37AD-17D3-524A-FDE47DABF15F" name="Obraz_Komentarz_PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7933366-11C2-E36A-5D69-31F31FCDDC89"/>
+<colUsage columnID="6349137F-558D-B33C-F169-0DACA23E053C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="638412AF-D44F-66DA-B11E-04BF2E9621F4" name="FK_ASS_23">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>F738D8A7-1EE7-E1F4-4136-071E1A4CA484</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E7933366-11C2-E36A-5D69-31F31FCDDC89"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6149A67A-5906-E41A-3E84-638CACBDAC84" name="FK_ASS_24">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>F738D8A7-1EE7-E1F4-4136-071E1A4CA484</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6349137F-558D-B33C-F169-0DACA23E053C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

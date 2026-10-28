@@ -1,0 +1,32 @@
+Sieci
+====================================
+
+Na poprzednim wykładzie: Struktura sieci optycznej, Topologia sieci, Elementy węzłów optycznych
+Sposoby transmisji - to sobie omijamy
+
+OADM - Add Drop Miltiplexer
+-----------------------------------
+Jeżeli połączymy kilka siatek, to możemy wprowadzać / wyprowadzać więcej długości fali dowolnej pojemnośći. 
+
+MEMS - Technologia mikro-elektromechaniczna
+-----------------------------------
+Mamy do czynienia z elementami, które fizycznie się poruszają. Element MEMS na tle przekroju włókna jest bardzo mały (zdjęcie z pierwszej realizacji). Opracowujemy je na zasadzie projektowania układów scalonych. Pełnią rolę komutatora. 
+Ta technologia później pozwoliła na realizacje bardziej skomplikowanych komutatorów. 
+
+WDM - Selektywna sieć rozsiewcza
+-----------------------------------
+Wszystkie długości fali dochodzą do każdego odbiornika. Wadą tego rozwiązania jest to, że dzielimy moce wszystkich kanałów. Mamy stratyzwiązane z podziałem mocy. Gdyby był tam demultiplekser wielofalowy, to wtedytakich strat byśmy nie mieli. Jeżeli chcielibyśmy uzystać najbardziej selektywną sieć WDM, to nadajniki powinny też mieć funkcje przestrajania (i odbiorniki). 
+
+WDM 
+-----------------------------------
+W sieciach WDM wykorzystujemy różne długości fali. Z jednej strony mamy fizyczne połączenia pomiędzy węzłami. Realizacje pomiędzy węzłem możemy uzystać na długości lambda. 
+
+Elementy sieci publicznej 
+-----------------------------------
+Możemy wydzielić pewne obszary związane z zasięgiem działania tej sieci.
+- LAN - do kilku kilometrów
+- MAN - sieci miejskie - kilkaset kilometrów
+- WANs - sieci dalekosiężne - do kilku tysięcy kilometrów
+- węzły sieciowe - dawniejsze centrale telefoniczne 
+
+Technika komutacji, Komutacja pakietów - definicje na slajdach

@@ -1,0 +1,299 @@
+******************************************************************************
+                  TI ARM Linker PC v5.2.9                      
+******************************************************************************
+>> Linked Thu Jan 17 11:11:23 2019
+
+OUTPUT FILE NAME:   <Joystick.hex>
+ENTRY POINT SYMBOL: "_c_int00"  address: 000016e9
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  FLASH                 00000000   00040000  0000330e  0003ccf2  R  X
+  SRAM                  20000000   00008000  00000218  00007de8  RW X
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+00000000    00000000    00003310   00003310    r-x
+  00000000    00000000    00001a42   00001a42    r-x .text
+  00001a44    00001a44    00001894   00001894    r-- .const
+  000032d8    000032d8    00000038   00000038    r-- .cinit
+20000000    20000000    00000218   00000000    rw-
+  20000000    20000000    00000200   00000000    rw- .stack
+  20000200    20000200    00000014   00000000    rw- .data
+  20000214    20000214    00000004   00000000    rw- .bss
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    00000000    00001a42     
+                  00000000    000009d4     ili9341_240x320x262K.obj (.text)
+                  000009d4    0000049c     main.obj (.text)
+                  00000e70    00000254     grlib.lib : string.obj (.text:GrFontGlyphRender)
+                  000010c4    00000132     driverlib.lib : gpio.obj (.text:GPIOPadConfigSet)
+                  000011f6    000000c0     grlib.lib : string.obj (.text:GrDefaultStringRenderer)
+                  000012b6    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.obj (.text)
+                  00001352    00000002     --HOLE-- [fill = 0]
+                  00001354    00000090     ili9341_240x320x262K.obj (.text:TFT_HW_SetRect)
+                  000013e4    00000086     grlib.lib : rectangle.obj (.text:GrRectFill)
+                  0000146a    0000007a     rtsv7M4_T_le_v4SPD16_eabi.lib : memset_t2.obj (.text)
+                  000014e4    0000006c                                   : autoinit.obj (.text)
+                  00001550    0000006a                                   : copy_decompress_rle.obj (.text)
+                  000015ba    00000002     --HOLE-- [fill = 0]
+                  000015bc    00000068     grlib.lib : context.obj (.text:GrContextInit)
+                  00001624    00000068               : string.obj (.text:GrStringWidthGet)
+                  0000168c    0000005a               : string.obj (.text:FontWideGlyphDataGet)
+                  000016e6    00000002     --HOLE-- [fill = 0]
+                  000016e8    00000050     rtsv7M4_T_le_v4SPD16_eabi.lib : boot.obj (.text)
+                  00001738    0000004c                                   : cpy_tbl.obj (.text)
+                  00001784    0000004a     grlib.lib : string.obj (.text:UpdateContextCharMapping)
+                  000017ce    00000002     --HOLE-- [fill = 0]
+                  000017d0    00000044     rtsv7M4_T_le_v4SPD16_eabi.lib : exit.obj (.text)
+                  00001814    0000003a     grlib.lib : string.obj (.text:FontGlyphDataGet)
+                  0000184e    00000002     --HOLE-- [fill = 0]
+                  00001850    00000034     driverlib.lib : sysctl.obj (.text:SysCtlPeripheralEnable)
+                  00001884    0000002e     grlib.lib : string.obj (.text:GrStringNextCharGet)
+                  000018b2    0000002c               : string.obj (.text:GrFontBaselineGet)
+                  000018de    0000002a     driverlib.lib : gpio.obj (.text:GPIODirModeSet)
+                  00001908    00000028     ili9341_240x320x262K.obj (.text:TFT_HW_Write)
+                  00001930    00000026     grlib.lib : string.obj (.text:GrFontInfoGet)
+                  00001956    00000022               : string.obj (.text:GrFontGlyphDataGet)
+                  00001978    0000001e               : string.obj (.text:GrFontCodepageGet)
+                  00001996    00000002     --HOLE-- [fill = 0]
+                  00001998    0000001c     driverlib.lib : sysctl.obj (.text:SysCtlGPIOAHBEnable)
+                  000019b4    00000018     rtsv7M4_T_le_v4SPD16_eabi.lib : args_main.obj (.text)
+                  000019cc    00000016     grlib.lib : string.obj (.text:GrStringDraw)
+                  000019e2    00000002     --HOLE-- [fill = 0]
+                  000019e4    00000014     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.text)
+                  000019f8    00000012     driverlib.lib : gpio.obj (.text:GPIOPinTypeGPIOInput)
+                  00001a0a    0000000e     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_none.obj (.text:decompress:none)
+                  00001a18    0000000c                                   : copy_zero_init.obj (.text:decompress:ZI)
+                  00001a24    00000008     grlib.lib : charmap.obj (.text:GrMapISO8859_1_Unicode)
+                  00001a2c    00000006     driverlib.lib : gpio.obj (.text:GPIOPinRead)
+                  00001a32    00000006     grlib.lib : string.obj (.text:GrContextFontSet)
+                  00001a38    00000006     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_rle.obj (.text:decompress:rle24)
+                  00001a3e    00000004                                   : pre_init.obj (.text)
+
+.const     0    00001a44    00001894     
+                  00001a44    0000094d     grlib.lib : fontcm20b.obj (.const:.string:g_pui8Cm20bData)
+                  00002391    00000755               : fontcm16b.obj (.const:.string:g_pui8Cm16bData)
+                  00002ae6    0000055f               : fontcm12.obj (.const:.string:g_pui8Cm12Data)
+                  00003045    00000003     --HOLE-- [fill = 0]
+                  00003048    000000c8               : fontcm12.obj (.const:g_sFontCm12)
+                  00003110    000000c8               : fontcm16b.obj (.const:g_sFontCm16b)
+                  000031d8    000000c8               : fontcm20b.obj (.const:g_sFontCm20b)
+                  000032a0    00000028     ili9341_240x320x262K.obj (.const:g_sILI9341_240x320x262K)
+                  000032c8    00000010     grlib.lib : context.obj (.const)
+
+.cinit     0    000032d8    00000038     
+                  000032d8    0000000f     (.cinit..data.load) [load image, compression = rle]
+                  000032e7    00000001     --HOLE-- [fill = 0]
+                  000032e8    0000000c     (__TI_handler_table)
+                  000032f4    00000004     --HOLE-- [fill = 0]
+                  000032f8    00000008     (.cinit..bss.load) [load image, compression = zero_init]
+                  00003300    00000010     (__TI_cinit_table)
+
+.init_array 
+*          0    00000000    00000000     UNINITIALIZED
+
+.stack     0    20000000    00000200     UNINITIALIZED
+                  20000000    00000200     --HOLE--
+
+.data      0    20000200    00000014     UNINITIALIZED
+                  20000200    00000008     rtsv7M4_T_le_v4SPD16_eabi.lib : _lock.obj (.data)
+                  20000208    00000008                                   : exit.obj (.data)
+                  20000210    00000004                                   : stkdepth_vars.obj (.data)
+
+.bss       0    20000214    00000004     UNINITIALIZED
+                  20000214    00000004     (.common:g_psGrLibDefaults)
+
+.TI.persistent 
+*          0    20000200    00000000     UNINITIALIZED
+
+.TI.noinit 
+*          0    20000214    00000000     UNINITIALIZED
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 00003300 records: 2, size/record: 8, table size: 16
+	.data: load addr=000032d8, load size=0000000f bytes, run addr=20000200, run size=00000014 bytes, compression=rle
+	.bss: load addr=000032f8, load size=00000008 bytes, run addr=20000214, run size=00000004 bytes, compression=zero_init
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 000032e8 records: 3, size/record: 4, table size: 12
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+	index: 2, handler: __TI_zero_init
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address   name                        
+-------   ----                        
+000017d1  C$$EXIT                     
+000018df  GPIODirModeSet              
+000010c5  GPIOPadConfigSet            
+00001a2d  GPIOPinRead                 
+000019f9  GPIOPinTypeGPIOInput        
+00001a33  GrContextFontSet            
+000015bd  GrContextInit               
+000011f7  GrDefaultStringRenderer     
+000018b3  GrFontBaselineGet           
+00001979  GrFontCodepageGet           
+00001957  GrFontGlyphDataGet          
+00000e71  GrFontGlyphRender           
+00001931  GrFontInfoGet               
+00001a25  GrMapISO8859_1_Unicode      
+000013e5  GrRectFill                  
+000019cd  GrStringDraw                
+00001885  GrStringNextCharGet         
+00001625  GrStringWidthGet            
+000004b7  ILI9341_240x320x262K_Init   
+UNDEFED   SHT$$INIT_ARRAY$$Base       
+UNDEFED   SHT$$INIT_ARRAY$$Limit      
+00001999  SysCtlGPIOAHBEnable         
+00001851  SysCtlPeripheralEnable      
+00000001  TFT_HW_Command              
+00000033  TFT_HW_Read                 
+00001355  TFT_HW_SetRect              
+00001909  TFT_HW_Write                
+20000200  __STACK_END                 
+00000200  __STACK_SIZE                
+20000200  __STACK_TOP                 
+00003300  __TI_CINIT_Base             
+00003310  __TI_CINIT_Limit            
+000032e8  __TI_Handler_Table_Base     
+000032f4  __TI_Handler_Table_Limit    
+000014e5  __TI_auto_init              
+20000208  __TI_cleanup_ptr            
+00001a0b  __TI_decompress_none        
+00001a39  __TI_decompress_rle24       
+2000020c  __TI_dtors_ptr              
+00000000  __TI_static_base__          
+00001a19  __TI_zero_init              
+0000146b  __aeabi_memclr              
+0000146b  __aeabi_memclr4             
+0000146b  __aeabi_memclr8             
+000012b7  __aeabi_memcpy              
+000012b7  __aeabi_memcpy4             
+000012b7  __aeabi_memcpy8             
+0000146d  __aeabi_memset              
+0000146d  __aeabi_memset4             
+0000146d  __aeabi_memset8             
+ffffffff  __binit__                   
+ffffffff  __c_args__                  
+20000000  __stack                     
+000019b5  _args_main                  
+000016e9  _c_int00                    
+20000200  _lock                       
+000019f3  _nop                        
+000019eb  _register_lock              
+000019e5  _register_unlock            
+00001a3f  _system_pre_init            
+20000204  _unlock                     
+000017d5  abort                       
+ffffffff  binit                       
+00001739  copy_in                     
+000017dd  exit                        
+000032c8  g_psDefaultCodePointMapTable
+00003048  g_sFontCm12                 
+00003110  g_sFontCm16b                
+000031d8  g_sFontCm20b                
+000032a0  g_sILI9341_240x320x262K     
+000009d5  main                        
+20000210  main_func_sp                
+000012b7  memcpy                      
+00001473  memset                      
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address   name                        
+-------   ----                        
+00000000  __TI_static_base__          
+00000001  TFT_HW_Command              
+00000033  TFT_HW_Read                 
+00000200  __STACK_SIZE                
+000004b7  ILI9341_240x320x262K_Init   
+000009d5  main                        
+00000e71  GrFontGlyphRender           
+000010c5  GPIOPadConfigSet            
+000011f7  GrDefaultStringRenderer     
+000012b7  __aeabi_memcpy              
+000012b7  __aeabi_memcpy4             
+000012b7  __aeabi_memcpy8             
+000012b7  memcpy                      
+00001355  TFT_HW_SetRect              
+000013e5  GrRectFill                  
+0000146b  __aeabi_memclr              
+0000146b  __aeabi_memclr4             
+0000146b  __aeabi_memclr8             
+0000146d  __aeabi_memset              
+0000146d  __aeabi_memset4             
+0000146d  __aeabi_memset8             
+00001473  memset                      
+000014e5  __TI_auto_init              
+000015bd  GrContextInit               
+00001625  GrStringWidthGet            
+000016e9  _c_int00                    
+00001739  copy_in                     
+000017d1  C$$EXIT                     
+000017d5  abort                       
+000017dd  exit                        
+00001851  SysCtlPeripheralEnable      
+00001885  GrStringNextCharGet         
+000018b3  GrFontBaselineGet           
+000018df  GPIODirModeSet              
+00001909  TFT_HW_Write                
+00001931  GrFontInfoGet               
+00001957  GrFontGlyphDataGet          
+00001979  GrFontCodepageGet           
+00001999  SysCtlGPIOAHBEnable         
+000019b5  _args_main                  
+000019cd  GrStringDraw                
+000019e5  _register_unlock            
+000019eb  _register_lock              
+000019f3  _nop                        
+000019f9  GPIOPinTypeGPIOInput        
+00001a0b  __TI_decompress_none        
+00001a19  __TI_zero_init              
+00001a25  GrMapISO8859_1_Unicode      
+00001a2d  GPIOPinRead                 
+00001a33  GrContextFontSet            
+00001a39  __TI_decompress_rle24       
+00001a3f  _system_pre_init            
+00003048  g_sFontCm12                 
+00003110  g_sFontCm16b                
+000031d8  g_sFontCm20b                
+000032a0  g_sILI9341_240x320x262K     
+000032c8  g_psDefaultCodePointMapTable
+000032e8  __TI_Handler_Table_Base     
+000032f4  __TI_Handler_Table_Limit    
+00003300  __TI_CINIT_Base             
+00003310  __TI_CINIT_Limit            
+20000000  __stack                     
+20000200  __STACK_END                 
+20000200  __STACK_TOP                 
+20000200  _lock                       
+20000204  _unlock                     
+20000208  __TI_cleanup_ptr            
+2000020c  __TI_dtors_ptr              
+20000210  main_func_sp                
+ffffffff  __binit__                   
+ffffffff  __c_args__                  
+ffffffff  binit                       
+UNDEFED   SHT$$INIT_ARRAY$$Base       
+UNDEFED   SHT$$INIT_ARRAY$$Limit      
+
+[74 symbols]

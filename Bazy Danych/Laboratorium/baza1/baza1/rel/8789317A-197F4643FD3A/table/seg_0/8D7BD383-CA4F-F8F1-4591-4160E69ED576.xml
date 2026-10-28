@@ -1,0 +1,142 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8D7BD383-CA4F-F8F1-4591-4160E69ED576" name="Post">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>2E1C24FB-2949-B97D-F34E-02C77522D8F9</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_posta" id="233D83FE-11D4-F8AC-6FB5-BD6B444B15CA">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>3500D913-C1F1-F62C-B520-F856EB3F39C5</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tytul" id="423F863C-7639-5725-5D5F-84223EC8602F">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>462D0A44-37A3-E47C-E0D0-16AB0C3AC75E</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="opis" id="D79F15AB-3076-5E1A-C27C-12788D3A403B">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>F0EB3644-99A2-4C38-7F97-A27A0DEA71A4</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="url" id="58DD11E3-23CD-7794-70BE-48DBA075A726">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>D8959BDB-ED6C-51B0-EB66-FED305E4B9BE</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_dodania" id="D612C00D-CD5F-1D09-9415-3B88E351D661">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>E78E0A24-21C0-869C-64A9-5570637E6748</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Uzytkownik_id_uzytkownika" id="53CEDC37-A317-9204-B954-ACFAEF1CE346">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>6A623514-6B0F-6F3B-D87B-DA7C696EAB8D</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5E548087-0CCA-8437-D767-C8C554F2C1D7" referredColumn="20D52CCF-7510-A14A-542C-8D1F2728FF11"/>
+</associations>
+</Column>
+<Column name="Obraz_id_obrazka" id="9C3933FC-C804-12B8-20FD-54821AD68FD4">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>D988BCC4-BD1B-4616-5228-CA1C90C3C19E</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DD34AEFC-AD19-F897-2DBB-3D8023A4AA7B" referredColumn="3B98875C-0827-FBD0-5600-4DEA50AD87FF"/>
+</associations>
+</Column>
+<Column name="nsfw" id="ABF43755-5279-CF86-63B6-CC2F46B3BC3D">
+<createdBy></createdBy>
+<createdTime>2019-01-30 23:54:10 UTC</createdTime>
+<generatorID>FE41CE26-774B-EBD6-AFB0-BCBBC8F4900A</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7204B6EE-D580-AF18-EDAD-B82341630FFF" name="Post_PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>9A13BD8E-95F9-91B6-6F30-0C78F6CBCC09</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="233D83FE-11D4-F8AC-6FB5-BD6B444B15CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9B370E2B-0315-23E4-8EDF-009F3E66DD06" name="Post_Obraz_FK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>65A0D074-205A-8BA7-0891-085FA7E556FB</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9C3933FC-C804-12B8-20FD-54821AD68FD4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FBB60E4C-4771-621F-DF41-97F639CB4EC3" name="Post_Uzytkownik_FK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>FFE05334-C1B8-8DB1-E99A-37E72B3E69B3</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53CEDC37-A317-9204-B954-ACFAEF1CE346"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

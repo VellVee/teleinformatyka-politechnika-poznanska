@@ -1,0 +1,22 @@
+Utrzymanie B+ drzewa
+===============================================
+
+1,7,3,4,15,2,5
+
++ przepełnienie węzła
++ podział węzła
++ propagacja informacji i podziale węzła
++ dodanie nowego poziomu indeksu
+
+Metody dostępu
+-----------------------------------
+1. Sortowanie zewnętrzne (2-way)
+    - sortowanie
+    - scalanie
+    2N(1+[log[M-1](N/M))
+
+    a. Zagnieżdżona pętla
+    b. Sortuj i scalaj
+    c. Hash-join
+
+

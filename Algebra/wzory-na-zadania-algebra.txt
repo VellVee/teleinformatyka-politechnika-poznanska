@@ -1,0 +1,15 @@
+1. Niezależność liniowa wektorów:
+Dać wektory do macierzy, liczyć rzędy macierzy, jeżeli liczba rzędów jest równa liczbie wektorów to są one liniowo niezależne
+
+2. Macierz przejścia z B do B'
+Każdy nawias macierzy B' to suma wszystkich nawiasów z B pomnożonych razy x1, x2, x3... Potem rzucić x1, x2, x3... do macierzy i wychodzi macierz przejścia (ilość kolumn macierzy równa ilości nawiasów w B, ilość wierszy równa ilości nawiasów w B')
+
+3. Współrzędne wektora v w bazie B
+Wektor to suma nawiasów bazy pomnożonych przez czynniki x1, x2, x3... [x1, x2, x3...] to współrzędne wektora w bazie
+
+6. Macierz przekształcenia.
+(jakaś macierz A) jest macierzą przekształcenia L:R->R w bazie standardowej (jakaś baza B). Jaka będzie macierz przekształcenia L w bazie (jakaś nowa baza C)
+Wzór: A'=P^-1*A*P^-1*A*P
+A' - nowa macierz przekształcenia
+P - macierz utworzona z nawiasów bazy C (P^-1 to odwrotność tej macierzy)
+A - macierz przekształcenia w bazie standardowej

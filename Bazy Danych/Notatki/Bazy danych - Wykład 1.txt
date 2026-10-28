@@ -1,0 +1,53 @@
+Przetwarzanie transakcyjne
+===========================================
+
+Zagrożenia dla poprawnego stanu bazy danych
+---------------------------------------------
+1. Awarie platformy sprzętowo-programowej
+    - Przerwanie procesu przetwarzania
+    - Utrata danych
+2. Użytkownicy baz danych
+3. Współbierzny dostęp do danych
+
+
+Jednostki pracy z bazą danych 
+---------------------------------------------
+* Sesja
+* Pojedyczne operacje SQL
+* Pojedyczne operacje na stanie bazy danych
+    - Odczyt
+    - Zapis
+* Transakcje
+    * COMMIT
+    * ROLLBACK
+
+Własności transakcji
+--------------------------------------------
+A   - atomowość
+C   - spójność
+I   - izolacja
+D   - trwałość
+
+
+Buforowanie bazy danych
+--------------------------------------------
+Dane wczytywane są do pamięcie operacyjnej. W tym czasie może nastąpić awaria.
+
+Anomalie procesu przetwarzania
+--------------------------------------------
+1. Niezatwierdzone modyfikacje
+2. Utrata zatwierdzonych modyfikacji
+
+Logi
+--------------------------------------------
+```
+<1,1,S>
+<LSN, identyfikator transakcji, operacja rozpoczęcia transakcji> 
+
+<2,2,W,X,100,200>
+<LSN, identyfikator transakcji, typ operacji, id danej, stara wartość, nowa wartość> 
+
+<3,1,C>
+C - commit
+```
+

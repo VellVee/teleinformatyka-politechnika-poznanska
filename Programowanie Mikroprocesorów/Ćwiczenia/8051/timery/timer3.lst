@@ -1,0 +1,57 @@
+     1        0097      DISPLAY EQU P1.7
+     2        0001      PRZYCISK EQU 00000001B	
+     3                  
+     4  0000: 02 01 00  		LJMP 	START
+     5  0100:           		ORG 	100H
+     6  0100:           START:
+     7  0100: 75 89 70  		MOV		TMOD,#01110000B
+     8  0103: 75 8B FC  		MOV		TL1,#0FCH
+     9  0106: 75 8D FF  		MOV		TH1,#0FFH
+    10  0109: D2 8E     		SETB	TR1
+    11                  		
+    12  010B: 78 30     		MOV R0, #CSDS
+    13  010D: 74 01     		MOV A, #PRZYCISK
+    14  010F: F2        		MOVX @R0, A
+    15                  		
+    16  0110:           WYSWIETL:
+    17  0110: 12 81 0C  		LCALL LCD_CLR 
+    18  0113: A9 8D     		MOV R1, TH1
+    19  0115: 12 81 04  		LCALL WRITE_HEX
+    20  0118: E5 8B     		MOV A, TL1
+    21  011A: 12 81 04  		LCALL WRITE_HEX
+    22  011D: 30 8F 04  		JNB TF1, LOOP
+    23  0120: C2 8F     		CLR	TF1
+    24  0122: B2 97     		CPL DISPLAY
+    25                  		
+    26  0124:           LOOP:		
+    27  0124: E9        		MOV		A,R1
+    28  0125: B5 8B E8  		CJNE A, TL1, WYSWIETL
+    29  0128: 80 FA     		SJMP LOOP
+    30  012A: 00        		NOP
+    31                  		
+    32  012B:           LOOP1:
+    33  012B: 30 B5 FD  		JNB P3.5, LOOP1
+    34                  		
+    35  012E:           SLEEP:
+    36  012E: 20 B5 FD  		JB P3.5, SLEEP
+    37  0131: E5 8B     		MOV A, TL1
+    38  0133: B4 FF 10  		CJNE A, #11111111B, L1
+    39  0136: 75 8D 00  		MOV TH1, #0 
+    40                  		
+    41  0139: E5 8D     		MOV A, TH1
+    42  013B: B4 FF 0D  		CJNE A, #11111111B, L2
+    43  013E: 75 8D 00  		MOV TH1, #0 
+    44                  		
+    45  0141: D2 8F     		SETB TF1
+    46  0143: 02 01 10  		LJMP WYSWIETL
+    47                  		
+    48  0146:           L1:
+    49  0146: 05 8D     	INC TH1
+    50  0148: 02 01 10  	LJMP WYSWIETL
+    51                  	
+    52  014B:           L2:
+    53  014B: 05 8B     	INC TL1
+    54  014D: 02 01 10  	LJMP WYSWIETL
+    55  0150: 00        	NOP
+    56                  	
+    57                  		

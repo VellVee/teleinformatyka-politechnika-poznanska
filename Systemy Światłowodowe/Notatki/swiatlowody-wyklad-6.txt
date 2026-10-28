@@ -1,0 +1,58 @@
+Optical Modulators and Modulation Formats Tx2
+============================================
+
+Przypomnienie:
+System koherentny zawiera element odniesienia, dzięki któremu odbiornik jest w stanie odczytać parametry procesu falowego (np. amplitudę, fazę). Normalnie fotodioda nie potrafi odczytywać tych paramaterów. Otwiera to możliwości użycia różnych rozwiązań m.in. modulacji. 
+
+Po co inne metody modulacji?
+Pozwalają na lepsze wykorzystanie pasma. W zależności od wyboru modulacji możemy "upchnąć" w paśmie większą ilość inforamcji. 
+
+Digital data modulation
+--------------------------------------------
+- W modulacjach cyfrowych używamy alfabetu binarnego o różnej ilości bitów 
+
+- Modulacja amplitudy - ASK (Amplitude Shift Keying)
+- Modulacja fazy - PSK (Phase Shift Keying)
+- Modulacja częstotliwości - FSK (Frequency Shift Keying)
+- Modulacja stanu polaryzacji - SOP (State of polarisation) 
+    --> PolSK (Polarisation Shift Keying)
+- różne kombinacje wielu modulacji
+
+--------------------------------------------
+Długość fali (wavelenght) rezerwujemy sobie do multipleksji.
+--------------------------------------------
+
+Jak działa modulator fazy?
+--------------------------------------------
+Wykorzystywany jest efekt eletrooptyczny - pole elektryczne zmienia właściwości optyczne (współczynnik załamania)
+
+Jak działa modulator intensywności?
+--------------------------------------------
+Reprezentowany jest przez modulator elektoabsorbcyjny. 
+
+Modulator Macha-Zehndera (MZM)
+--------------------------------------------
+Jest to układ interferencyjny który w sposób domyślny działa jako modulator amplitduy, ale także może działac jako bardzo sprawny modulator fazy.
+
+Interferometr Macha-Zehndera:
+Mamy wiązkę optyczną i dzielimy ją na dwie części - połowa przechodzi przez zwierciadło, połowa odbija się do góry. Te dwie wiązki łączymy później z powrotem (na rysunku z tablicy). Mamy dzięki temu dwa procesy falowe. Jesli fazy tych dwóch wiązek są zgodne, to wyjście jest wzmocnione. Jeśli nie ma strat (zwykle są), to mamy maksymalną intensywność światła, w przeciwnym wypadku mamy wygaszenie światła. Jeżeli potrafimy kontrolować tą różnicę fazy, to możemy uzyskać efekt modulacji amplitudy.
+Elektrody obecne w interferometrze wymuszają odpowiednie zależności na obu falach. 
+
+----------------------------------------------
+
+Konfiguracja single-drive MZM
+Po rozdzieleniu wiązki, górna wiązka modyfikowana jest przez przeuswnik fazowy.
+
+Konfiguracja dual-drive MZM:
+Mamy dwa przesuwniki fazowa, które działają w przeciwnych kierunkach. Wymagane jest dwukrotnie większe napięcie sterujące. 
+
+---------------------------------------------
+
+Mamy dwa sposoby modulacji: NRZ (Non-return to Zero) lub RZ (Return to Zero). Na slajdach mamy budowę modulatorów dla obu typów.
+
+Modulacja róznicowa-fazowa - DPSK
+----------------------------------------------
+Jeżeli mamy zmodulowany sygnał, to możemy wykorzystać laser odniesienia (który daje nam stabilną fazę) i sprzęgacz kierukowy, aby rozpoznać zmianę fazy. Lasery muszą być stabilne i są dość drogie. Alternatywą może być system detekcji autokoherentnej, która nie potrzebuje lasera. Nazywamy to modulacją różnicową.    
+
+
+

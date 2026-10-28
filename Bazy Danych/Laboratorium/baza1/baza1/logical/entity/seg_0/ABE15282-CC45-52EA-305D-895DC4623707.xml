@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="ABE15282-CC45-52EA-305D-895DC4623707" name="Glos_Posta">
+<createdBy></createdBy>
+<createdTime>2019-01-30 20:34:53 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_glosu_posta" id="31288C2C-386F-4A7D-221E-2E9160A558EA">
+<createdBy></createdBy>
+<createdTime>2019-01-30 20:35:02 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="ocena" id="8C3B6787-110B-9483-E4BC-D0B03666AA7E">
+<createdBy></createdBy>
+<createdTime>2019-01-30 20:36:29 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_uzytkownika" id="4C0550BA-C7C3-10FD-5858-3D844DB40073">
+<createdBy></createdBy>
+<createdTime>2019-01-30 20:44:50 UTC</createdTime>
+<generatorID>1F37A4C6-3D93-DBA0-E42A-FA3CBCB8C228</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>CB59ACCB-ADFA-281A-2871-D05B99B2DF81</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_posta" id="FC9B6BFF-4119-DB26-9E7E-BA4D46419F0D">
+<createdBy></createdBy>
+<createdTime>2019-01-30 20:46:47 UTC</createdTime>
+<generatorID>D2210CA3-C593-40FC-756A-61F3048A7287</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>3500D913-C1F1-F62C-B520-F856EB3F39C5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6EADA266-D584-6401-0834-A0AD20B03458" name="Glos_Posta PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 20:48:18 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>31288C2C-386F-4A7D-221E-2E9160A558EA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,64 @@
+Synchronizacja transakcji
+============================================
+
+1. Natychmiastowe wykonanie
+2. Opóźnij operacje
+3. Wycofaj transakcje
+4. Nic nie rób
+5. Przyspiesz operację
+
+Protokoły synchronizacji transakcji
+============================================
+
+1. Lokowanie dwufazowe (2PL↓↓→)
+2. Znaczniki czasowe 
+3. Wielowersyjność
+4. Protokoły optymistyczne
+
+Lokowanie dwufazowe
+--------------------------------------------
+Typy blokad:
+- do odczytu R (S)
+- do zapisu W (X)
+
+
+Tj/Ti  -    R    W      i!=j
+--------------------
+R |   TAK  TAK  NIE
+W |   TAK  NIE  NIE
+
+
+x    R    W
+-------------
+R |  R    W
+W | TAK  NIE
+
+
+Przykładowe zadanie:
+r1[x], r2[x], w1[x], r1[y], w1[y], r2[y], c2, c1
+1.      2.    3.     4.     5.     6.     7.  8.
+
+r1[x], r2[x], r2[y], c2, w1[x], r1[y], w1[y], c1
+
+!!! Protokół blokowania dwufazowego na kolokwium!
+
+Wady protokołu blokowania dwufazowego
+=============================================
+
+1. Niski stopień współbierznośći
+2. Zakleszczenie transakcji
+
+r1[x], r2[x], w1[x], w2[x], c1, c2
+
+Blokada na poziomie calej tabeli
+----------------------------------------------
+LOCK TABLE Pracownicy IN EXCLUSIVE MODE
+
+Macierz kompatybilności blokad zakładanych na tabelach:
+
+      IR   IW   R    W
+--------------------------------
+IR | TAK  TAK  TAK  TAK
+IW | TAK  TAK  NIE  NIE
+R  | TAK  NIE  TAK  NIE
+W  | NIE  NIE  NIE  NIE

@@ -1,0 +1,14 @@
+     1  0000: 02 01 00  	LJMP START 
+     2  0100:           	ORG 100H 
+     3  0100:           START:
+     4  0100: 12 81 0C  	LCALL LCD_CLR ;
+     5  0103: 78 40     	MOV R0, #40H 
+     6  0105: 79 0A     	MOV R1, #10 
+     7                  	
+     8  0107:           ZAPETLENIE: 
+     9  0107: 76 00     	MOV @R0, #0  
+    10  0109: 08        	INC R0
+    11  010A: E8        	MOV A, R0 
+    12  010B: 12 81 04  	LCALL WRITE_HEX 
+    13  010E: 12 81 12  	LCALL DELAY_100MS
+    14  0111: D9 F4     	DJNZ R1, ZAPETLENIE ; zmniejszam o 1 i wykonuje petle jeszcze raz

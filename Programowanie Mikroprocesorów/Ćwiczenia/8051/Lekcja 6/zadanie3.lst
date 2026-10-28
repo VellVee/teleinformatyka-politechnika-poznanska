@@ -1,0 +1,89 @@
+     1        0096      SEG_ON EQU P1.6 ;
+     2        FF30      F_CSDS EQU 0FF30H ;
+     3        FF38      F_CSDB EQU 0FF38H ;
+     4                  
+     5        0030      WYBOR EQU 30H
+     6        0038      DANE EQU 38H
+     7                  
+     8        0001      DISPLAY6 EQU 00000001B
+     9        0002      DISPLAY5 EQU 00000010B
+    10        0004      DISPLAY4 EQU 00000100B
+    11        0008      DISPLAY3 EQU 00001000B
+    12        0010      DISPLAY2 EQU 00010000B
+    13        0020      DISPLAY1 EQU 00100000B
+    14                  
+    15        0038      COD5 EQU 00111000B;L
+    16        0079      COD4 EQU 01111001B;E
+    17        003E      COD3 EQU 00111110B;W
+    18        0077      COD2 EQU 01110111B;A
+    19        0073      COD1 EQU 01110011B;P
+    20                  
+    21        000A      DELAY EQU 10
+    22                  
+    23                  
+    24                  
+    25  0000: 02 01 00  	LJMP START
+    26  0100:           	ORG 100H
+    27  0100:           START:
+    28                  	;1
+    29  0100: 78 30     	MOV R0,#WYBOR ;
+    30  0102: 74 20     	MOV A,#DISPLAY1
+    31  0104: F2        	MOVX @R0,A
+    32                  	
+    33  0105: 79 38     	MOV R1, #DANE; bufor danych wskaznika
+    34  0107: 74 73     	MOV A,#COD1
+    35  0109: F3        	MOVX @R1,A
+    36                  	
+    37  010A: C2 96     	CLR SEG_ON
+    38  010C: 74 0A     	MOV A, #DELAY
+    39  010E: 12 81 12  	LCALL DELAY_100MS
+    40                  	;2
+    41  0111: 78 30     	MOV R0,#WYBOR ;
+    42  0113: 74 10     	MOV A,#DISPLAY2
+    43  0115: F2        	MOVX @R0,A
+    44                  	
+    45  0116: 79 38     	MOV R1, #DANE; bufor danych wskaznika
+    46  0118: 74 77     	MOV A,#COD2
+    47  011A: F3        	MOVX @R1,A
+    48                  	
+    49  011B: C2 96     	CLR SEG_ON
+    50  011D: 74 0A     	MOV A, #DELAY
+    51  011F: 12 81 12  	LCALL DELAY_100MS
+    52                  	;3
+    53  0122: 78 30     	MOV R0,#WYBOR ;
+    54  0124: 74 08     	MOV A,#DISPLAY3
+    55  0126: F2        	MOVX @R0,A
+    56                  	
+    57  0127: 79 38     	MOV R1, #DANE; bufor danych wskaznika
+    58  0129: 74 3E     	MOV A,#COD3
+    59  012B: F3        	MOVX @R1,A
+    60                  	
+    61  012C: C2 96     	CLR SEG_ON
+    62  012E: 74 0A     	MOV A, #DELAY
+    63  0130: 12 81 12  	LCALL DELAY_100MS
+    64                  	;4
+    65  0133: 78 30     	MOV R0,#WYBOR ;
+    66  0135: 74 04     	MOV A,#DISPLAY4
+    67  0137: F2        	MOVX @R0,A
+    68                  	
+    69  0138: 79 38     	MOV R1, #DANE; bufor danych wskaznika
+    70  013A: 74 79     	MOV A,#COD4
+    71  013C: F3        	MOVX @R1,A
+    72                  	
+    73  013D: C2 96     	CLR SEG_ON
+    74  013F: 74 0A     	MOV A, #DELAY
+    75  0141: 12 81 12  	LCALL DELAY_100MS
+    76                  	;5
+    77  0144: 78 30     	MOV R0,#WYBOR ;
+    78  0146: 74 02     	MOV A,#DISPLAY5
+    79  0148: F2        	MOVX @R0,A
+    80                  	
+    81  0149: 79 38     	MOV R1, #DANE; bufor danych wskaznika
+    82  014B: 74 38     	MOV A,#COD5
+    83  014D: F3        	MOVX @R1,A
+    84                  	
+    85  014E: C2 96     	CLR SEG_ON
+    86  0150: 74 0A     	MOV A, #DELAY
+    87  0152: 12 81 12  	LCALL DELAY_100MS
+    88                  	
+    89  0155: 80 A9     	SJMP START

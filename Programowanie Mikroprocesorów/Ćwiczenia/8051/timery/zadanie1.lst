@@ -1,0 +1,48 @@
+     1        0096      SEG_ON EQU P1.6 ;włączenie wyświetlacza 7-segm.
+     2        0097      LED_ON EQU P1.7
+     3                  ;Pełne adresy urządzeń we/wy systemu DSM-51
+     4        0001      DISPLAY1 EQU 00000001B
+     5        0000      COD1 EQU 00000000B;
+     6                  
+     7  0000: 02 01 00  	LJMP START
+     8  0100:           	ORG 100H
+     9  0100:           START:
+    10  0100: 75 89 40  	MOV TMOD, #01000000B ;Timer 0 w tryb licznika w trybie 0
+    11  0103: 75 8B F0  	MOV TL1, #240
+    12  0106: 75 8D F0  	MOV TH1, #240
+    13  0109: 79 00     	MOV R1, #0
+    14  010B: D2 8E     	SETB TR1
+    15                  	
+    16  010D: 78 30     	MOV R0,#CSDS
+    17  010F: 74 01     	MOV A,#DISPLAY1
+    18  0111: F2        	MOVX @R0,A
+    19                  	
+    20  0112: 78 38     	MOV R0,#CSDB
+    21  0114: 74 00     	MOV A,#COD1
+    22  0116: F2        	MOVX @R0,A
+    23                  	
+    24  0117: 12 81 0C  	LCALL LCD_CLR
+    25  011A: C2 96     	CLR SEG_ON
+    26                  
+    27  011C:           PETLA:
+    28  011C: 20 8F 19  	JB TF1, OVERFLOW
+    29  011F: E9        	MOV A, R1
+    30  0120: B5 8B 04  	CJNE A, TL1, DISPLAY
+    31  0123: E5 8B     	MOV A, TL1
+    32  0125: 80 F5     	SJMP PETLA
+    33                  	
+    34  0127:           DISPLAY:
+    35  0127: 12 81 0C  	LCALL LCD_CLR
+    36  012A: A9 8B     	MOV R1, TL1
+    37  012C: E5 8D     	MOV A, TH1
+    38  012E: 12 81 04  	LCALL WRITE_HEX
+    39  0131: E5 8B     	MOV A, TL1
+    40  0133: 12 81 04  	LCALL WRITE_HEX
+    41  0136: 80 E4     	SJMP PETLA
+    42                  	
+    43  0138:           OVERFLOW:
+    44  0138: C2 8F     	CLR TF1
+    45  013A: B2 97     	CPL LED_ON
+    46  013C: 75 8B FA  	MOV TL1, #250
+    47  013F: 75 8D FF  	MOV TH1, #255
+    48  0142: 80 D8     	SJMP PETLA

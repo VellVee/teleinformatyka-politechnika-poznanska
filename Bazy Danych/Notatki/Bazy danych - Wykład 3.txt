@@ -1,0 +1,99 @@
+Przykładowy szkic aplikacji: Aplikacja do rezerwacji miejsc w kinie
+
+```
+SELECT status INTO :st FROM rezerwacje WHERE id_miejsca=:m AND id_seansu=:sn
+if (:s='W') then
+    UPDATE rezerwacje 
+    SET status='2'
+    WHERE id_miejsca=:m, AND id_seans=:sn
+else ...
+```
+
+- "INTO :st" - wynik "SELECT status" zapamiętujemy w zmiennej :st
+- :st - status
+- :sn - seans
+- :m - miejsce
+- if (:s='W') - Jeśli status miejsca to "Wolne" 
+
+Tak zapisane polecenie nie uwzględnia przypadku w którym wiele użytkowników próbuje zarezerwować to samo miejsce. Wszyscy użytkownicy zobaczą, że miejsce jest wolne.  
+
+Anomalie współbieżnego dostępu do bazy danych 
+========================================================
+
+### Utracona modyfikacja
+Przykład:
+    r1[x], r2[x], w1[x], w2[x]
+
+    Operacje r1[x], w1[x] są wykonywane przez użytkownika 1
+    Operacje r2[x], w2[x] są wykonywane przez użytkownika 2
+
+    r1[x] - user 1 widzi 2500zł
+    r2[x] - user 2 widzi 2500zł
+    w1[x] - dodajemy do stanu konta x = x+5000
+    w2[x] - od x odejmujemy 500 (x=x-500) - tutaj odczytaliśmy starą wartość (2500 - 500zł = 2000zł) - BŁĄD!
+
+    Wynik operacji w1[x] zniknął, ponieważ operacje nie były współbierzne. 
+
+### Rozmyty (niepowtarzalny) odczyt
+Przykład: 
+    r1[x], w1[x], r2[x], r1[x], r2[x], c2, w1[y],c1
+    Dany jest bank o dwóch kontach - x i y. Suma wszystkich kont to x+y. 
+    Stany początkowe: 
+        x = 5000
+        y = 100000
+
+    w1[x] = 5000-1000=4000
+    r2[y] = 100000+1000=101000
+    Teraz x+y = 4000+100000 = 104000 (zamiast 105000). 
+
+
+Model poprawnego wykonywania współbieznych transakcji
+=========================================================
+
+Dana jest opraracja współbierzna T1, T2, T3. 
+Historia sekwencyjna T2-->T3-->T1. 
+Równoważność stanowa - gwarantuje, że po odczycie danych w dowolnym momencie, stany będą dokładnie takie same.
+ 
+## Uszeregowalność [U c I]
+## Konfliktowość operacji
+
+Przykłady:
+1. ..., r1[x], ..., w2[x], ...  K
+2. ..., r1[x], ..., w2[x], ...  NK
+3. ..., w1[x], ..., w2[x], ...  K
+4. ..., r1[x], ..., r2[x], ...  NK
+5. ..., r1[x], ..., w2[x], ...  NK
+    K - operacja konfliktowa
+    NK - operacja niekonfliktowa 
+Konfliktowość operacji to inaczej brak przemienności. Przemienność opisuje czy coś się zmieni, jeżeli zmienimy kolejność dwóch operacji. 
+Np. zamienimy miejscami r1[x] i w2[x]. Jesli opearacje są przemienne to użytkownik zawsze zobaczy to samo.  sąkonfliktowe. 
+
+Para operacji - O,[x],O,[y] jest konfliktowe, jeśli:
+1. x=y AND 
+2. i!=j AND
+3. typ(Oi) OR typ(Oj)=w
+
+
+Relacja konfliktowości transakcji 
+========================================================
+
+Zbiór relacji knfliktowych historii Hi jest taki sam jak zbiór relacji konfliktowych historii Hj.
+
+Zadanie:
+Szukamy operacji konfliktowych:
+           xxxxxxxx           xxx-----xxx
+H1: r1[x],w1[x],r2[x],r1[y],r2[y],c2,w1[y],c1
+
+            xxxxxxx     xxx----------xxx
+H2: r1[x],r2[x],w1[x],r2[x],c1,r1[y],w1[y]
+
+h1 = { T1, Lx T2, T2 Ly T1 }
+h2 = { l2 Lx T1, T2 Ly T1 }
+
+h(T1->T2) = { T1 Lx T2, T1 Ly T2 }
+h(T1->T1) = { T2 Lx T1, T2 Ly T1 }
+
+Graf uszeregowalności transakcji 
+=======================================================
+Graf którego węzły reprezentują transakcje. Umozliwia dużo szybsze wykrywanie operacji konfliktowych. Będzie na kolokwium!
+Rysujemy przykładowy graf dla powyższych historii H1 i H2 (mam w zeszycie).

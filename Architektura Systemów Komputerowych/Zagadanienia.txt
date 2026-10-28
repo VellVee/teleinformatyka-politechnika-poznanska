@@ -1,0 +1,41 @@
+- slajdy z The Big Picture (hierarchia pamięci)
+- źródła nietrafień
+- coś z potokiem
+- co to jest hierarchia pamięci
+- typy pamięci podręcznej, sposób jej adresowania
+- idea potoku, zagrożenia potoku
+- multiple issue - sposoby rozwiązywania - statyczne i dynamiczne, spekulowanie
+- co to są wyjątki i przerwania, jaka jest akcja na skutek wyjątku i przerwania
+- sposoby obchodzenia zagrożeń potoku - predykcja i skok opóźniony
+- zagrożenia strukturalne 
+
+Schematów blokowych nie będzie
+ 
+- podstawowe 3 typy instalacji i na czym one polegają - skoki i jeszczejakieś 2 inne
+- jakie operacje są wykonywane w procesorze sa...
+- jak wykonuje się mnożenie, dzielenie, dodawanie, odejmowanie zmiennoprzecinkowe
+- fazy wykonywania się instrukcji
+
+Tryby adresowania
+1. Natychmiastowy
+2. Bezpośredni
+3. Pośredni
+cylinder --> ścieżka --> sektor
+
+- podstawowe instrukcje ARMa
+- operacje logiczne - 4 podstawowe
+	- AND
+	- OR
+	- XOR
+	- NOT
+	
+MVN - move negated
+
+- przesunięcia
+- transfery danych 
+	- load LD
+	- store ST
+
+- z pierwszego wykładu tylko slajd "części komputera" i prawo Amdahla 
+
+- wszystkie instrukcje skoku zaczynają się od B, a jak jest same B to skok jest bezwarunkowy

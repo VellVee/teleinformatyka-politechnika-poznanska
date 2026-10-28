@@ -1,0 +1,9 @@
+Sterowanie:
+
+strzałki - poruszanie się w przestrzeni
+kółko myszki - przybliżanie i oddalanie
+przycisk myszy i ruch - obracanie kamery
+
+Działanie:
+
+w zależności od odległości modelu słonia od kamery wyświetlany jest model z innym poziomem szczegółów

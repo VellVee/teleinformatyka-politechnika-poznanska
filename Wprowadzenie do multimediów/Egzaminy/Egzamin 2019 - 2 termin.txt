@@ -1,0 +1,24 @@
+1. Mężczyzna o wzroście H = 2m stoi w odległości od kamery d = 10m o obiektywie długości ogniskowej f = 10mm. Przetwornik 2000x2000px. Okres próbkowania Ts=5 mikro_m. Na ilu liniac obrazu mieści się mężczyzna?
+
+2. Filtry obrazu (2-wymiarowe). Dany jest obraz. Dla zaznaczonej próbki wyznacz:
+	a) Wyjście filtru medianowego z maską 3x3
+	b) Otwarcie z maską 3x3
+
+3. Obraz monochromatyczny z sygnałem o ograniczonym paśmie fg = 10 [1/mm]. Ograniczenie pasma kołowe na płaszczyźnie (f1, f2). Wyznacz minimalną gęstość próbkowania, czyli minimalną liczbę próbek na 1 mm^2 dla próbkowania prostokątnego. 
+
+4. W kinie stereoskopowym widz siedzi w odległości 6 m od ekranu. Wyznacz rozbieżność w milimetrach, jeśli obiekt widziany jest:
+	a) w odległości 4 m od widza.
+	b) w odległości 2 metrów za ekranem
+
+5. Kompresja fonii. Schemat MPEG-1 wersja III.
+
+6. AVC: Jedenostki NAL - objaśnić, budowa, funkcje, typy
+
+7. Przedstaw wykorzystywany w kompresji model narządu mowy człowieka. Co to są formanty i ton krtaniowy?
+
+8. Określenie głośności. Jednostka głośności.
+	B) Dźwięk A o częstotliwośći 1kHz z ciśnieniem fali akustycznej 3 mPa. Ile wynosi głośność dźwięku B (jednostki!!) o częstotliwości 1 kHz, gdzie poziom ciśnienia akustycznego jest o 20dB większy od A.
+
+9. Strumień AVC - struktura makrobloku. Jakie jednostki semantyczne są przesyłane w makrobloku?
+
+10. Narysować schemat blokowy kodera wizji AVC (objaśnić!)

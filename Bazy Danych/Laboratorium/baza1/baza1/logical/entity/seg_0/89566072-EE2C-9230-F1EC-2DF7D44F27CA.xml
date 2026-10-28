@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="89566072-EE2C-9230-F1EC-2DF7D44F27CA" name="Substrypcja">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:13:17 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_subskrypcji" id="59915DBC-ED35-422C-EDE1-72598E0688C6">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:13:28 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="powiadomienia_email" id="678A0B7E-1F9F-531C-D238-B272DF358B46">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:13:37 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="ilosc" id="99F1C61D-CED2-424C-18B0-27DC5A3E58FC">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:17:22 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="czestotliwosc" id="EC54377A-B62D-0075-5D55-9F40D97CC0F7">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:15:49 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+</Attribute>
+<Attribute name="data_dodania" id="BB38EC0F-FD41-685E-F81B-E4180C8E8B1A">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:16:35 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+</Attribute>
+<Attribute name="id_uzytkownika" id="9C3D3397-480B-599B-1CEB-8EE75B7F7AA8">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:17:45 UTC</createdTime>
+<generatorID>D463623D-AD37-C663-C704-E69D5809A1E2</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>CB59ACCB-ADFA-281A-2871-D05B99B2DF81</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="26FD796D-31BD-8392-80E1-8C513F764BB1" name="Substrypcja PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:16:26 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>59915DBC-ED35-422C-EDE1-72598E0688C6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

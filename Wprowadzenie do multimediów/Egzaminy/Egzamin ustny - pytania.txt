@@ -1,0 +1,92 @@
+Pytania z egzaminu ustnego - I termin - Teleinformatyka 2018
+=============================================================================
+
+1.fotometria , wielkości zależności jednostki 
+2. Maskowanie 
+3.schemat blokowy kodera avc jakiś jeszcze schemat i wykorzystywane metody
+
+1. Opisac analize subpasmowa(wzory, schematy) Obliczyc czestotliwosc graniczna i szerokosc pasma przepustowego gdy czestotliwosc probkowania =48kHz
+2.Opisac projektowanie filtru dolnopasmowego, warunki, przyklad
+3.Opisac obrazy typu B, sposob predykcji, opoznienie, przyklady uzycia
+
+Transmisyjne współrzędne barw - uzasadnienie stosowania, transformacje z układów RGB, relacja do transformacji gamma, odmiany, zastosowania
+
+1. Heksagonalne próbkowanie obrazu. Porównanie z próbkowaniem ortogonalnym. 
+2. Jednostki NALU - funkcje, zastosowania, typy.
+3. Estymacja ruchu - zasady, problemy, metody
+
+1. Generacje technik kompresji obrazów ruchomych 
+2. Deskryptory obrazów 
+3. Strumień binarny w kodeku MUSICAM
+
+1. schemat MP3 i porownanie do schematu MPEG-1 warstwy 2
+2. Koder CABAC (schemat, modelowanie) i zastosowanie
+3. RGB, XYZ, IHS, konwertowanie z RGB i zastosowanie
+
+1. Dźwięk- głośność i jej pomiary, progi słyszenia, zjawisko maskowania i jego wykorzystanie.
+2. Metody oceny jakości obrazu.
+3. Formaty obrazów ruchomych (rozdzielczość, proporcje, próbkowanie chrominancji).
+
+1. Cele normalizacji, zasady normalizacji, proces tworzenia norm, organizacje, numeracja norm. 
+2. Kompresja obrazu według normy JPEG. 
+3. Estymacja głębi stereoskopowej - określone problemy, stosowane techniki, optymalizacja, zastosowania
+
+Cechy sluchu ludzkiego w kompresji fonii. Czestotliwosc przestrzenna, co to i jednostki. Estymacja ruchu, metody.
+Wlasciwosci dwuwymiarowej transformaty fouriera, sbr, gop
+Dwuwymiarowej TF sygnalu dyskretnego*
+Model psychoakustyczny w fonii. Dwuwymiarowa transformata Fouriera właściwości, przykład wyliczyć. Kodowanie progresywne i hierarchiczne w Jpeg
+
+Tryb CBR kodowania sekwencji wizyjnych i odpowiednie techniki regulacji prędkości transmisji. Zastosownaia. 
+
+3.strumien binarny w musicam
+
+1. Mieszanie addytywne i subtraktywne 
+2. DFT przykład, analiza obliczeniowa i widmowa 
+3. Koder AVC
+
+1. Co to jest plaster i jak jest związany z CABAC
+2. Wymyśl dyskretny nietrywialnt sygnał dwuwymiarowy (przynajmniej 3 wartości niezerowe) i wyznacz jego transformatę
+3. CELP - koder, dekoder, zasada działania, parametry
+
+1. Kodowanie subpasm dzwieku 
+2. kompresja stratna jpeg 
+3. deskryptory obrazu
+
+Techniki kompresji bezstratnej obrazu. Podstawowe dwa etapy. 
+
+Wielkości psychofizyczne i psychofizjologiczne charakteryzujące światło widzialne. 
+
+1)Współrzędne trojchromatyczne( realizacja,reguły,ograniczenia,wykresy)
+2) kompresja według standardu avc metoda wybierania międzyliniowego -kodowanie ramkowe i kodowanie polowe -opis, wykorzystanie, porównanie
+3) standard jpeg -kodowanie bezstratne
+
+1. Wspólne cechy technik kompresji bezstratnej obrazu.
+2.Trzy warstwy MPEG-1
+3.LPC
+
+1. Ekstrakcja krawędzi w obrazie
+2. Kompresja fonii techniką MPEG-1 warstwa II
+
+1 dwuwymiarowe filtry fir-wlasnosci, rownania, 
+2 koder i dekoder avc(schemat), 
+3 zadania cyfrowego przetwarzania sygnałów
+
+1. Operacje algebraiczne przetwarzania obrazów (na wejściu 2 obrazy), 
+2. Układ współrzędnych XYZ zastosowanie opis, 
+3. Techniki kompresji mowy
+
+1.Wyznacz minimslną rozdzielczość zdjęcia 30x20 oglądanego z odległości 30 cm
+2.Zastosowanie reprezentacj barw za pomocą RGB. Odmiany układu RGB.
+3.Techniki kodowania bezstratnego obrazu podtawowe etapy
+
+1. Kodek mpeg 2 warstwy 3 i różnicę między 3 a 2 
+2. Algorytm kodowania arytmetycznego i schemat CABAC, zastosowanie
+3. RGB,IHS,XYZ konwersja pomiędzy nimi, wykresy, zastosowanie
+
+1. Heksagonalne próbkowanie obrazu. Porównanie z próbkowaniem ortogonalnym.
+2. Jednostki NAL - funkcje, zastosowania, typy
+3. Estymacja ruchu - zasady, problemy, metody
+
+1 kompresja sekwencji z wybieraniem miedzyliniowym - problemy i rozwiązania w avc
+2 operację morfologiczne na obrazach - różne operację, określenia, zastosowania
+3 dwuwymiarowy dyskretny splot liniowy - określenie właściwości, realizacje

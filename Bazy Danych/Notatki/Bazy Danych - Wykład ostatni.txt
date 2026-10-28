@@ -1,0 +1,24 @@
+Przykładowe zadania 
+===================================
+
+Zadanie 4 
+----------------------
+a)
+H1: r1(x),r2(y),w3(z),w1(x),r1(z),r1(y),r2(x),w2(x),c1,r2(z),r3(z),c2,c3
+
+1. Najpierwsz analizujemy same x'
+2. Analizujemy cykliczność grafu - jeśli są pętle, to znaczy że graf jest nieuszeregowany
+
+Odp. Graf jest acykliczny, a więc graf jest uszeregowanyq
+
+b)
+H 2 :  r1[x], r2[x], r3[z], w2[y], w2[x], r3[y], c3, w1[y], c2, r1[z], c1
+
+Ta sama dana, jedna operacja zapisu, 
+Protokół sychrnizacji oparty na blokadach. 
+
+r1(x), r2(x),r3(z),w2(y),a1,w2(x),c2,r3(y),c3,r4(x),r4(z),c4
+
+Powtórzyć operacje (wykład nr 4).
+
+

@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F617325-1CCF-B48B-AAFA-93DB1B068A15" name="Glos_Posta">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>ABE15282-CC45-52EA-305D-895DC4623707</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_glosu_posta" id="51AA6350-073A-6E14-2217-07F92A2141AA">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>31288C2C-386F-4A7D-221E-2E9160A558EA</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="typ" id="380ECB80-EE9F-78E8-693E-C0EDA1008FB5">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>943A35AF-E7C4-0F6D-6AEE-1F280BD7B803</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ocena" id="D7B32AB2-3E8A-DA9A-EC13-D46A647D8BA4">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>8C3B6787-110B-9483-E4BC-D0B03666AA7E</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Uzytkownik_id_uzytkownika" id="0006767D-3B3A-F939-005D-44C682377FF0">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>4C0550BA-C7C3-10FD-5858-3D844DB40073</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2B38B25D-75B8-7DCC-5975-344102D905F0" referredColumn="20D52CCF-7510-A14A-542C-8D1F2728FF11"/>
+</associations>
+</Column>
+<Column name="Post_id_posta" id="5C3487E6-1B60-4733-ACE9-443819823717">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>FC9B6BFF-4119-DB26-9E7E-BA4D46419F0D</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91AA9F6D-EBA0-416A-647D-85868A7E6AD5" referredColumn="233D83FE-11D4-F8AC-6FB5-BD6B444B15CA"/>
+</associations>
+</Column>
+<Column name="Post_id_uzytkownika" id="9BB5C1FC-70C8-5357-7D6C-FF6F6B0ABACF">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>0DC99607-9531-4CB2-7558-669D8E41667D</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0D6D73C3-8837-5A4E-3636-45FF1BB33345" name="Glos_Posta_PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>6EADA266-D584-6401-0834-A0AD20B03458</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="51AA6350-073A-6E14-2217-07F92A2141AA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D7343139-373C-20C3-003F-E2BBEE20DAA7" name="Glos_Posta_Post_FK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>D2210CA3-C593-40FC-756A-61F3048A7287</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5C3487E6-1B60-4733-ACE9-443819823717"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29DD8EE3-8442-47CC-65F4-4463A75BAC20" name="Glos_Posta_Uzytkownik_FK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>1F37A4C6-3D93-DBA0-E42A-FA3CBCB8C228</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0006767D-3B3A-F939-005D-44C682377FF0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

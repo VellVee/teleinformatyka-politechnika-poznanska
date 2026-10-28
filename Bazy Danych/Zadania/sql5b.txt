@@ -1,0 +1,213 @@
+--1Następnie skonstruuj zapytanie, które wyświetli nazwiska, numery zespołów i nazwy zespołów
+wszystkich pracowników. W zbiorze wynikowym mają pojawić się również pracownicy, którzy nie
+należą do żadnego zespołu. Wynik uporządkuj wg nazwisk pracowników.
+
+SELECT NAZWISKO, P.ID_ZESP, NAZWA
+
+FROM PRACOWNICY P LEFT OUTER JOIN ZESPOLY Z
+
+ON Z.ID_ZESP = P.ID_ZESP
+
+ORDER BY NAZWISKO;
+
+--2Tym razem wyświetl nazwy wszystkich zespołów. Jeśli w zespole pracują pracownicy, wyświetl ich
+nazwiska. Dla zespołów, które nie mają pracowników, wyświetl tekst „brak pracowników”.
+Uporządkuj wynik według nazw zespołów i nazwisk pracowników.
+
+SELECT Z.NAZWA, Z.ID_ZESP, CASE
+
+    WHEN P.NAZWISKO IS NOT NULL THEN NAZWISKO
+
+    WHEN P.NAZWISKO IS NULL THEN 'brak pracownikow'
+
+END AS PRACOWNIK
+
+FROM ZESPOLY Z FULL OUTER JOIN PRACOWNICY P
+
+ON P.ID_ZESP = Z.ID_ZESP
+
+ORDER BY Z.NAZWA, PRACOWNIK;
+
+
+
+--3Połącz wyniki dwóch poprzednich zapytań w jeden wynik. Dla pracowników pracujących w
+zespołach wyświetl nazwisko pracownika i nazwę zespołu. Dla pracowników bez zespołów wyświetl
+w miejscu nazwy zespołu tekst „brak zespołu”. Dla zespołów, które nie mają pracowników, wyświetl
+tekst „brak pracowników”. Uporządkuj wynik według nazw zespołów i nazwisk pracowników.
+
+SELECT CASE
+
+    WHEN Z.NAZWA IS NOT NULL THEN Z.NAZWA
+
+    WHEN Z.NAZWA IS NULL THEN 'brak zespolu'
+
+END AS ZESPOL,
+
+CASE
+
+    WHEN P.NAZWISKO IS NOT NULL THEN NAZWISKO
+
+    WHEN P.NAZWISKO IS NULL THEN 'brak pracownikow'
+
+END AS PRACOWNIK
+
+FROM ZESPOLY Z FULL OUTER JOIN PRACOWNICY P
+
+ON P.ID_ZESP = Z.ID_ZESP
+
+ORDER BY Z.NAZWA, PRACOWNIK;
+
+
+
+--4Dla każdego zespołu znajdź liczbę pracowników, których zatrudnia oraz sumę ich płac. W zbiorze
+wynikowym uwzględnij również zespoły bez pracowników.
+
+SELECT Z.NAZWA AS ZESPOL, COUNT(*) AS LICZBA, SUM(PLACA_POD) AS SUMA_PLAC 
+
+FROM ZESPOLY Z FULL OUTER JOIN PRACOWNICY P
+
+ON Z.ID_ZESP = P.ID_ZESP
+
+GROUP BY Z.NAZWA
+
+ORDER BY Z.NAZWA;
+
+
+
+--5Wyświetl nazwy zespołów, które nie zatrudniają pracowników. Wynik posortuj wg nazw zespołów.
+
+SELECT NAZWA 
+
+FROM PRACOWNICY P RIGHT OUTER JOIN ZESPOLY Z 
+
+ON Z.ID_ZESP=P.ID_ZESP 
+
+WHERE P.ID_ZESP IS NULL 
+
+GROUP BY NAZWA; 
+
+
+
+--6 Wyświetl nazwiska i numery pracowników wraz z numerami i nazwiskami ich szefów. Wynik
+posortuj wg nazwisk pracowników. W zbiorze wynikowym mają się pojawić również ci pracownicy,
+którzy nie mają szefów.
+
+
+SELECT P.NAZWISKO AS PRACOWNIK, P.ID_PRAC, S.NAZWISKO AS SZEF, P.ID_SZEFA
+
+FROM PRACOWNICY S   RIGHT OUTER JOIN PRACOWNICY P
+
+ON P.ID_SZEFA = S.ID_PRAC
+
+ORDER BY P.NAZWISKO;
+
+
+
+--7Dla każdego pracownika wyświetl liczbę jego bezpośrednich podwładnych.
+
+SELECT S.NAZWISKO AS PRACOWNIK, COUNT(P.ID_SZEFA) AS LICZBA_PODWLADNYCH FROM PRACOWNICY P RIGHT OUTER JOIN PRACOWNICY S ON P.ID_SZEFA=S.ID_PRAC 
+
+AND S.NAZWISKO IS NOT NULL 
+
+GROUP BY S.NAZWISKO
+
+ORDER BY S.NAZWISKO;
+
+
+
+--8Wyświetl następujące informacje o każdym pracowniku: nazwisko, etat, płaca podstawowa, nazwa
+zespołu, do którego należy oraz nazwisko szefa. Wynik uporządkuj wg nazwisk pracowników. Weź
+pod uwagę, że pracownik może nie mieć szefa i może nie być zatrudniony w żadnym zespole.
+
+
+SELECT A.NAZWISKO, A.ETAT, A.PLACA_POD, ZESPOLY.NAZWA, B.NAZWISKO
+
+FROM PRACOWNICY A LEFT OUTER JOIN PRACOWNICY B
+
+ON B.ID_PRAC = A.ID_SZEFA
+
+    INNER JOIN ZESPOLY
+
+    ON A.ID_ZESP = ZESPOLY.ID_ZESP
+
+ORDER BY A.NAZWISKO;
+
+
+
+--9Wygeneruj iloczyn kartezjański relacji Pracownicy i Zespoly. W zbiorze wynikowym umieść jedynie
+wartości kolumn nazwisko i nazwa.
+
+
+SELECT NAZWISKO, NAZWA
+
+FROM PRACOWNICY CROSS JOIN ZESPOLY
+
+ORDER BY NAZWISKO;
+
+
+
+--10Policz, ile rekordów będzie zawierał iloczyn kartezjański trzech relacji: Etaty, Pracownicy i Zespoły.
+
+
+SELECT COUNT(*)
+
+FROM PRACOWNICY CROSS JOIN ZESPOLY
+
+    CROSS JOIN ETATY;
+
+    
+
+--11Wyświetl nazwy etatów, na które przyjęto pracowników zarówno w 1992 jak i 1993 roku. Wynik
+posortuj wg nazw etatów.
+
+
+SELECT ETAT 
+
+FROM PRACOWNICY 
+
+WHERE TO_CHAR(ZATRUDNIONY, 'YYYY') = 1992
+
+INTERSECT
+
+SELECT ETAT 
+
+FROM PRACOWNICY 
+
+WHERE TO_CHAR(ZATRUDNIONY, 'YYYY') = 1993;
+
+
+
+--12Wyświetl numer zespołu który nie zatrudnia żadnych pracowników.
+
+SELECT ID_ZESP FROM ZESPOLY
+
+MINUS
+
+SELECT ID_ZESP FROM PRACOWNICY;
+
+
+
+--13Zmień powyższe zapytanie w taki sposób, aby oprócz numeru poznać również nazwę zespołu bez
+pracowników.
+
+SELECT ID_ZESP, NAZWA FROM ZESPOLY
+
+MINUS
+
+SELECT P.ID_ZESP, NAZWA FROM PRACOWNICY P INNER JOIN ZESPOLY Z ON Z.ID_ZESP= P.ID_ZESP; 
+
+
+
+--14Wyświetl poniższy raport. Nie używaj wyrażenia CASE.
+
+SELECT NAZWISKO, PLACA_POD, 'PONIZEJ 480 ZLOTYCH'AS PROG FROM PRACOWNICY WHERE PLACA_POD<480
+
+UNION
+
+SELECT NAZWISKO, PLACA_POD, 'DOKLADNIE 480 ZLOTYCH'AS PROG FROM PRACOWNICY WHERE PLACA_POD=480
+
+UNION
+
+SELECT NAZWISKO, PLACA_POD, 'POWYZEJ 480 ZLOTYCH'AS PROG FROM PRACOWNICY WHERE PLACA_POD>480
+
+ORDER BY PLACA_POD

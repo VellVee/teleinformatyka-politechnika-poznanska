@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4BE80C31-CA6C-865B-708D-C54AC9EE4694" name="Głos_Komentarza">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:54:29 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_glosu_komentarza" id="38EA17DE-C3DC-1AE9-A941-35C510B035AD">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:54:41 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="typ" id="A2DE76F0-17F6-EBA3-1BD9-4CF813E51C61">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:55:03 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="id_uzytkownika" id="29A33489-BD21-58B0-948E-F025FB7AA98E">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:59:04 UTC</createdTime>
+<generatorID>8B302E58-E843-C745-DBE8-4E5D63CBAA5C</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>CB59ACCB-ADFA-281A-2871-D05B99B2DF81</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_komentarza" id="4E7FDC90-1205-3926-B59C-B36E3FA10A6C">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:00:25 UTC</createdTime>
+<generatorID>4F3C0989-8C26-7390-8ECF-487D3A846DA8</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>3EE26639-53BB-5696-8E2B-A0898425E027</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5271E136-AD3F-3E04-6523-FCF06E25C00B" name="Głos PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 19:01:52 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>38EA17DE-C3DC-1AE9-A941-35C510B035AD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

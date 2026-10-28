@@ -1,0 +1,87 @@
+     1        0096      SEG_ON EQU P1.6 
+     2        FF30      F_CSDS EQU 0FF30H ;
+     3        FF38      F_CSDB EQU 0FF38H ;
+     4        0001      DISPLAY6 EQU 00000001B
+     5        0002      DISPLAY5 EQU 00000010B
+     6        0004      DISPLAY4 EQU 00000100B
+     7        0008      DISPLAY3 EQU 00001000B
+     8        0010      DISPLAY2 EQU 00010000B
+     9        0020      DISPLAY1 EQU 00100000B
+    10                  
+    11        0038      COD5 EQU 00111000B;L
+    12        0079      COD4 EQU 01111001B;E
+    13        003E      COD3 EQU 00111110B;W
+    14        0077      COD2 EQU 01110111B;A
+    15        0073      COD1 EQU 01110011B;P
+    16                  
+    17        000A      DELAY EQU 10
+    18                  
+    19  0000: 02 01 00  	LJMP START
+    20  0100:           	ORG 100H
+    21  0100:           START:
+    22                  	;1
+    23  0100: 90 FF 30  	MOV DPTR,#F_CSDS
+    24  0103: 74 20     	MOV A,#DISPLAY1
+    25  0105: F0        	MOVX @DPTR,A
+    26                  	
+    27  0106: 90 FF 38  	MOV DPTR,#F_CSDB
+    28  0109: 74 73     	MOV A,#COD1
+    29  010B: F0        	MOVX @DPTR,A
+    30                  	
+    31  010C: C2 96     	CLR SEG_ON
+    32  010E: 74 0A     	MOV A, #DELAY
+    33  0110: 12 81 12  	LCALL DELAY_100MS
+    34                  	
+    35                  	;2
+    36  0113: 90 FF 30  	MOV DPTR,#F_CSDS
+    37  0116: 74 10     	MOV A,#DISPLAY2
+    38  0118: F0        	MOVX @DPTR,A
+    39                  	
+    40  0119: 90 FF 38  	MOV DPTR,#F_CSDB
+    41  011C: 74 77     	MOV A,#COD2
+    42  011E: F0        	MOVX @DPTR,A
+    43                  	
+    44  011F: C2 96     	CLR SEG_ON
+    45  0121: 74 0A     	MOV A, #DELAY
+    46  0123: 12 81 12  	LCALL DELAY_100MS
+    47                  	
+    48                  	;3
+    49  0126: 90 FF 30  	MOV DPTR,#F_CSDS
+    50  0129: 74 08     	MOV A,#DISPLAY3
+    51  012B: F0        	MOVX @DPTR,A
+    52                  	
+    53  012C: 90 FF 38  	MOV DPTR,#F_CSDB
+    54  012F: 74 3E     	MOV A,#COD3
+    55  0131: F0        	MOVX @DPTR,A
+    56                  	
+    57  0132: C2 96     	CLR SEG_ON
+    58  0134: 74 0A     	MOV A, #DELAY
+    59  0136: 12 81 12  	LCALL DELAY_100MS
+    60                  	
+    61                  	;4
+    62  0139: 90 FF 30  	MOV DPTR,#F_CSDS
+    63  013C: 74 04     	MOV A,#DISPLAY4
+    64  013E: F0        	MOVX @DPTR,A
+    65                  	
+    66  013F: 90 FF 38  	MOV DPTR,#F_CSDB
+    67  0142: 74 79     	MOV A,#COD4
+    68  0144: F0        	MOVX @DPTR,A
+    69                  	
+    70  0145: C2 96     	CLR SEG_ON
+    71  0147: 74 0A     	MOV A, #DELAY
+    72  0149: 12 81 12  	LCALL DELAY_100MS
+    73                  	
+    74                  	;5
+    75  014C: 90 FF 30  	MOV DPTR,#F_CSDS
+    76  014F: 74 02     	MOV A,#DISPLAY5
+    77  0151: F0        	MOVX @DPTR,A
+    78                  	
+    79  0152: 90 FF 38  	MOV DPTR,#F_CSDB
+    80  0155: 74 38     	MOV A,#COD5
+    81  0157: F0        	MOVX @DPTR,A
+    82                  	
+    83  0158: C2 96     	CLR SEG_ON
+    84  015A: 74 0A     	MOV A, #DELAY
+    85  015C: 12 81 12  	LCALL DELAY_100MS
+    86                  	
+    87  015F: 80 9F     	SJMP START

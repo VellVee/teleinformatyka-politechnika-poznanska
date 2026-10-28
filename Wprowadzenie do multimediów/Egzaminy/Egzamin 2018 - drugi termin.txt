@@ -1,0 +1,18 @@
+1. Koder fonii MPEG-4 AAC HE. Schemat kodera B. Opisać zwięźle. Rysunki, narzędzia nieużywane w koderach MPEG-1. Na schematach blokowych dokładnie opisać wszystkie bloki i sygnały.
+
+2. Barwy. Wyznaczyć sygnały wejściowe do drukarki czyli składowe żółty, błękitny i purpurowy w funkcji składowych RGB znormalizowanych do przedziału [0,1].
+    b. Wyznaczyć składowe zółtą , błękitną w funkcji składowych PbPr znormalizowanych do przedziału [-0.5, 0.5]
+
+3. Techniki replikacji widma (SBR). Metody, zastosowanie, normy, techniki, wykorzystanie SBR.
+
+4. Obiekt o wysokości H=6m znajduje się na płaszczyźnie prostopadłej do osi optycznych pary kamer i odległej od środków optycznych tych kamer o z=6m. Długość ogniskowa obu kamer wynosi F=8mm. Przetworniki obu kamer składają się z 2000x1000 elementów (pixeli), okres próbkowania (pionowy i poziomy) wynosi Ts=10um. Baza stereoskopowa układu dwóch kamer wynosi B=10cm. (?)
+a. Wyznaczyć rozbieżność d (w okresach próbkowania)
+b. Jaką część (%) wysokości przetwornika znajduje obiekt?
+
+5. Tryb CBR (constant Bitrat) kodowania sekwencji wizyjnych i odpowiednia technika regulacji prędkości transmisji. Zastosowanie 
+
+6. Kodowanie progresywne i hierarchiczne w technice kompresji stratnej JPEG. Opis technik i wariantów. Zastosowanie. 
+
+7. Model psychoakustyczny w kompresji fonii. Zasada działania, schemat, przetwarzanie sygnału, sygnały wejściowe, zastosowania (w koderze? dekoderze?).
+
+8. Kodowanie wewnątrzobrazowe AVC. Wskazać możliwe bloki odniesienia . Wskazać bloki, których nie można użyć jako bloki odniesienia. Opisać stosowane tryby predycji. 

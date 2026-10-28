@@ -1,0 +1,805 @@
+1. W przelaczniku ATM z wirtualnymi  kolejkami na wyjsciu bufory:
+ Sa umieszczane na wejsciach pola komutacyjnego
+ Sa umieszczane na wyjsciach elementow komutacyjnych pola komutacyjnego
+ Sa umieszczone na wyjsciach pola komutacyjnego
+ Sa umieszczone wewnatrz pola komutacyjnego
+a
+
+2. W komutatorze przestrzenno – czasowym ze wspolna pamiecia o pojemnosci 4x4 trakt PCM po cztery szczeliny czasowe w kazdym trakcie , w czasie trwania jednej szczeliny czasowej wykonuje sie:
+ Jednego zapisu do pamieci danych i czterech odczytow z  pamieci danych
+ Czterech zapisow do pamieci danych i czterech odczytow z pamieci danych
+ Czterech zapisow do pamieci danych i jednego odczytu z pamieci danych
+ Jednego zapisu do pamieci danych i jednego odczytu z pamieci danych
+d
+
+3. W systemie SDH ramka modulu transportowego STM-1 trwa 
+ 125 milisekund 
+ 125 nanosekund 
+ 125 mikrosekund 
+ 32 mikrosekundy
+c
+
+4. Do opisu statycznego uslug telekomunikacyjnych stosuje sie;
+ Technike atrybutow
+ Technike wykresow MSC
+ Jezyk XML
+ Jezyk SDL (specyfikacji i opisu)
+a
+
+5. W wiadomosciach TFP w polu wskaznikow jest umieszczany
+ Tylko kod punktu dostepowego 
+ Kod punktu niedostepnego oraz 2 dodatkowe bity niewykorzystane
+ Kod punktu do ktorego wiadomosc jest przeznaczona oraz 2 dodatkowe niewykorzystywane bity
+ Tylko kod punktu do ktorego wiadomosc jest przeznaczona
+b
+
+6. Opoznienie kabla transmisyjnego wynosi 7 mikrosekund na kilometr. Przyjmujac ze czas trwania bitu wynosi 5,2 mikrosekundy a okno probkowania 1,7 mikrosekundy , maksymalna dlugosc magistrali szeregowej dla dostepu podstawowego zbudowanego z wykorzystaniem tego kabla nie moze przekroczyc:
+ 500 m
+ 250 m
+ 1 000m
+ 125m
+b
+
+7. Ktora z wymienionych ponizej cech nie cechuje uslug multimedialnych
+ Polaczenia typu rozgloszeniowego
+ Tworzenie stalych w czasie strumieni bitow
+ Asymetria polaczen
+ Zalezy od czasu przenoszenia informacji
+b
+  
+8. Czesc BSSAP definiuje protokol i procedury sygnalizacyjne wykorzystywane 
+ W styku Air sieci GSM
+ W styku Abis sieci GSM
+ Pomiedzy centralami radiokomunikacyjnymi (styk E sieci GSM)
+ W styku A sieci GSM
+d
+
+9. Ktora z wymienionych funkcji nie jest funkcja realizowana w module wyjsciowym przelacznika ATM:
+ ksztaltowanie ruchu
+ przetwarzanie komorek 
+ generacja pola HEC naglowka
+ generowanie pustych komorek
+a
+
+9B.Ktora z wymienionych funkcji nie jest funkcja realizowana w module wyjsciowym przelacznika ATM:
+ przetwarzanie komorek
+ generacja pola HEC naglowka
+ uaktualnienie pol VPI i VCI
+ usuwanie pustych komorek
+d
+
+10. W dostepie podstawowym abonent ma do dyspozycji 
+ dwa kanaly B o przeplywnosci 64 kbit/s i kanal D o przeplywnosci 64 kbit/s
+ trzydziesci kanalow B o przeplywnosci 64 kbit/s i kanal D o przeplywnosci 16 kbit/s
+ dwa kanaly B o przeplywnosci 64 kbit/s i kanal D o przeplywnosci 16 kbit/s
+ trzydziesci kanalow B o przeplywnosci 64 kbit/s i kanal D o przeplywnosci 64 kbit/s
+c
+
+11. Ktore z wymienionych uslug nie moga byc jednoczesnie oferowane uzytkownikowi
+ Oczekiwanie na polaczenie i przenoszenie polaczenia przy braku odpowiedzi
+ Oczekiwanie na polaczenie i przenoszenie polaczenia przy zajetosci
+ Prezentacja numeru wywolujacego oraz oczekiwanie na polaczenie
+ Prezentacja numeru wywolujacego i prezentacja linii dolaczonej
+b
+
+12. Szybkosc transmisji danych w jednej szczelinie czasowej traktu PCM wynosi:
+ 2 048 000 bit/s
+ 64 000 bit/s
+ 2 000 000 bit/s
+ 65 536 bit /s
+b
+
+13. Numer punktu sygnalizacyjnego w sieci miedzy narodowej jest kodowany
+ Na ogol na 14 bitach ale w niektorych krajach moze byc kodowany na 24 bitach
+ Zawsze na 4 bitach
+ Numer punktu sygnalizacyjnego nie jest nigdy umieszczany w wiadomosciach sygnalizacji
+ Zawsze na 14 bitach
+d
+
+14. W sieciach ATM uslugi klasy A to uslugi
+ O zmiennej szybkosci transmisji (VBR), zorientowanych polaczeniowo i zaleznie od czasu
+ O zmiennej szybkosci transmisji (VBR), niezorientowanych polaczeniowo i zaleznie od czasu
+ O stalej szybkosci transmisji (CBR), niezorientowanych polaczeniowo i zaleznie od czasu
+ O stalej szybkosci transmisji (CBR), zorientowanych polaczeniowo i zaleznie od czasu 
+d
+
+15. W sygnalizacji we wspolnym kanale zasoby do przesylania informacji sygnalizacyjnych
+ Sa wspolne dla nie wiecej niz dwoch kanalow danych
+ Sa zarezerwowane indywidualnie dla kazdego z kanalow danych
+ Nie sa w ogole wydzielane
+ Sa wspolne dla wielu kanalow danych
+d
+
+16. Teleusluga obejmuje nastepujace warstwy modelu OSI
+ 4 -7
+ 1-7
+ 1-4
+ 1-3
+b
+
+17. Uaktywnienie uslugi dodatkowej „zabronienie prezentacji numeru linii wywolujacej” oznacza ze w wiadomosci IAM
+ Zaden z wymienionych punktow nie jest poprawna odpowiedzia
+ Nie umieszcza sie parametru calling party number
+ Nie umieszcza sie numeru katalogowego linii wywolujacej w parametrze calling party number
+ Nie umieszcza sie parametru called party number
+a
+
+18. W przelaczniku ATM ze buforowaniem na wyjsciu , posiadajacego N wejsc i N wyjsc …. Jednej szczeliny trzeba wykonac w najgorszym przypadku 
+ Jednego zapisu i N odczytow
+ Jednego zapisu i jednego odczytu
+ N zapisow i jednego odczytu
+ N zapisow i N odczytow
+c
+
+19. Atrybut „tryb przesylania informacji” okresla
+ Techniki transmisyjne i komutacyjne wykorzystywane przez usluge przesylania informacji 
+ Stosowanie przez usluge szybkosci przesylania informacji
+ Zdolnosc uslugi do utrzymania okreslonej struktury przesylania informacji
+ Sposob zestawiania polaczenia dla danej uslugi 
+a
+
+20. Przepustowosc przelacznika ATM z buforowaniem na wyjsciu wynosi:
+ Dokladnie 100%
+ Mniej niz 50%
+ Prawie 100 %
+ Okolo 58%
+c
+
+20A. Przepustowosc przelacznika ATM z buforowaniem na WEJSCIU wynosi:
+ Dokladnie 100%
+ Mniej niz 50%
+ Prawie 100 %
+ Okolo 58%
+d
+
+21. Warstwa AAL2 przeznaczona jest dla:
+ Aplikacji wymagajacych  zmiennej szybkosci transmisji (VBR), zorientowanych polaczeniowo i zaleznie od czasu
+ Aplikacji wymagajacych  zmiennej szybkosci transmisji (VBR), niezorientowanych polaczeniowo i zaleznie od czasu
+ Aplikacji wymagajacych  stalej szybkosci transmisji (CBR), niezorientowanych polaczeniowo i zaleznie od czasu
+ Aplikacji wymagajacych stalej szybkosci transmisji (CBR), zorientowanych polaczeniowo i zaleznie od czasu
+a
+
+22. W polach komutacyjnych nieblokowalnych w szerokim sensie mozemy zawsze polaczyc wyjscie z wolnym wejsciem:
+ Niezaleznie od aktualnego stanu pola i stosowanego algorytmu wyboru drogi polaczeniowej
+ Ale tylko wtedy , gdy jest stosowany okreslony algorytm wyboru drogi polaczeniowej
+ Niezaleznie od aktualnego stanu pola ale tylko wtedy gdy mozliwa jest zmiana juz istniejacych polaczen
+ Ale tylko wtedy gdy wczesniej polaczenia zostaly zmienione tak aby zadne nowe polaczenie nie trafilo na stan blokady
+b
+
+23. Przeslo sygnalizacyjne znajduje sie w stanie pracy. Po odebraniu jednostki LSSU ze wskazaniem SIPO przeslo przejdzie do stanu:
+ Uszkodzone
+ Niezynchronizowane
+ Uszkodzenie procesora
+ Nie zmieni stanu
+c
+
+24. W celu wykonania procedury przejscia na przeslo rezerwowe sasiednie punkty sygnalizacyjne wymieniaja miedzy soba wiadomosci
+ ECO i ECA
+ COO i COA
+ CBD i CBA
+ Odbywa sie to automatycznie po wykryciu uszkodzenia laczy bez informowania sasiedniego wezla
+b
+
+25. Abonent zestawiajac polaczenie z wykorzystaniem sygnalizacji blokowej chce skorzystac z uslugi CLIR. Przy realizacji tej uslugi pole wskaznika prezentacji parametru calling party number zostaje ustawiony na wartosc odpowiadajaca znaczeniu zabroniona. Parametr ten jest umieszczany w sygnalizacji DSS1. http://helios.et.put.poznan.pl/~sskowron/ed/sz/isdn.txt
+ W wiadomosci SETUP wyslanej tylko do abonenta wywolywanego
+ W wiadomosci SETUP wyslanej tylko od abonenta wywolujacego
+ W wiadomosci SETUP wyslanych zarowno od abonenta wywolujacego jak i do abonenta wywolywanego
+ Wskaznik ten nie wystepuje w wiadomosciach DSS1 lecz tylko w wiadomosciach sygnalizacji SS7
+b
+
+26. Identyfikator sciezki wirtualnej VPI jest w sieci ATM kodowany na
+ 8 lub 12 bitach
+ 24 bitach
+ 12 bitach
+ 8 bitach
+a
+
+27. W laczu sygnalizacyjnym przeslano kolejno jednostke FISU z numerem FSN=126 i jednostke MSU z numerem FSN=127. Kolejna do wyslania jest jednostka LSSU. Pole FSN tej jednostki przyjmie wartosc:
+ 0
+ 126
+ 127
+ 128
+c
+
+28. Punkt SP A wyslal do SP B nastepujace jednostki sygnalizacyjne: MSN(FSN=55,FIB=0), MSN(FSN=56,FIB=0), MSN(FSN=57,FIB=0), MSN(FSN=58,FIB=0) i MSN(FSN=59,FIB=0). Po wyslaniu ostatniej jednostki sygnalizacyjnej odebral jednostke FISU(FSN=68, BSN=57, BIB=1). Nastepna jednostka sygnalizacyjna wyslana przez SP A bedzie:
+ MSN(FSN=58,FIB=0)
+ MSN(FSN=58,FIB=1)
+ MSN(FSN=57,FIB=1)
+ MSN(FSN=68,FIB=1)
+b
+
+29. Czesc ISUP:
+ Nie umozliwia zarzadzania stanami laczy danych
+ Nie jest zainteresowana stanami laczy danych
+ Ignoruje stan laczy danych
+ Umozliwia zarzadzanie stanami laczy danych
+d
+
+30. Zadaniem funkcji rozdzielania wiadomosci jest
+ Przekazywanie odebranej jednostki MSU do odpowiedniej czesci uzytkownika na podstawie wskaznika sieci (pola NT)
+ Przekazywanie odebranej jednostki MSU do odpowiedniej czesci uzytkownika na podstawie wskaznika uslugi (pola SI)
+ Wyznaczenie przesla sygnalizacyjnego, ktorym odebrana jednostka MSU bedzie przeslana d nastepnego punktu sygnalizacyjnego
+ Odrzucenie wiadomosci odebranych blednie i zaakceptowanie wiadomosci odebranych poprawnie
+b
+
+31. W wiadomosci TFP w polu wskaznikow jest umieszczany:
+ Tylko kod punktu niedostepnego
+ Kod punktu niedostepnego oraz 2 dodatkowe bity niewykorzystane
+ Kod punktu do ktorego wiadomosc jest przeznaczona oraz 2 dodatkowe bity niewykorzystane
+ Tylko punkt do ktorego wiadomosc jest przeznaczona
+b
+
+32. W sieci zupelnej zlozonej z 5 wezlow liczba potrzebnych laczy jest rowna
+ 5
+ 7
+ 10
+ 15
+c
+
+32B. System telekomunikacyjny ma laczyc 20 wezlow na zasadzie „kazdy z kazdym”. Lacznosc miedzy parami punktow bedzie zapewniona za pomoca pary przewodow. Ile par przewodow bedzie potrzebnych do realizacji tej sieci:
+190
+7
+10
+15
+a
+
+32C. System telekomunikacyjny ma laczyc 10 wezlow na zasadzi ‚kazdy z kazdym‘. Lacznosc miedzy parami punktow bedzie zapewniana za pomoca pary przewodow. Ile par przewodow bedzie potrzebnych do realizacji tej sieci.
+45
+90
+10
+100
+a
+
+33. Koncowe bity ramki warstwy 1 na styku S dostepu podstawowego sa nastepujace: bity kanalu B2=01011011, bit L=0 i bit D=0. Konczacy ramke bit L bedzie zakodowany jako:
+ Logiczne 0 nadane impulsem ujemnym
+ Logiczne 0 nadane impulsem dodatnim
+ Logiczne 1 nadane losowo wybranym impulsem
+ Logiczne 1 nadane jako brak impulsu
+b
+
+34. Komorka ATM sklada sie  z: 
+ 48 bajtow
+ 53 kilobajtow
+ 53 bajtow
+ 48 kilobajtow
+c
+
+35. Wiadomosc IAM jest zawsze wysylana jako ...., przy podstawowej obsludze polaczen:
+ druga
+ pierwsza
+ dowolna z kolei
+ ostatnia
+b
+
+36. Wiadomosc IAM przy podstawowej obsludze polaczen jest wysylana jako:
+ Zawsze druga wiadomosc
+ Zawsze pierwsza wiadomosc
+ Zawsze ostatnia wiadomosc
+ dowolna z kolei wiadomosc
+b
+
+37. Warstwa 2 urzadzenia koncowego odebrala ramke z SAPI=63. Ramka ta zostanie przekazana:
+ do warstwy 3 – czesci zajmujacej sie obsluga sygnalizacji dla polaczen z komutacja kanalow
+ do warstwy 2 plaszczyzny zarzadzania
+ do warstwy 3 – czesci zajmujacej sie obsluga danych urzytkownika
+ do warstwy 3 – czesci zajmujacej sie obsluga sygnalizacji dla polaczen z komutacja pakietow
+b
+
+38. Podstawowa odpowiedzia na wiadomosc REL jest wiadomosc:
+ RLC
+ IAM
+ REL
+ CPG
+a
+
+39. W wiadomosciach stosowanych w procedurze przejscia na przeslo rezerwowe pole SLC zawiera:
+ kod przesla sygnalizacyjnego, ktorym wiadomosc jest przesylana
+ kod przesla sygnalizacyjnego, na ktory zostanie przeniesiony kod sygnalizacyjny
+ kod uszkodzonego przesla sygnalizacyjnego i kod przesla sygnalizacyjnego, ktorym wiadomosc jest przesylana
+ kod uszkodzonego przesla sygnalizacyjnego
+d
+
+40. Przeslo sygnalizacyjne odpowiada za realizacje nastepujacych funkcji:
+ Detekcja bledow, korekcja bledow, kontrola kolejnosci przesylanych jednostek sygnalizacyjnych, sterowanie przeplywem
+ Sterowanie przeplywem, kierowanie jednostek sygnalizacyjnych do punktu docelowego, zapewnienie bezblednosci transmisji
+ Kierowanie sygnalizacyjnych do punktu docelowego, wybieranie odpowiedniego kodu transmisyjnego, detekcja i korekcja bledow, odtwarzanie zegara
+ Wszystkie funkcje warstw 1 i 2 OSI
+a
+
+41. Wyslanie wiadomosci IAM z dwoch centrali, ktore zadaja zajecia tego samego lacza miedzycentralowego nazywa sie:
+ bledem
+ katastrofa
+ kolizja czolowa wywolan
+ nie moze sie to zdarzen
+c
+
+42. Identyfikator kanalu wirtualnego VCI jest w sieci ATM kodowany na: 
+ 8 bitach
+ 24 bitach
+ 12 bitach
+ 16 bitach
+d
+
+43. W usludze CD (call deflection – odbijanie polaczeni abonent specyfikuje numer na ktory nalezy przekazac polaczenie:
+ po odebraniu polaczenia
+ w momencie aktywacji uslugi 
+ po dostarczeniu polaczenia (rozpoczeciu dzwonieni ale przed odebraniem polaczenia
+ przed naplywem polaczenia
+c
+
+44. Jezeli zablokowane przeslo przechodzi do stanu dostepnosci, zadaniem funkcji zarzadzania ruchem sygnalizacyjnym jest:
+ uruchomienie procedury powrotu na przeslo normalne
+ uruchomienie procedury sterowania przeplywem ruchu sygnalizacyjnego
+ urochomienie procedury przejscia na przeslo rezerwowe
+ urochomienie procedury przejscia na droge rezerwowa
+a
+
+45. Procedury probne zestawu drog sygnalizacyjnych umozliwiaja punktom sygnalizacyjnym:
+ rozsylanie informacji dotyczacych zmian stanow w sieci sygnalizacyjnej
+ informowanie tylko sasiednich punktow sygnalizacyjnych o zmianie swojego stanu
+ przekazywanie wiadomosci ostanie punktu sygnalizacyjnego tylko do wybranych punktow sygnalizacyjnych
+ zdobywanie informacji dotyczacych zmian stanow w sieci sygnalizacyjnej
+d
+
+46. Jezeli STP A odebral od punktu SP B fjednostke sygnalizacyjna kierowana do punktu SP C, ale droga sygnalizacyjna z STP A do SP C jest niedostepna to powinien odpowiedziec punktowi SP B wysylajac wiadomosc:
+ TFA
+ RST
+ TFR
+ TFP
+d
+
+47. Do przesylania jednostek sygnalizacyjnych sygnalizacji SS7 wykorzystuje sie:
+ jedna ze szczelin czasowych traktu PCM poza szczelina 0, przy czym zalecana jest szczelina 16
+ jedna ze szczelin czasowych traktu PCM, przy czym zalecana jest szczelina 0
+ tylko szczelina 16 traktu PCM
+ tylko szczelina 0 traktu PCM
+a
+
+48. Styk u abonenta, korzystajacego z uslugi MSN, skonfigurowany jest w sposob pokazany na Rysunku 1. Do abonenta kierowane jest wywolanie na numer 2222221. Abonent odbiera wywolanie z terminala A. W czasie zestawiania tego polaczenia w styku:
+ pojawi sie wiadomosc RELEASE i bedzie ona wysylana do terminala pierwszego na magistrali (liczac od NT1)
+ wiadomosc RELEASE nigdy nie bedzie wysylana w czasie zestawiania tego polaczenia
+ pojawi sie wiadomosc RELEASE i bedzie ona wysylana do terminala drugiego na magistrali (liczac od NT1)
+ pojawi sie wiadomosc RELEASE i bedzie ona wysylana do terminala ostatniego na magistrali (liczac od NT1)
+d
+
+49. Synchronizacja komorek ATM po stronie odbiorczej dokonuje sie na podstawie:
+ flagi poczatkowej i koncowej ramki, w ktorej jest umieszczona komorka AMT
+ na podstawie pola kontroli bledow zabezpieczajacego naglowek komorki ATM
+ wzorca synchronizacji na poczatku ramki, w ktorej jest umieszczona komorka ATM
+ na podstawie pola kontroli bledow zabezpieczajacego dane calej komorki ATM
+b
+
+50. Czesc uzytkownika ISUP definiuje protokol
+ do wymiany wiadomosci oraz procedur do sterowania polaczeniami tylko w sieci ISDN.
+ do wymiany wiadomosci oraz procedur do sterowania polaczeniami w sieci telefonicznej i ISDN.
+ do wymiany wiadomosci oraz procedur do sterowania polaczeniami w sieci telefonicznej, ISDN i GSM oraz do procedury do zarzadzania mobilnoscia w sieci GSM.
+ wymiany wiadomosci oraz procedur do sterowania polaczeniami w sieci telefonicznej, ISDN i GSM.
+d
+
+51. W systemach ATM:
+ komorki sa przesylane synchronicznie i dane do komorek sa wprowadzane synchronicznie.
+ komorki sa przesylane asynchronicznie i dane do komorek sa wprowadzane synchronicznie.
+ komorki sa przesylane asynchronicznie i dane do komorek sa wprowadzane asynchronicznie.
+ komorki sa przesylane synchronicznie i dane do komorek sa wprowadzane asynchronicznie.
+d
+
+52.W sieci komutacji kanalow wirtualnych
+ Droga transmisyjna jest przypisywana n a czas transmisji pakietu, przy czym w warunkach normalnej pracy dla kazdego pakietu droga jest inna
+ Droga transmisyjna jest przypisywana na caly czas trwania polaczenia do jego wylacznego uzytku
+ Droga transmisyjna jest przypisywana na czas transmisji pakietu, przy czym w warunkach normalnej pracy dla kazdego pakietu droga jest taka sama
+ Droga transmisyjna jest ustalana przed transmisja kazdego pakietu nalezacego do danego kanalu wirtualnego
+c
+
+53. Ktora w wymienionych ponizej topologii sieci telekomunikacyjnych jest topologia drzewa:
+ zupelna
+ hierarchiczna
+ niezupelna
+ pierscieniowa
+b
+
+54. Wiadomosci ISUP sa:
+ niektore sa jednokierunkowe a niektore dwukierunkowe
+ zawsze jednokierunkowe
+ zaden z wymienionych punktow nie jest poprawna odpowiedzia
+ zawsze dwukierunkowe
+a
+
+55. ISUP sluzy do:
+ ustanawiania polaczen sygnalizacyjnych
+ tworzenia relacji sygnalizacyjnych
+ zaden z wymienionych punktow nie jest poprawna odpowiedzia
+ obslugi polaczen dla podstawowych uslug przenoszenia i teleuslug
+d
+
+56. Zegary temporyzacji w procedurach wymiany wiadomosci ISUP sluza do:
+ zliczania wiadomosci
+ sprawdzania sprawnosci procesora sterujacego
+ tylko do zbierania statystyk dotyczacych sprawnosci systemu
+ zabezpieczania przed zbyt dlugim czasem realizacji procedury w przypadku bledow w wymianie wiadomosci
+d
+
+57. Obsluga uslugi dodatkowej „sledzenie polaczen zlosliwych“ jest realizowana za pomoca informacji przenoszonej w parametrze:
+ calling party number
+ called party number
+ zadne z wymienionych punktow nie jest poprawna odpowiedzia
+ cause
+c
+
+58. Jaka jest poczatkowa sekwencja wiadomosci ISUP...
+ ACM, IAM, ANM
+ IAM, ANM, ACM
+ ACM, ANM, IAM
+ IAM, ACM, ANM
+d
+
+59. Strona sieciowa dostepu podstawowego odebrala poprawnie ramke typu I o numerze N(S)=8, w ktorej N(R)=25. Ktora z ramek moze byc wyslana jako odpowiedz na te ramke:
+ ramka typu I z polem N(S)=25 i N(R)=9 - Lebioda
+ ramka RR z polem N(R)=8
+ ramka typu I z polem N(S)=25 i N(R)=8
+ ramka typu I z polem N(S)=26 i N(R)=9
+a
+
+60. Dwa punkty sygnalizacyjne A i B sa polaczone laczami sygnalizacyjnymi. Jezeli SP A odbierze wiadomosc LSSU wskazujaca na wejscie SP B w stan przeciazenia, to:
+ wstrzymuje nadawanie jednostek MSU tym laczem, nadaje jednostki FISU i restartuje zegar temporyzacji odliczajacy czas oczekiwania na potwierdzenie
+ wstrzymuje nadawanie jednostek MSU na wszystkich laczach sygnalizacyjnych laczacych SP A z SP B
+ wstrzymuje nadawanie wszystkich jednostek sygnalizacyjnych i wprowadza przeslo sygnalizacyjne w stan niezsynchronizowane
+ tylko wstrzymuje nadawanie jednostek MSU, ale takze wstrzymuje potwierdzenie jednostek sygnalizacyjnych odebranych od SP B
+a
+
+61. Adres wymagajacy tlumaczenia przez funkcje SCCP nazywany jest:
+ roboczym
+ domowym
+ spojnym
+ globalnym
+d
+
+62. Kierowanie wiadomosci SCCP odbywa sie na podstawie adresu przenoszonego w wiadomosci w parametrze:
+ Called party number
+ Calling party number
+ Protocol class
+ Importanc
+a
+
+63. Przy realizacji polaczenia wychodzacego z sieci GSM do sieci telefonii stacjonarnej siec GSM wykorzystuje miedzy innymi protokoly:
+ ISUP
+ ISUP, MAP, SCCP
+ ISUP, MTP-3, SCCP, B-ISUP
+ ISUP, TCAP, SCCP
+b
+
+64. Wiadomosc TC, ktora rozpoczyna transkacje i wymiane informacji w trybie uporzadkowanym, to:
+ END
+ BEGIN
+ CONTINUE
+ EXIT
+b
+
+65. System telekomunikacyjny ma laczyc 10 wezlow na zasadzi ‚kazdy z kazdym‘. Lacznosc miedzy parami punktow bedzie zapewniana za pomoca pary przewodow. Ile par przewodow bedzie potrzebnych do realizacji tej sieci.
+45
+90
+10
+100
+a
+
+66. Poczatek jednostki sygnalizacyjnej zawiera nastepujacy ciag bitow: 0111111001111100111111000011001111100000 … . W laczu nadany zostanie w rzeczywistosci  nastepujacy ciag bitow:
+ 0111111001111100011111010000110011111000000…
+ 0111110100111110001111101000011001111100000…
+ 0111111001111100111111000011001111100000…
+ 0111110100111110011111010000110011111000000… //Flaga na poczatku i koncu: 01111110, a potem po kazej 5x„1“ dodajemy „0“
+a
+
+67. Przy obsludze polaczenia wychodzacego centrala MSC w celu przeslania numeru abonenta wywolywanego wysyla nastepujace wiadomosci:
+IAM i potem moze byc takze wyslana wiadomosc INF (jedna lub wiecej)
+IAM i potem moze byc takze wyslana wiadomosc SAM (jedna lub wiecej)
+IAM i ACM
+Tylko IAM
+b
+
+68. Funkcje TC stanowia styk miedzy: 
+ SCCP a MTP
+Czesciami aplikacji a MTP
+Czesciami aplikacji a siecia sygnalizacyjna
+Zaden z wymienionych
+c
+
+69. Ktory z ponizszych podsystemow nie jest obslugiwany przez SCCP: 
+Rejestr abonentow wlasnych (HLR)
+Czesc dodatkowa TC
+Centrum uwierzytelniania (AU
+Zarzadzanie SCCP
+b
+
+70. Ile bitow zajmuje pole detekcji bledow w komorce ATM?  
+HEC (ang. Header Error Control) - szesnastoobitowe pole protekcji przed bledami transmisji
+HEC (ang. Header Error Control) - dwunastoobitowe pole protekcji przed bledami transmisji
+HEC (ang. Header Error Control) - osmiobitowe pole protekcji przed bledami transmisji
+HEC (ang. Header Error Control) - czteroobitowe pole protekcji przed bledami transmisji
+c
+
+71. Jakie wystepuja kanaly w dostepie podstawowy? 
+1 kanal B  + 2 kanaly D
+2 kanaly B + 2 kanal D
+2 kanaly B + 1 kanal D
+3 kana³y B + 1 kanal D
+c
+
+72. Wyliczyc ilosc polaczen dla n laczy w topologii zupelnej.
+n
+n*n
+n(n-1)/2
+n-1
+c
+
+72. Przy dlugosci pakietu 40 bajtow i szybkosci transmisji 1 Gbit/s czas trwania takiego pakietu 	wynosi:
+ 32 ns
+ 3,2 ns
+ 320 ns
+ 32 ns
+c
+
+73. Ktore z wymienionych ponizej zdan jest prawdziwe:(Teleuslugi = zapewniaja wymiane informacji miedzy uzytkownikami (wyzsze warstwy OSI)
+ Teleuslugi to uslugi komunikacyjne zapewniajace mozliwosc transportu …....
+ Teleuslugi to uslugi komunikacyjne obejmujace wszystkie aspekty zwie................. urzadzen koncowych i sieci
+ Teleuslugi to uslugi komunikacyjne bedace uzupelnieniem uslug podstawowych
+ Teleuslugi to uslugi komunikacyjne kontrolujace uslugi podstawowe i u............. dodatkowych tresci
+d
+
+74. W wielokrotnym komutatorze przestrzennym zbudowanym na multiplekserach i o pojemnosci 4 x 4 trakty PCM, po cztery szczeliny czasowe w trakcie (patrz rysunek), zestawione sa nastepujace polaczenia: w szczelinie 0: 1(we)-1(wy), 2-2, 3-3, 4-4; w  szczelinie 1: 1-2, 2-3, 3-4, 4-1; w szczelinie 2: 1-3, 2-4, 3-1, 4-2; w szczelinie 3: 1-4, 2-1, 3-2, 4-3. W takim przypadku zawartosc pamieci adresowej odpowiadajacej szczelinie czasowej t2 powinna zawierac kolejno nastepujacy wpis:
+ 00, 01, 10, 11
+ 11, 00, 01, 10
+ 10, 11, 00, 01
+ 01, 10, 11, 00
+c
+
+75. Wielokrotny komutator przestrzenny o pojemnosci 4 x 8 bedzie zbudowany z demultiplexerow:
+ 4
+ 8
+ 12
+ 32
+a
+
+76. Usluga prezentacji numeru abonenta wywolujacego (CLIP) jest to usluga:
+ dodana
+ przenoszenia
+ dodatkowa
+ podstawowa
+c
+
+77. Klasa uslug typu „best effort”, w ktorej uzytkownik moze wynegocjowac takie zasoby sieci, jakie sa aktualnie dostepne podajac minimalne i maksymalne wymagania na szybkosc transmisji komorek, nazywa sie w skrocie:
+ GBR
+ VBR – NRT
+ ABR
+ UBR
+c
+
+78. Do przeslania krotkiej wiadomosci tekstowej stosowane sa w czesci szkieletowej sieci 	GSM:
+ procedury MAP i ISUP
+ tylko procedury MAP
+ tylko procedury ISUP
+ procedury IUSP i TCAP
+b
+
+79. Do budowy hierarchicznej sieci telekomunikacyjnej zlozonej z 24 wezlow liczba potrzebnych laczy wynosi:
+ 24
+ 23
+ 15
+ 28
+b
+
+80. Protokoly SS7 obejmuja warstwy:
+ 3
+ 7
+ 1
+ 4
+d
+
+81. Warstwa AAL1 przeznaczona jest dla
+ aplikacji wymagajacych stalej szybkosci transmisji (CBR), zorientowanych polaczeniowo i zaleznie od czasu
+ aplikacji wymagajacych zmiennej szybkosci transmisji (VBR), zorientowanych polaczeniowo i zaleznie od czasu
+ aplikacji wymagajacych zmiennej szybkosci transmisji (VBR), niezorientowanych polaczeniowo i zaleznie od czasu
+ aplikacji wymagajacych stalej szybkosci transmisji (CBR), niezorientowanych polaczeniowo i zaleznie od czasu
+a
+
+82. W TC wyroznia sie nastepujace komponenty:
+ indication, confirm, result, reject
+ invoke, confirm, error, reject
+ invoke, return result, return error, reject
+ return, indication, result, confirm
+c
+
+83. W sieci GSM rejestr HLR zawiera informacje o:
+ wszystkich abonentach sieci GSM w regione (np. Europ
+ wszystkich abonentach sieci GSM znajdujacych sie (na stale) w obszarze obslugiwanych przez MSC, do ktorej HLR jest dolaczony
+ wszystkich abonentach sieci GSM danego kraju
+ wszystkich abonentach sieci GSM danego operatora
+d
+
+84. Atrybut „symetria polaczenia” definiuje:
+ mozliwe konfiguracje polaczenia
+ roznice pomiedzy szybkosciami przesylania informacji dla obu
+ kanal dostepny dla uslugi
+ sposob zestawiania polaczenia
+b
+
+85. W dostepie podstawowym kanal D sluzy do
+ przesylania tylko informacji uzytkownika
+ przesylania informacji zarowno uzytkownika jak i sygnalizacyjnych, ale informacje sygnalizacyjne maja wyzszy priorytet
+ przesylania tylko informacji sygnalizacyjnych
+ przesylania informacji zarowno uzytkownika jak i sygnalizacyjnych, ale informacje uzytkownika maja wyzszy priorytet
+c
+
+86. Rodzaj informacji przesylanej w komorce ATM jest umieszczane w jej naglowku na polu:
+ PT o dlugosci 3 bitow
+ PT o dlugosci 2 bitow
+ CLP o dlugosci 1 bita
+ REC o dlugosci 8 bitow
+a
+
+87. W sieci komutacji pakietow typu datagram:
+ Droga transmisyjna jest przypisywana na czas transmisji pakietu, przy czym w warunkach normalnej pracy dla kazdego pakietu droga jest jest taka sama
+ droga transmisyjne jest ustalana przed transmisja kazdego pakietu nalezacego …....... kanalu wirtualnego 
+ droga transmisyjna jest przypisywana na czas transmisji pakietu, przy czym …..... normalnej pracy dla kazdego pakietu droga ta jest niezalezna od drogi ….......... pakietu danej sesji 
+ droga transmisyjna jest przypisywana na caly czas trwania polaczenia do …..... uzytku
+c
+
+88. W detagramie:
+ Droga transmisyjna jest przypisywana na czas transmisji pakietu, przy czym w warunkach normalnej pracy dla kazdego pakietu droga jest inna
+ Droga transmisyjna jest przypisywana na caly czas trwania polaczenia do jego wylacznego uzytku
+ Droga transmisyjna jest przypisywana na czas transmisji pakietu, przy czym w warunkach normalnej pracy dla kazdego pakietu droga jest taka sama
+ Droga transmisyjna jest ustalana przed transmisja kazdego pakietu nalezacego do danego kanalu wirtualnego
+a
+
+89. Wiadomosci sygnalizacji SS7 moga byc przenoszone w sieci Internet protokolem IP
+ bezposrednio przez umieszczenie wiadomosci SS7 w polu informacyjnym datagramu IP
+ z wykorzystaniem protokolu TCP (wiadomosc SS7 jest umieszczana w pakiecie TCP a ten w datagramie IP)
+ wiadomosci SS7 nie mozna przeslac przez siec Internet ze wzgledu na zmienne opoznienie w tej sieci 
+ z wykorzystaniem odpowiedniego modulu adaptacyjnego specyficznego dla kazdego poziomu SS7 i protokolu SCTP
+d
+
+90. W routerach IP pierwszej generacji komutacja jest realizowana
+ sprzetowo z wykorzystaniem wspolnej pamieci
+ sprzetowo z wykorzystaniem wspolnej magistrali
+ sprzetowo z wykorzystaniem pola komutacyjnego
+ programowo z wykorzystaniem wspolnej pamieci i magistrali
+d
+
+91. Usluga wielokrotny numer abonenta (MSN) umozliwia:
+ przypisanie jednemu abonentowi wielu numerow ale polaczenie jest kierowane do wszystkich urzadzen na styku
+ przypisanie jednemu abonentowi wielu numerow i kierowanie polaczenia do wybranego urzadzenia koncowego jesli jest wolne, a do wszystkich pozostalych urzadzen, jezeli wybrane polaczenie jest zajete
+ przypisanie jednemu abonentowi wielu numerow i kierowanie polaczenia do urzadzenia koncowego o wybranym numerze
+ przypisanie jednemu abonentowi dokladnie dwoch numerow do obslugi dwoch kanalow styku uzytkownika z siecia
+b
+
+92. Wzor Erlanga opisuje system:
+ M/M/N
+ M/M/N/5
+ M/M/1
+ M/M/N/0
+a
+
+93. System sygnalizacji we wspolnym kanale moze pracowac:
+ tylko w powiazaniu z laczami danych
+ tylko bez powiazania zlaczami danych
+ w powiazaniu zlaczami danych lub bez powiazania zlaczami danych, ale w jednym punkcie sygnalizacyjnym jest mozliwy tylko jeden tryb pracy
+ zarowno w powiazaniu z laczami danych jak i bez powiazania z laczami danych
+d
+
+94. W polskiej sieci telefonicznej jest stosowana numeracja 
+ mieszana 
+ skryta
+ jawna
+ jednolita
+b
+
+95. Diagram stanow dla systemu M/M/N/K bedzie zawieral:
+ N stanow
+ maxN;K stanow
+ N+K stanow
+ N+K+1 stanow 
+d
+
+96. System sygnalizacyjny do przesylania informacji sterujacej wykorzystuje sygnal sinusoidalny o czestotliwosci 2400 Hz. System jest systemem sygnalizacji:
+ cyfrowej w szczelinie czasowej
+ cyfrowej poza szczelina czasowa
+ analogowej poza pasmem
+ analogowej w pasmie
+d
+
+97. Ktory z wymienionych ponizej mechanizmow nie ma wplywu na p(rzepustowos – ten wyraz to moje przypuszczenie
+ sterowanie przeplywem
+ korekcja bledow
+ ksztaltowanie ruchu
+ algorytmy przyjmowania zgloszen CAC
+c
+
+98. Najwieksza teoretyczna przepustowosc uzyskuje sie w routerach z ….:
+ kolejkowaniem na wejsciu
+ kolejkowaniem rozproszonym
+ wirtualnym kolejkowaniem na wyjsciu
+ kolejkowaniem na wyjsciu
+d
+
+99. W analogowym laczu abonenckim do abonenta sa wysylane nastepujace sygnaly informujace o aktualnym stanie polaczenia:
+ zwrotny sygnal dzwonienia, impulsy wybiercze, sygnaly R2
+ sygnal zgloszenia centrali, zwrotny sygnal dzwonienia, prad dzwonienia
+ prad dzwonienia, sygnaly DTMF, wiadomosci sygnalizacji SS7
+ zwrotny sygnal dzwonienia, wiadomosci sygnalizacji DSS1, impulsy wybiercze
+b
+
+100. W czasie realizacji polaczenia przychodzacego od abonenta sieci telefonicznej stacjonarnej do abonenta sieci GSM procedury MAP:
+ sa wykorzystywane przez caly czas zestawienia i trwania polaczenia oraz w momencie rozlaczania
+ sa wykorzystywane na poczatku realizacji polaczenia w celu okreslenia lokalizacji abonenta oraz po rozpoczeciu wywolania w celu potwierdzenia lokalizacji abonenta
+ sa wykorzystywane tylko na poczatku realizacji polaczenia w celu lokalizacji wywolywanego abonenta sieci GSM
+ ….................
+c
+
+101. W systemie WDM sygnaly przesylane na kazdej dlugosci fali struktura przesylanego sygnalu (budowa ramki) oraz szybkosc transmisji
+ musza byc rowne co do szybkosci ale moga sie roznic struktura
+ moga byc rozne
+ musza byc takie same
+ musza miec taka sama strukture, ale moga sie roznic co do szybkosci
+d
+
+102. Wielokrotny komutator przestrzenny o pojemnosci 4 x 8 bedzie zbudowany z multiplexerow:
+ 4
+ 8 
+ 12
+ 32
+b
+
+103. Czy komutator przestrzenny przerzuca z jednego swiatlowodu na drugi:
+ w inna szczeline
+ w te sama szczeline 
+ w inny swiatlowod
+ szczeline wej na wyjscie.
+c
+
+1. W przestrzennych polach komutacyjnych sygnal przenoszony jest:
+z lacza wejsciowego do lacza wyjsciowego
+z okreslonej szczeliny czasowej w laczu wejsciowym do dowolnej szczeliny czasowej w laczu wyjsciowym
+z okreslonej dlugosci fali w swiatlowodzie wejsciowym na dowolna dlugosc fali w dowolnym swiatlowodzie wyjsciowym
+z okreslonej dlugosci fali w swiatlowodzie wejsciowym na te sama dlugosc fali, ale w dowolnym swiatlowodzie wyjsciowym
+a
+
+2. Uslugi dodatkowe:
+sa samodzielne oferowane uzytkownikom
+sa czasami powiazane z uslugami podstawowymi, ale moga tez byc oferowane samodzielnie uzytkownikom
+sluza do modyfikacji uslug podstawowych
+w zadnej sieci telekomunikacyjnej uslugi dodatkowe nie sa oferowane
+c
+
+3. Ktory z wymienionych ponizej mechanizmow nie ma wplywu na parametry QoS w sieci ATM:
+sterowanie przeplywem
+korekcja bledow
+ksztaltowanie ruchu
+algorytmy przyjmowania zgloszen CAC
+d
+
+4. W sieciach ATM usluga klasy CBR sluzy do przesylania informacji dla aplikacji wymagajacych:
+o zmiennej szybkosci transmisji, zorientowanych polaczeniowo i zaleznie od czasu
+o zmiennej szybkosci transmisji, niezorientowanych polaczeniowo i zaleznie odczasu
+o stalej szybkosci transmisji, niezorientowanych polaczeniowo i zaleznie od czasu
+o stalej szybkosci transmisji, zorientowanych polaczeniowo i zaleznie od czasu
+d
+
+5. Komutacja ATM jest odmiana komutacji:
+pakietow, w ktorej pakiety maja stala i duza dlugosc
+kanalow, w ktorej do danych dolacza sie naglowek z adresem w celu okreslenia jego przeznaczenia
+pakietow, w ktorej pakiety maja zmienna, ale niewielka dlugosc
+pakietow, w ktorej pakiety zastapiono krotkimi komorkami o stalej dlugosci
+d
+
+6. Atrybut „struktura przesylanej informacji” okresla:
+zdolnosc uslugi do utrzymania okreslonej struktury przesylanej informacji
+sposob zestawiania
+techniki transmisyjne i komutacyjne wykorzystywane przez usluge w celu przesylania informacji
+stosowane przez usluge szybkosci przesylania informacji
+a
+
+7. Usluga przenoszenia obejmuje nastêpujace warstwy OSI:
+4 – 7
+1 – 7
+1 – 4
+1 – 3
+c
+===

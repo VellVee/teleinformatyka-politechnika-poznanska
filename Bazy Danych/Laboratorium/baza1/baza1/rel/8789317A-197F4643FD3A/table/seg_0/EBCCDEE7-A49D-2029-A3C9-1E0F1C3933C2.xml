@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EBCCDEE7-A49D-2029-A3C9-1E0F1C3933C2" name="Post_Hashtag">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Post_id_posta" id="4FB9BDD0-689C-1F73-066B-1794520D8764">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E7E91D89-1201-B7C5-7042-B5011A22D568" referredColumn="233D83FE-11D4-F8AC-6FB5-BD6B444B15CA"/>
+</associations>
+</Column>
+<Column name="Post_id_uzytkownika" id="3F087BB8-B34C-04C4-42CB-746573BE49AF">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Hashtag_nazwa" id="7E013E48-B5B0-0E7C-2FDB-BA559661CC22">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6F52B0E8-7395-F06C-D6AF-8C49EC027600" referredColumn="B58DA496-F442-08BA-52CD-79949AAA1A67"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3BA60ED1-5743-D15F-81A9-C80F382DCE4C" name="Post_Hashtag_PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FB9BDD0-689C-1F73-066B-1794520D8764"/>
+<colUsage columnID="3F087BB8-B34C-04C4-42CB-746573BE49AF"/>
+<colUsage columnID="7E013E48-B5B0-0E7C-2FDB-BA559661CC22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="92C53037-F04C-E921-61F7-4D3D2F2F6D63" name="FK_ASS_25">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>8761F33A-B0D0-E151-E4D2-79A98E4A1163</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FB9BDD0-689C-1F73-066B-1794520D8764"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D8262414-745F-D532-F3D7-C23FB16F9ADC" name="FK_ASS_26">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>8761F33A-B0D0-E151-E4D2-79A98E4A1163</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7E013E48-B5B0-0E7C-2FDB-BA559661CC22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

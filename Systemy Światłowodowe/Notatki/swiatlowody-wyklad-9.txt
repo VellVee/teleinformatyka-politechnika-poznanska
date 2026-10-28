@@ -1,0 +1,24 @@
+Parametry łącza: interfejs nadawczy:
+
+* Typ źródła światła
+* Długość fali źródła
+* Szerokość widma źródła
+* Współczynnik tłumienia modów bocznych
+* Średnia moc optyczna
+* Współczynnik gaszenia
+* Maska wykresu oczkowego 
+
+Parametry łącze: tor optyczne
+
+* Całkowite tłumienie - tłumienie włókna, złączy, multiplekserów, przełącznic i innych
+* Optyczne tłumienie powrotne (ORL - Optical Return Loss) - wszelkie dyskretne odbicia (na złączu, od płaszczyzny wejściowej fotodiody, na spawie, w środku linii, na filtrach itp) - ich suma + sygnał zwrotny na skutek rozproszenia
+* Reflektancja optyczna - mierzone na reflektometrze
+* Dyspersja chromatyczna 
+* Dyspersja polaryzacyjna 
+
+Parametry łącze: styk odbiorczy
+
+* Czułość odbiornika
+* Moc maksymalna - związana z nasyceniem odbiornika
+* Reflektancja odbiornika
+* Dodatkowe straty na tor optyczny 

@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7297A366-ED4C-DD4E-15BD-43F3B3B739E4" name="Komentarz">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:43:18 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_komentarza" id="3EE26639-53BB-5696-8E2B-A0898425E027">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:43:26 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="tresc" id="ED66034B-7931-B9A5-408B-7BEC57F5C686">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:43:36 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+</Attribute>
+<Attribute name="data_dodania" id="3358B7F3-1982-8472-7F25-0637FC71AE11">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:43:54 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+</Attribute>
+<Attribute name="id_posta" id="B35DE728-F8BC-5D24-5209-89A5E945255A">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:46:32 UTC</createdTime>
+<generatorID>33E568D9-1303-4DC0-AC94-FF00210FA9DD</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>3500D913-C1F1-F62C-B520-F856EB3F39C5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="id_uzytkownika" id="35BC031A-EACF-57A4-AC22-77DAB8B8FCE1">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:29:20 UTC</createdTime>
+<generatorID>9A08D6FB-2E65-00AC-9D24-34E60F2EC1AD</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="true"/>
+</engineerTo>
+<referedAttribute>CB59ACCB-ADFA-281A-2871-D05B99B2DF81</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="5692B113-C5A2-A02B-E4B5-1018EDF69832" name="Komentarz PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 18:43:34 UTC</createdTime>
+<ownerDesignName>baza1</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="8789317A-4C46-DBAC-8B51-197F4643FD3A" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>3EE26639-53BB-5696-8E2B-A0898425E027</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

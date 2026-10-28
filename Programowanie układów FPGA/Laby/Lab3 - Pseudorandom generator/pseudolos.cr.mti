@@ -1,0 +1,29 @@
+C:/Users/Vell/Desktop/sem6/FPGA/Lab3/src/random1.v {1 {vlog -work work -stats=none C:/Users/Vell/Desktop/sem6/FPGA/Lab3/src/random1.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module random1
+
+Top level modules:
+	random1
+
+} {} {}} C:/Users/Vell/Desktop/sem6/FPGA/Lab3/src/random2.v {1 {vlog -work work -stats=none C:/Users/Vell/Desktop/sem6/FPGA/Lab3/src/random2.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module random2
+
+Top level modules:
+	random2
+
+} {} {}} C:/Users/Vell/Desktop/sem6/FPGA/Lab3/src/random3.v {1 {vlog -work work -stats=none C:/Users/Vell/Desktop/sem6/FPGA/Lab3/src/random3.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module random3
+
+Top level modules:
+	random3
+
+} {} {}} C:/Users/Vell/Desktop/sem6/FPGA/Lab3/src/testbench.v {1 {vlog -work work -stats=none C:/Users/Vell/Desktop/sem6/FPGA/Lab3/src/testbench.v
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module mytestbenchmodule
+
+Top level modules:
+	mytestbenchmodule
+
+} {} {}}

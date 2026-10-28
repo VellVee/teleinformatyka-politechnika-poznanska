@@ -1,0 +1,8 @@
+C:\Users\adamp\Desktop\Studia\Semestr 7\PO W-Z Sieci zintegrowanych\Qban\Qban kod\Qban\obj\Debug\Qban.csprojResolveAssemblyReference.cache
+C:\Users\adamp\Desktop\Studia\Semestr 7\PO W-Z Sieci zintegrowanych\Qban\Qban kod\Qban\obj\Debug\Form1.Form1.resources
+C:\Users\adamp\Desktop\Studia\Semestr 7\PO W-Z Sieci zintegrowanych\Qban\Qban kod\Qban\obj\Debug\Form1.Kaban.Properties.Resources.resources
+C:\Users\adamp\Desktop\Studia\Semestr 7\PO W-Z Sieci zintegrowanych\Qban\Qban kod\Qban\obj\Debug\Qban.csproj.GenerateResource.Cache
+C:\Users\adamp\Desktop\Studia\Semestr 7\PO W-Z Sieci zintegrowanych\Qban\Qban kod\Qban\bin\Debug\Kaban.exe
+C:\Users\adamp\Desktop\Studia\Semestr 7\PO W-Z Sieci zintegrowanych\Qban\Qban kod\Qban\bin\Debug\Kaban.pdb
+C:\Users\adamp\Desktop\Studia\Semestr 7\PO W-Z Sieci zintegrowanych\Qban\Qban kod\Qban\obj\Debug\Kaban.exe
+C:\Users\adamp\Desktop\Studia\Semestr 7\PO W-Z Sieci zintegrowanych\Qban\Qban kod\Qban\obj\Debug\Kaban.pdb

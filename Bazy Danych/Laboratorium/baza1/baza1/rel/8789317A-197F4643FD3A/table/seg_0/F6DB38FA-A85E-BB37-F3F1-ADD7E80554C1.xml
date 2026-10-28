@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F6DB38FA-A85E-BB37-F3F1-ADD7E80554C1" name="Głos_Komentarza">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>4BE80C31-CA6C-865B-708D-C54AC9EE4694</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<ordsAlias>glos_komentarza</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_glosu_komentarza" id="9767B30E-0762-2D4C-1193-C15B51AD2E37">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>38EA17DE-C3DC-1AE9-A941-35C510B035AD</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="typ" id="A701792A-0A0C-CCB8-F333-CAA72507B3EA">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>A2DE76F0-17F6-EBA3-1BD9-4CF813E51C61</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Uzytkownik_id_uzytkownika" id="A3B49B51-7016-45A5-0A50-185508EC4457">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>29A33489-BD21-58B0-948E-F025FB7AA98E</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A052A46C-18A1-C452-8227-DDF0D27240E5" referredColumn="20D52CCF-7510-A14A-542C-8D1F2728FF11"/>
+</associations>
+</Column>
+<Column name="Komentarz_id_komentarza" id="4E5EC1FC-1BCB-14DE-5CBA-594A931AC6D5">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>4E7FDC90-1205-3926-B59C-B36E3FA10A6C</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F846295D-3DEB-4DBF-5820-A2062D94CF4F" referredColumn="238D0DD8-3A89-05E0-675D-211972A137F2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="452A412F-EAB8-6320-0613-0F0746F80A38" name="Głos_Komentarza_PK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>5271E136-AD3F-3E04-6523-FCF06E25C00B</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9767B30E-0762-2D4C-1193-C15B51AD2E37"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="27653260-50D0-68DC-2EC5-0B96652526DF" name="Głos_Komentarza_Komentarz_FK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>4F3C0989-8C26-7390-8ECF-487D3A846DA8</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4E5EC1FC-1BCB-14DE-5CBA-594A931AC6D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C4E6A571-F1FD-8BDD-5465-F2E2B78AFAD7" name="Głos_Komentarza_Uzytkownik_FK">
+<createdBy></createdBy>
+<createdTime>2019-01-30 21:12:45 UTC</createdTime>
+<generatorID>8B302E58-E843-C745-DBE8-4E5D63CBAA5C</generatorID>
+<ownerDesignName>baza1</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3B49B51-7016-45A5-0A50-185508EC4457"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,33 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="7EEC41DB-5274-F251-2B44-2F59A344F24B" name="Aktywacja" seqName="seg_0"/>
+   <object objectType="Table" objectID="8F617325-1CCF-B48B-AAFA-93DB1B068A15" name="Glos_Posta" seqName="seg_0"/>
+   <object objectType="Table" objectID="F6DB38FA-A85E-BB37-F3F1-ADD7E80554C1" name="GĹ‚os_Komentarza" seqName="seg_0"/>
+   <object objectType="Table" objectID="A5ADA830-45B1-1680-7E53-C9C530ECD726" name="Hashtag" seqName="seg_0"/>
+   <object objectType="Table" objectID="475723BD-D69A-1B5D-C43C-41F8B3333C66" name="Komentarz" seqName="seg_0"/>
+   <object objectType="Table" objectID="5F6C8D73-2C14-45AF-7E9C-0FFF48D7703D" name="Obraz" seqName="seg_0"/>
+   <object objectType="Table" objectID="7066CB0A-6DE4-B312-6BB5-BB4784C3CB25" name="Obraz_Komentarz" seqName="seg_0"/>
+   <object objectType="Table" objectID="8D7BD383-CA4F-F8F1-4591-4160E69ED576" name="Post" seqName="seg_0"/>
+   <object objectType="Table" objectID="EBCCDEE7-A49D-2029-A3C9-1E0F1C3933C2" name="Post_Hashtag" seqName="seg_0"/>
+   <object objectType="Table" objectID="4E4F2D54-4F1A-C5E9-E755-D56DE35FB7CA" name="Powiadomienie" seqName="seg_0"/>
+   <object objectType="Table" objectID="D4F54D0F-AD30-62C9-ACC3-330C25B9455F" name="Subskrypcja_Hashtag" seqName="seg_0"/>
+   <object objectType="Table" objectID="81F61D2F-BA15-255D-9AAC-A3F3F742E009" name="Substrypcja" seqName="seg_0"/>
+   <object objectType="Table" objectID="95DD2396-918F-6FF2-72B9-FC397665B6CD" name="Uzytkownik" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="07205D4B-C052-4980-6A34-4C42844FDAEB" name="Aktywacja_Uzytkownik_FK" seqName="seg_0" containerID="7EEC41DB-5274-F251-2B44-2F59A344F24B" refContainerID="95DD2396-918F-6FF2-72B9-FC397665B6CD"/>
+   <object objectType="FKIndexAssociation" objectID="08B70BF3-8125-03C5-9D71-F0BE60CA79BA" name="FK_ASS_23" seqName="seg_0" containerID="7066CB0A-6DE4-B312-6BB5-BB4784C3CB25" refContainerID="5F6C8D73-2C14-45AF-7E9C-0FFF48D7703D"/>
+   <object objectType="FKIndexAssociation" objectID="A8E0B111-8518-4848-FB44-D4D8A640D27F" name="FK_ASS_24" seqName="seg_0" containerID="7066CB0A-6DE4-B312-6BB5-BB4784C3CB25" refContainerID="475723BD-D69A-1B5D-C43C-41F8B3333C66"/>
+   <object objectType="FKIndexAssociation" objectID="E7E91D89-1201-B7C5-7042-B5011A22D568" name="FK_ASS_25" seqName="seg_0" containerID="EBCCDEE7-A49D-2029-A3C9-1E0F1C3933C2" refContainerID="8D7BD383-CA4F-F8F1-4591-4160E69ED576"/>
+   <object objectType="FKIndexAssociation" objectID="6F52B0E8-7395-F06C-D6AF-8C49EC027600" name="FK_ASS_26" seqName="seg_0" containerID="EBCCDEE7-A49D-2029-A3C9-1E0F1C3933C2" refContainerID="A5ADA830-45B1-1680-7E53-C9C530ECD726"/>
+   <object objectType="FKIndexAssociation" objectID="D1EF224C-0F8D-45A9-C86A-845471B9EB23" name="FK_ASS_30" seqName="seg_0" containerID="D4F54D0F-AD30-62C9-ACC3-330C25B9455F" refContainerID="81F61D2F-BA15-255D-9AAC-A3F3F742E009"/>
+   <object objectType="FKIndexAssociation" objectID="8611F37B-7C7D-AE4A-F520-79CBC12C84B3" name="FK_ASS_31" seqName="seg_0" containerID="D4F54D0F-AD30-62C9-ACC3-330C25B9455F" refContainerID="A5ADA830-45B1-1680-7E53-C9C530ECD726"/>
+   <object objectType="FKIndexAssociation" objectID="91AA9F6D-EBA0-416A-647D-85868A7E6AD5" name="Glos_Posta_Post_FK" seqName="seg_0" containerID="8F617325-1CCF-B48B-AAFA-93DB1B068A15" refContainerID="8D7BD383-CA4F-F8F1-4591-4160E69ED576"/>
+   <object objectType="FKIndexAssociation" objectID="2B38B25D-75B8-7DCC-5975-344102D905F0" name="Glos_Posta_Uzytkownik_FK" seqName="seg_0" containerID="8F617325-1CCF-B48B-AAFA-93DB1B068A15" refContainerID="95DD2396-918F-6FF2-72B9-FC397665B6CD"/>
+   <object objectType="FKIndexAssociation" objectID="F846295D-3DEB-4DBF-5820-A2062D94CF4F" name="GĹ‚os_Komentarza_Komentarz_FK" seqName="seg_0" containerID="F6DB38FA-A85E-BB37-F3F1-ADD7E80554C1" refContainerID="475723BD-D69A-1B5D-C43C-41F8B3333C66"/>
+   <object objectType="FKIndexAssociation" objectID="A052A46C-18A1-C452-8227-DDF0D27240E5" name="GĹ‚os_Komentarza_Uzytkownik_FK" seqName="seg_0" containerID="F6DB38FA-A85E-BB37-F3F1-ADD7E80554C1" refContainerID="95DD2396-918F-6FF2-72B9-FC397665B6CD"/>
+   <object objectType="FKIndexAssociation" objectID="25F60BDB-7ABA-FC1C-7894-9D5DCF257325" name="Komentarz_Post_FK" seqName="seg_0" containerID="475723BD-D69A-1B5D-C43C-41F8B3333C66" refContainerID="8D7BD383-CA4F-F8F1-4591-4160E69ED576"/>
+   <object objectType="FKIndexAssociation" objectID="E53BA035-08EA-A4FE-0FD1-1C35BE8B4252" name="Komentarz_Uzytkownik_FK" seqName="seg_0" containerID="475723BD-D69A-1B5D-C43C-41F8B3333C66" refContainerID="95DD2396-918F-6FF2-72B9-FC397665B6CD"/>
+   <object objectType="FKIndexAssociation" objectID="DD34AEFC-AD19-F897-2DBB-3D8023A4AA7B" name="Post_Obraz_FK" seqName="seg_0" containerID="8D7BD383-CA4F-F8F1-4591-4160E69ED576" refContainerID="5F6C8D73-2C14-45AF-7E9C-0FFF48D7703D"/>
+   <object objectType="FKIndexAssociation" objectID="5E548087-0CCA-8437-D767-C8C554F2C1D7" name="Post_Uzytkownik_FK" seqName="seg_0" containerID="8D7BD383-CA4F-F8F1-4591-4160E69ED576" refContainerID="95DD2396-918F-6FF2-72B9-FC397665B6CD"/>
+   <object objectType="FKIndexAssociation" objectID="A72AE843-C9C7-94EB-F1B1-50FF003A7C14" name="Powiadomienie_Uzytkownik_FK" seqName="seg_0" containerID="4E4F2D54-4F1A-C5E9-E755-D56DE35FB7CA" refContainerID="95DD2396-918F-6FF2-72B9-FC397665B6CD"/>
+   <object objectType="FKIndexAssociation" objectID="8FBC74BD-9A9D-E113-E1A1-88D5BB8D9222" name="Substrypcja_Uzytkownik_FK" seqName="seg_0" containerID="81F61D2F-BA15-255D-9AAC-A3F3F742E009" refContainerID="95DD2396-918F-6FF2-72B9-FC397665B6CD"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

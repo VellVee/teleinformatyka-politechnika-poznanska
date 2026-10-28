@@ -1,0 +1,81 @@
+-- Wersja dla Oracle
+
+DROP TABLE pacjenci CASCADE CONSTRAINTS;
+DROP TABLE punkty_szczepien CASCADE CONSTRAINTS;
+DROP TABLE rejestracje CASCADE CONSTRAINTS;
+DROP TABLE szczepionki CASCADE CONSTRAINTS;
+DROP TABLE szczepienia CASCADE CONSTRAINTS;
+
+
+CREATE TABLE pacjenci( 
+     pesel CHAR (11) constraint pacjenci_pk PRIMARY KEY, 
+     imie VARCHAR2 (100) NOT NULL, 
+     nazwisko VARCHAR2 (100) NOT NULL, 
+     data_urodzenia DATE NOT NULL, 
+     czy_choroby_wspolistniejace CHAR (1) NOT NULL constraint pacjenci_chk1 CHECK(czy_choroby_wspolistniejace IN ('T', 'N')));
+
+CREATE TABLE punkty_szczepien ( 
+     kod CHAR (10) constraint punkty_szczepien_pk PRIMARY KEY, 
+     nazwa VARCHAR2 (50) NOT NULL, 
+     adres VARCHAR2 (100) NOT NULL, 
+     czy_dojazd_do_pacjenta CHAR(1) NOT NULL constraint punkty_szczepien_chk1 check(czy_dojazd_do_pacjenta in ('T','N')), 
+     data_zgloszenia DATE NOT NULL);
+
+
+CREATE TABLE rejestracje ( 
+     pesel_pacjenta CHAR (11) NOT NULL 
+		constraint rejestracje_fk1 REFERENCES pacjenci(pesel), 
+     data DATE NOT NULL, 
+     plan_termin_1_dawki DATE NOT NULL, 
+     plan_termin_2_dawki DATE NOT NULL, 
+     kod_punktu_szczepien CHAR(10) NOT NULL
+		constraint rejestracje_fk2 REFERENCES punkty_szczepien(kod),
+     constraint rejestracje_pk PRIMARY KEY (data, pesel_pacjenta));
+
+CREATE TABLE szczepionki( 
+     symbol VARCHAR2(10) constraint szczepionki_pk PRIMARY KEY, 
+     nazwa VARCHAR2(100) NOT NULL, 
+     producent VARCHAR2(100) NOT NULL, 
+     czy_przechowywanie_ponizej_0 CHAR(1) NOT NULL 
+		constraint szczepionki_chk1 CHECK(czy_przechowywanie_ponizej_0 IN ('T', 'N')));
+	 
+CREATE TABLE szczepienia( 
+     data DATE NOT NULL, 
+     symbol_szczepionki VARCHAR2(10) NOT NULL
+		constraint szczepienia_fk1 REFERENCES szczepionki(symbol), 
+     numer_dawki NUMBER (2) NOT NULL, 
+     pesel_pacjenta CHAR(11) NOT NULL
+		constraint szczepienia_fk2 REFERENCES pacjenci(pesel), 
+     kod_punktu_szczepien CHAR(10) NOT NULL 
+		constraint szczepienia_fk3 REFERENCES punkty_szczepien(kod),  
+     constraint szczepienia_pk PRIMARY KEY(data, pesel_pacjenta));
+
+REM Przykładowe dane
+insert into szczepionki(symbol, nazwa, producent, czy_przechowywanie_ponizej_0) values ('VACC1', 'vaccine one', 'Manufacturer 1', 'N');
+insert into szczepionki(symbol, nazwa, producent, czy_przechowywanie_ponizej_0) values ('VACC2', 'vaccine two', 'Manufacturer 2', 'T');
+insert into szczepionki(symbol, nazwa, producent, czy_przechowywanie_ponizej_0) values ('VACC3', 'vaccine three', 'Manufacturer 3', 'N');
+
+insert into punkty_szczepien(kod, nazwa, adres, czy_dojazd_do_pacjenta, data_zgloszenia) values('P1', 'Punkt 1', 'ul. Pierwsza 1', 'N', DATE '2020-01-02');
+insert into punkty_szczepien(kod, nazwa, adres, czy_dojazd_do_pacjenta, data_zgloszenia) values('P2', 'Punkt 2', 'ul. Druga 2', 'N', DATE '2020-01-03');
+
+insert into pacjenci(pesel, imie, nazwisko, data_urodzenia, czy_choroby_wspolistniejace) values('11111111111', 'Jan', 'Kowalski', DATE '1950-01-02', 'T');
+insert into pacjenci(pesel, imie, nazwisko, data_urodzenia, czy_choroby_wspolistniejace) values('22222222222', 'Adam', 'Czarny', DATE '1980-10-03', 'N');
+insert into pacjenci(pesel, imie, nazwisko, data_urodzenia, czy_choroby_wspolistniejace) values('33333333333', 'Zuzanna', 'Niebieska', DATE '1987-08-12', 'N');
+
+insert into rejestracje (pesel_pacjenta, data, plan_termin_1_dawki, plan_termin_2_dawki, kod_punktu_szczepien)
+	values('11111111111', DATE '2021-01-25', DATE '2021-05-01', DATE '2021-05-28', 'P1');
+insert into rejestracje (pesel_pacjenta, data, plan_termin_1_dawki, plan_termin_2_dawki, kod_punktu_szczepien)
+	values('22222222222', DATE '2021-01-26', DATE '2021-04-11', DATE '2021-05-01', 'P2');	
+insert into rejestracje (pesel_pacjenta, data, plan_termin_1_dawki, plan_termin_2_dawki, kod_punktu_szczepien)
+	values('33333333333', DATE '2021-01-26', DATE '2021-09-01', DATE '2021-09-22', 'P1');
+	
+insert into szczepienia(data, symbol_szczepionki, numer_dawki, pesel_pacjenta, kod_punktu_szczepien)
+	values(DATE '2021-05-01', 'VACC1', 1, '11111111111', 'P1');
+insert into szczepienia(data, symbol_szczepionki, numer_dawki, pesel_pacjenta, kod_punktu_szczepien)
+	values(DATE '2021-05-28', 'VACC1', 2, '11111111111', 'P1');	
+insert into szczepienia(data, symbol_szczepionki, numer_dawki, pesel_pacjenta, kod_punktu_szczepien)
+	values(DATE '2021-04-11', 'VACC2', 1, '22222222222', 'P2');
+insert into szczepienia(data, symbol_szczepionki, numer_dawki, pesel_pacjenta, kod_punktu_szczepien)
+	values(DATE '2021-05-01', 'VACC2', 2, '22222222222', 'P2');	
+insert into szczepienia(data, symbol_szczepionki, numer_dawki, pesel_pacjenta, kod_punktu_szczepien)
+	values(DATE '2021-09-01', 'VACC2', 1, '33333333333', 'P1');	

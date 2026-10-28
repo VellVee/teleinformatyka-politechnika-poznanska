@@ -1,0 +1,30 @@
+     1        0096      SEG_ON EQU P1.6
+     2        FF30      F_CSDS EQU 0FF30H
+     3        FF38      F_CSDB EQU 0FF38H
+     4                  
+     5        001F      DISPLAY EQU 00011111B
+     6                  
+     7        0073      COD_P	EQU 01110011B
+     8        0077      COD_A	EQU 01110111B
+     9        001C      COD_W	EQU 00011100B
+    10        0079      COD_E	EQU 01111001B
+    11        0038      COD_L	EQU 00111000B
+    12                  
+    13  0000: 02 01 00  	LJMP START
+    14  0100:           	ORG 100H
+    15                  
+    16  0100:           START:
+    17  0100: 90 FF 30  	MOV DPTR, #F_CSDS
+    18                  	
+    19  0103: 74 1F     	MOV A,#DISPLAY
+    20  0105: F0        	MOVX @DPTR, A
+    21                  	
+    22                  	
+    23                  	
+    24  0106: 90 FF 38  	MOV DPTR,#F_CSDB
+    25                  	
+    26  0109: 74 73     	MOV  A,#COD_P
+    27  010B: F0        	MOVX @DPTR,A
+    28                  	
+    29  010C: C2 96     	CLR SEG_ON
+    30                  	

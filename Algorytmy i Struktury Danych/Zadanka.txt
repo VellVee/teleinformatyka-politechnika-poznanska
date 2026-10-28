@@ -1,0 +1,43 @@
+1. Napisz funkcję która sprawdzi czy dana liczba jest parzysta.
+
+2. Napisz funkcję, która sprawdzi ile jedynek jest w danej liczbie binarnej
+1100 1010 <-- 4 jedynki
+
+4. Napisz funkcję, która "odwróci" liczbę bitowo (zapisz ją od końca)
+1000 1010 <-- WEJŚCIE
+0101 0001 <-- WYJŚCIE
+
+5. Napisz funkcję, która sprawdzi najdłuższą sekwencję zer w liczbie binarnej i zwróci ich ilość
+0001 1001 0000 0010 0101 0001
+ 	  ^6 zer (max) - wynik
+
+6. Napisz funkcję, która dla danej liczby rozmieści wszystkie jedynki po lewej stronie i wszystkie zera po prawej stronie
+1011 1000 1111 0001 <-- WEJŚCIE (liczba)
+1111 1111 1000 0000 <-- WYJŚCIE (liczba)
+
+7. Napisz funkcję, która zamieni podaną liczbę dziesiętną na ósemkową
+111 011 110 001 010 <-- WEJŚCIE (liczba)
+73612	<-- WYJŚCIE
+
+8. Napisz funkcję, która zamieni podaną liczbę dziesiętną na szesnastkową
+1101 1001 1110 0000 1111 1100 1000 1011 <-- WEJŚCIE
+D9E0FC8B <-- WYJŚCIE
+
+9. Napisz funkcję, która zamieni miejscami sąsiednie bajty
+1101 1001 1110 0000 1111 1100 1000 1011 <-- WEJŚCIE (liczba)
+1110 0000 1101 1001 1000 1011 1111 1100 <-- WYJŚCIE (liczba)
+
+10. Napisz funkcję, która wykryje wszystkie powtarzające się sekwencje zer i jedynek w danej liczbie (sprawdzamy każde 4 bity), i zwórci ich ilość [użyj tablicy, chyba że masz lepszy pomysł] 
+1101 1011 1000 1011 1111 1110 1100 1011 <-- WEJŚCIE (liczba)
+     ^raz      ^dwa        ^trzy   ^cztery
+np.
+1011 - powtarza się 4 razy
+1101 - powtarza się x razy
+0001 - powtarza się y razy
+...
+WYJŚCIE: 4+x+y+... (liczba)
+
+11. Napisz funkcję, która zamieni liczbę dodatnią na ujemną (i na odwrót)
+75  <-- WEJŚCIE
+-75 <-- WYJŚCIE
+

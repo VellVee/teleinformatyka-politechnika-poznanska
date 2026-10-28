@@ -1,0 +1,52 @@
+Hierarchia pamięci 
+============================================
+
+Dostęp do pamięci w HDD - czas liczony w milisekundach (10^-3 s)
+Dostep do pamięci RAM - czas liczony w nanosekundach (10^-9 s)
+
+Przykładowa tabela:
+Składniki (id , pesel, regon, typ, data, kwota)
+
+Symbole:
+r - liczba rekordów =  2,8 * 10^10
+R - rozmiar rekordu = 100 B
+B - rozmiar bloku =  4 kB
+bfr - rozmiar rekordów na blok [B/R] = 40
+b - liczba bloków [r/bfr] = 7*10^6
+
+bfr i b - to liczby całkowite (zaookrąglane w górę)
+
+Metoda dostępu "full scan" - implementacj selekcji - wczytuj bloki i szukaj wyników
+
+Relacyjny model danych: relacje, krotki
+Fizyczny model danych: pliki, rekord, blok dyskowy
+
+Dyskowe struktury danych
+=============================================
+
+Organizacja plików
+---------------------------
+1. Pliki nieuporządkowane
+2. Pliki uporzadkowane 
+    a. posortowane
+    b. hashowanie zewnętrzne
+
+Metoda połowienia
+---------------------------
+Mamy 3 bloki - w każdym po 3 nazwiska. 
+Mamy dwa wskaźniki - P (początek) i K (koniec)
+    P=1, K=6
+Wyznaczamy wskaźnik środkowy Ś=(P+K)/2.
+W naszym przypadku wskazuje on na drugie nazwisko w drugim bloku. 
+K_max = log2_b = log2_7*10^8 = 30
+
+Hashowanie 
+---------------------------
+Dana jest funkcja hashująca (mieszająca), której algorytm generuje numer bloku do którego trafi rekord. 
+Numer bloku: (płaca mod 100)+1
+<'Tarzan', 'Prezes', 25348zł, ...> ==> 49
+<'Nowak', 'referent', 1851zł, ...> ==> 52
+
+Kolizje 
+---------------------------
+W przypadku gdy występuje przepełnienie bloku, to nadwyżkę danych zapisujemu w nowym bloku, który umieszczamy na końcu. Natomiast w bloku oryginalnym dajemy na niego wskaźnik.

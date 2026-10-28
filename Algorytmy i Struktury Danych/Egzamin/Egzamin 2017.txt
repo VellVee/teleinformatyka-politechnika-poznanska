@@ -1,0 +1,20 @@
+1. Maszyna Turinga 
+	- odejmowanie
+	- #0*10# 
+	- dodawanie +1
+
+2. Ile razy szybciej wykona się program?
+	- heapsort
+	- quicksort
+
+3. Operacje bitowe
+
+4. Oszacuj złożoność obliczeniową dla podanego algorytmu
+
+5. Funkcje mieszające 
+
+6. Opis słowny algorytmu
+	- tablica z miliardem elementów - wpisać milion największych
+	
+7. Wyszukiwanie sekwencyjne vs. binarne
+	- zaznacz zdanie prawdziwe

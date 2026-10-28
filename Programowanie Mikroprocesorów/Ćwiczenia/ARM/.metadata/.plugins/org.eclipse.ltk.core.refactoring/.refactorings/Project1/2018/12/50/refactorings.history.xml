@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;driverlib.lib&apos; to &apos;Project1&apos;" description="Move &apos;driverlib.lib&apos; to &apos;Project1&apos;" destination="/Project1" element1="/Projekt2/driverlib.lib" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1544694329819" updateReferences="true"/>
+</session>

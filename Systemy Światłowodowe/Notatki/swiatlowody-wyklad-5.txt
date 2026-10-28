@@ -1,0 +1,19 @@
+Modulacja sygnałów cyfrowych
+==========================================
+- alfabet binarny [0 1]
+- 00 01 10 11 = [A B C D]
+- 000 001 ... 111 = [A B C D E F G H]
+
+Każdy z tych symboli może być reprezentowany przez falę elektromagnetyczną. Możemy ją uzyskać za pomocą
+- modulacji amplituty 
+- modulacji fazy
+- modulacji częstotliwośći
+- modulacji stanu polaryzacji (czubek wektora fali elektromagnetycznej) 
+
+Nie wszystkie sposoby modulacji są chętnie wykorzystywane do przesyłania informacji wprost. 
+
+* Długość fali - wolimy zostawić sobie ten parametr do systemów typu WDM
+* Stan polaryzacjo - możemy manipulować stanem polaryzacji (multipleksja stanem polaryzjacji - 
+
+
+

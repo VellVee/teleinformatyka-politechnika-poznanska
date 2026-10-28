@@ -1,0 +1,179 @@
+m255
+K4
+z2
+!s11f vlog 2020.3 2020.10, Oct 14 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/lscc/diamond/3.12/modeltech/win32loem
+vincrement
+!s110 1616087422
+!i10b 1
+!s100 JzLG4C29omE2AFGeCzL=C1
+Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
+In:10DOkEF`6:5DJBN]hR^3
+Z1 dC:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/pliki modelsima
+Z2 w1551273962
+8C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/increment.v
+FC:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/increment.v
+!i122 3
+L0 1 14
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 OT;L;2020.3;71
+r1
+!s85 0
+31
+!s108 1616087422.000000
+!s107 C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/increment.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/increment.v|
+!s101 -O0
+!i113 1
+Z5 o-work work -O0
+Z6 tCvgOpt 0
+vmytestbenchmodule
+!s110 1616087431
+!i10b 1
+!s100 D7cM9bQCPJ0cd:QYS[hlV0
+R0
+IX4KfWcJl5U5jJ]f2eYb]`1
+R1
+w1551271479
+8C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench.v
+FC:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench.v
+!i122 5
+L0 1 13
+R3
+R4
+r1
+!s85 0
+31
+!s108 1616087431.000000
+!s107 C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench.v|
+!s101 -O0
+!i113 1
+R5
+R6
+vmytestbenchmodule2
+!s110 1616087439
+!i10b 1
+!s100 =X_dh>[1DEib4=IX=NTXK0
+R0
+I;;B<:>^_K_O4bIhVf]hM60
+R1
+w1551271585
+8C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench2.v
+FC:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench2.v
+!i122 7
+L0 2 15
+R3
+R4
+r1
+!s85 0
+31
+!s108 1616087439.000000
+!s107 C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench2.v|
+!s101 -O0
+!i113 1
+R5
+R6
+vmytestbenchmodule3
+!s110 1616087420
+!i10b 1
+!s100 UloZKjd<gPWASe@nzKM]_0
+R0
+ImKoQGB6?=?;ROUchDPF@:1
+R1
+w1551272345
+8C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench3.v
+FC:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench3.v
+!i122 2
+L0 2 16
+R3
+R4
+r1
+!s85 0
+31
+!s108 1616087420.000000
+!s107 C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench3.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench3.v|
+!s101 -O0
+!i113 1
+R5
+R6
+vmytestbenchmodule4
+!s110 1616087425
+!i10b 1
+!s100 Q0C[Gija7JGcFDS8@eh8O2
+R0
+I8DfnFF<e<_6?K=zNLBOI@2
+R1
+R2
+8C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench4.v
+FC:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench4.v
+!i122 4
+L0 1 23
+R3
+R4
+r1
+!s85 0
+31
+!s108 1616087425.000000
+!s107 C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench4.v|
+!s101 -O0
+!i113 1
+R5
+R6
+vmytestbenchmodule5
+!s110 1616087436
+!i10b 1
+!s100 9Veo]M[S0VPk7fKQiBTc63
+R0
+I@T[AW:3<?LB>Wa0lK@FJ70
+R1
+w1551273968
+8C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench5.v
+FC:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench5.v
+!i122 6
+L0 1 37
+R3
+R4
+r1
+!s85 0
+31
+!s108 1616087436.000000
+!s107 C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench5.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench5.v|
+!s101 -O0
+!i113 1
+R5
+R6
+vsum
+!s110 1616087411
+!i10b 1
+!s100 IA]e]LDoiCc@==Z8k8z:b0
+R0
+IJnhQgnJ94RYDnH?]DmNE^0
+R1
+w1551273934
+8C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/sum.v
+FC:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/sum.v
+!i122 0
+L0 1 10
+R3
+R4
+r1
+!s85 0
+31
+!s108 1616087411.000000
+!s107 C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/sum.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/sum.v|
+!s101 -O0
+!i113 1
+R5
+R6

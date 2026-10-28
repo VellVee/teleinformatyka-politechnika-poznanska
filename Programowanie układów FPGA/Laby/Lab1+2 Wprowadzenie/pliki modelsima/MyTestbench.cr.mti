@@ -1,0 +1,50 @@
+{C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/sum.v} {1 {vlog -work work -stats=none {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/sum.v}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module sum
+
+Top level modules:
+	sum
+
+} {} {}} {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench3.v} {1 {vlog -work work -stats=none {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench3.v}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module mytestbenchmodule3
+
+Top level modules:
+	mytestbenchmodule3
+
+} {} {}} {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/increment.v} {1 {vlog -work work -stats=none {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/increment.v}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module increment
+
+Top level modules:
+	increment
+
+} {} {}} {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench4.v} {1 {vlog -work work -stats=none {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench4.v}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module mytestbenchmodule4
+
+Top level modules:
+	mytestbenchmodule4
+
+} {} {}} {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench.v} {1 {vlog -work work -stats=none {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench.v}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module mytestbenchmodule
+
+Top level modules:
+	mytestbenchmodule
+
+} {} {}} {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench5.v} {1 {vlog -work work -stats=none {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench5.v}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module mytestbenchmodule5
+
+Top level modules:
+	mytestbenchmodule5
+
+} {} {}} {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench2.v} {1 {vlog -work work -stats=none {C:/Users/Vell/Desktop/sem6/FPGA/Lab1 i lab2/src/mytestbench2.v}
+Model Technology ModelSim - Lattice FPGA Edition vlog 2020.3 Compiler 2020.10 Oct 14 2020
+-- Compiling module mytestbenchmodule2
+
+Top level modules:
+	mytestbenchmodule2
+
+} {} {}}

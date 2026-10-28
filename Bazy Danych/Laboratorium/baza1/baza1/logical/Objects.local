@@ -1,0 +1,26 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="3333C7AE-AD82-FE2D-21FC-1D7E286032E9" name="Aktywacja" seqName="seg_0"/>
+   <object objectType="Entity" objectID="ABE15282-CC45-52EA-305D-895DC4623707" name="Glos_Posta" seqName="seg_0"/>
+   <object objectType="Entity" objectID="4BE80C31-CA6C-865B-708D-C54AC9EE4694" name="GĹ‚os_Komentarza" seqName="seg_0"/>
+   <object objectType="Entity" objectID="40DAC190-ADE5-4973-E727-5F69AEF1C856" name="Hashtag" seqName="seg_0"/>
+   <object objectType="Entity" objectID="7297A366-ED4C-DD4E-15BD-43F3B3B739E4" name="Komentarz" seqName="seg_0"/>
+   <object objectType="Entity" objectID="8C857B50-C422-B4B4-DD3E-F065318D75F3" name="Obraz" seqName="seg_0"/>
+   <object objectType="Entity" objectID="2E1C24FB-2949-B97D-F34E-02C77522D8F9" name="Post" seqName="seg_0"/>
+   <object objectType="Entity" objectID="BE80B5C0-6B50-989B-BF5D-929586F8D99B" name="Powiadomienie" seqName="seg_0"/>
+   <object objectType="Entity" objectID="89566072-EE2C-9230-F1EC-2DF7D44F27CA" name="Substrypcja" seqName="seg_0"/>
+   <object objectType="Entity" objectID="593B58B7-272F-EE21-9F6A-53E5EE0015CF" name="Uzytkownik" seqName="seg_0"/>
+   <object objectType="Relation" objectID="B715B915-F390-F0A6-CFDB-6E71B882EB4B" name="Aktywacja_Uzytkownika" seqName="seg_0"/>
+   <object objectType="Relation" objectID="4F3C0989-8C26-7390-8ECF-487D3A846DA8" name="Glos_Komentarz_Komentarz" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D2210CA3-C593-40FC-756A-61F3048A7287" name="Glos_Posta_Post" seqName="seg_0"/>
+   <object objectType="Relation" objectID="1F37A4C6-3D93-DBA0-E42A-FA3CBCB8C228" name="Glosowanie_na_Posty" seqName="seg_0"/>
+   <object objectType="Relation" objectID="33E568D9-1303-4DC0-AC94-FF00210FA9DD" name="Komentarze_Posty" seqName="seg_0"/>
+   <object objectType="Relation" objectID="8761F33A-B0D0-E151-E4D2-79A98E4A1163" name="Post_Hashtag" seqName="seg_0"/>
+   <object objectType="Relation" objectID="65A0D074-205A-8BA7-0891-085FA7E556FB" name="Relation_13" seqName="seg_0"/>
+   <object objectType="Relation" objectID="F77CE695-B3C3-4431-5B85-CA43E4D67DA6" name="Relation_17" seqName="seg_0"/>
+   <object objectType="Relation" objectID="D463623D-AD37-C663-C704-E69D5809A1E2" name="Relation_18" seqName="seg_0"/>
+   <object objectType="Relation" objectID="0DEE2B03-9590-6CE4-7593-EFC0B07D5A0C" name="Subskrypcja_Hashtag" seqName="seg_0"/>
+   <object objectType="Relation" objectID="8B302E58-E843-C745-DBE8-4E5D63CBAA5C" name="Uzytkownik_Glos_Komentarza" seqName="seg_0"/>
+   <object objectType="Relation" objectID="9A08D6FB-2E65-00AC-9D24-34E60F2EC1AD" name="Uzytkownik_Komentarz" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FFE05334-C1B8-8DB1-E99A-37E72B3E69B3" name="UĹĽytkownik_Post" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

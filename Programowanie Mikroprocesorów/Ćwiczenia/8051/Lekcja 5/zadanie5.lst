@@ -1,0 +1,29 @@
+     1  0000: 02 01 00  	LJMP START
+     2  0100:           	ORG 100H
+     3  0100:           START:
+     4  0100: 12 81 0C  	LCALL LCD_CLR
+     5  0103: 12 81 1C  	LCALL WAIT_KEY
+     6  0106: F9        	MOV R1, A
+     7  0107: 12 01 25  	LCALL KONWERTUJ
+     8  010A: 12 81 04  	LCALL WRITE_HEX
+     9  010D: 12 81 1C  	LCALL WAIT_KEY
+    10  0110: F8        	MOV R0, A
+    11  0111: E9        	MOV A, R1
+    12  0112: 80 00     	SJMP DODAJ
+    13                  	
+    14  0114:           DODAJ:
+    15  0114: 28        	ADD A, R0
+    16  0115: F8        	MOV R0, A
+    17  0116: 12 01 25  	LCALL KONWERTUJ
+    18  0119: 12 81 0C  	LCALL LCD_CLR
+    19  011C: EB        	MOV A, R3
+    20  011D: 12 81 04  	LCALL WRITE_HEX
+    21  0120: 12 81 1C  	LCALL WAIT_KEY
+    22  0123: 80 EF     	SJMP DODAJ
+    23  0125:           KONWERTUJ:
+    24  0125: 75 F0 0A  	MOV B, #10
+    25  0128: 84        	DIV AB;
+    26  0129: C4        	SWAP A
+    27  012A: 25 F0     	ADD A, B
+    28  012C: FB        	MOV R3, A
+    29  012D: 22        	RET

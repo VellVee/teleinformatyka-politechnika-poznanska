@@ -1,0 +1,126 @@
+13. Numer punktu sygnalizacyjnego w sieci miedzynarodowej jest kodowany
+A) Na ogol na 14 bitach ale w niektorych krajach moze byc kodowany na 24 bitach
+B) Zawsze na 4 bitach
+C) Numer punktu sygnalizacyjnego nie jest nigdy umieszczany w wiadomosciach sygnalizacji
+D) Zawsze na 14 bitach
+
+15. W sygnalizacji we wspolnym kanale zasoby do przesylania informacji sygnalizacyjnych
+A) Sa wspolne dla nie wiecej niz dwoch kanalow danych
+B) Sa zarezerwowane indywidualnie dla kazdego z kanalow danych
+C) Nie sa w ogole wydzielane
+D) Sa wspolne dla wielu kanalow danych
+
+23. Przeslo sygnalizacyjne znajduje sie w stanie pracy. Po odebraniu jednostki LSSU ze wskazaniem SIPO przeslo przejdzie do stanu:
+A) Uszkodzone
+B) Niezynchronizowane
+C) Uszkodzenie procesora
+D) Nie zmieni stanu
+
+24. W celu wykonania procedury przejscia na przeslo rezerwowe sasiednie punkty sygnalizacyjne wymieniaja miedzy soba wiadomosci
+A) ECO i ECA
+B) COO i COA
+C) CBD i CBA
+D) Odbywa sie to automatycznie po wykryciu uszkodzenia laczy bez informowania sasiedniego wezla
+
+27. W laczu sygnalizacyjnym przeslano kolejno jednostke FISU z numerem FSN=126 i jednostke MSU z numerem FSN=127. Kolejna do wyslania jest jednostka LSSU. Pole FSN tej jednostki przyjmie wartosc:
+A) 0
+B) 126
+C) 127
+D) 128
+
+28. Punkt SP A wyslal do SP B nastepujace jednostki sygnalizacyjne: MSN(FSN=55,FIB=0), MSN(FSN=56,FIB=0), MSN(FSN=57,FIB=0), MSN(FSN=58,FIB=0) i MSN(FSN=59,FIB=0). Po wyslaniu ostatniej jednostki sygnalizacyjnej odebral jednostke FISU(FSN=68, BSN=57, BIB=1). Nastepna jednostka sygnalizacyjna wyslana przez SP A bedzie:
+A) MSN(FSN=58,FIB=0)
+B) MSN(FSN=58,FIB=1)
+C) MSN(FSN=57,FIB=1)
+D) MSN(FSN=68,FIB=1)
+
+39. W wiadomosciach stosowanych w procedurze przejscia na przeslo rezerwowe pole SLC zawiera:
+A) kod przesla sygnalizacyjnego, ktorym wiadomosc jest przesylana
+B) kod przesla sygnalizacyjnego, na ktory zostanie przeniesiony kod sygnalizacyjny
+C) kod uszkodzonego przesla sygnalizacyjnego i kod przesla sygnalizacyjnego, ktorym wiadomosc jest przesylana
+D) kod uszkodzonego przesla sygnalizacyjnego
+
+35. Wiadomosc IAM jest zawsze wysylana jako ...., przy podstawowej obsludze polaczen:
+A) druga
+B) pierwsza
+C) dowolna z kolei
+D) ostatnia
+
+38. Podstawowa odpowiedzia na wiadomosc REL jest wiadomosc:
+A) RLC
+B) IAM
+C) REL
+D) CPG
+
+40. Przeslo sygnalizacyjne odpowiada za realizacje nastepujacych funkcji:
+A) Detekcja bledow, korekcja bledow, kontrola kolejnosci przesylanych jednostek sygnalizacyjnych, sterowanie przeplywem
+B) Sterowanie przeplywem, kierowanie jednostek sygnalizacyjnych do punktu docelowego, zapewnienie bezblednosci transmisji
+C) Kierowanie sygnalizacyjnych do punktu docelowego, wybieranie odpowiedniego kodu transmisyjnego, detekcja i korekcja bledow, odtwarzanie zegara
+D) Wszystkie funkcje warstw 1 i 2 OSI
+
+47. Do przesylania jednostek sygnalizacyjnych sygnalizacji SS7 wykorzystuje sie:
+A) jedna ze szczelin czasowych traktu PCM poza szczelina 0, przy czym zalecana jest szczelina 16
+B) jedna ze szczelin czasowych traktu PCM, przy czym zalecana jest szczelina 0
+C) tylko szczelina 16 traktu PCM
+D) tylko szczelina 0 traktu PCM
+
+50. Czesc uzytkownika ISUP definiuje protokol
+A) do wymiany wiadomosci oraz procedur do sterowania polaczeniami tylko w sieci ISDN.
+B) do wymiany wiadomosci oraz procedur do sterowania polaczeniami w sieci telefonicznej i ISDN.
+C) do wymiany wiadomosci oraz procedur do sterowania polaczeniami w sieci telefonicznej, ISDN i GSM oraz do procedury do zarzadzania mobilnoscia w sieci GSM.
+D) wymiany wiadomosci oraz procedur do sterowania polaczeniami w sieci telefonicznej, ISDN i GSM.
+
+55. ISUP sluzy do:
+A) ustanawiania polaczen sygnalizacyjnych
+B) tworzenia relacji sygnalizacyjnych
+C) zaden z wymienionych punktow nie jest poprawna odpowiedzia
+D) obslugi polaczen dla podstawowych uslug przenoszenia i teleuslug
+
+56. Zegary temporyzacji w procedurach wymiany wiadomosci ISUP sluza do:
+A) zliczania wiadomosci
+B) sprawdzania sprawnosci procesora sterujacego
+C) tylko do zbierania statystyk dotyczacych sprawnosci systemu
+D) zabezpieczania przed zbyt dlugim czasem realizacji procedury w przypadku bledow w wymianie wiadomoœci
+
+57. Obsluga uslugi dodatkowej „sledzenie polaczen zlosliwych“ jest realizowana za pomoca informacji przenoszonej w parametrze:
+A) calling party number
+B) called party number
+C) zadne z wymienionych punktow nie jest poprawna odpowiedzia
+D) cause
+
+58. Jaka jest poczatkowa sekwencja wiadomosci ISUP...
+A) ACM, IAM, ANM
+B) IAM, ANM, ACM
+C) ACM, ANM, IAM
+D) IAM, ACM, ANM
+
+66. Poczatek jednostki sygnalizacyjnej zawiera nastepujacy ciag bitow: 0111111001111100111111000011001111100000 … . W laczu nadany zostanie w rzeczywistosci  nastepujacy ciag bitow:
+A) 0111111001111100011111010000110011111000000…
+B) 0111110100111110001111101000011001111100000…
+C) 0111111001111100111111000011001111100000…
+D) 0111110100111110011111010000110011111000000… 
+
+67. Przy obsludze polaczenia wychodzacego centrala MSC w celu przeslania numeru abonenta wywolywanego wysyla nastepujace wiadomosci:
+A) IAM i potem moze byc takze wyslana wiadomosc INF (jedna lub wiecej)
+B) IAM i potem moze byc takze wyslana wiadomosc SAM (jedna lub wiecej)
+C) IAM i ACM
+D) Tylko IAM
+
+68. Funkcje TC stanowia styk miedzy: 
+A) SCCP a MTP
+B) Czesciami aplikacji a MTP
+C) Czesciami aplikacji a siecia sygnalizacyjna
+D) Zaden z wymienionych
+
+
+Sieæ analogowa:
+A)   Jest najstarsz¹ sieci¹
+B)   Jest najm³odsz¹ sieci¹
+C)   By³a najwiêksz¹ sieci¹ do momentu wejœcia us³ug cyfrowych
+D)   ¯adne z powy¿szych
+
+Wiadomoœæ Setup w dostêpie u¿ytkownika wywo³ywanego:
+A)   tworzy wiadomoœæ IAM,
+B)   jest tworzona z wiadomoœci ANM,
+C)   ….
+D)   ¿adne z powy¿szych
